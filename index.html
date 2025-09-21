@@ -28,9 +28,11 @@
         <a href="#safety" class="hover:text-sky-600">Safety</a>
         <a href="#about" class="hover:text-sky-600">About</a>
         <a href="#contact" class="hover:text-sky-600">Contact</a>
-      </nav>
-      <a href="#contact" class="inline-flex items-center gap-2 rounded-xl bg-sky-600 text-white px-4 py-2 text-sm font-semibold shadow hover:bg-sky-700">Book consultation</a>
-    </div>
+     </nav>
+<a href="/pre-appointment.html" class="hover:text-sky-600 hidden md:inline">Pre-appointment</a>
+<a href="/aftercare.html" class="hover:text-sky-600 hidden md:inline">Aftercare</a>
+<a href="/privacy.html" class="hover:text-sky-600 hidden md:inline">Privacy</a>
+<a href="#contact" class="inline-flex items-center gap-2 rounded-xl bg-sky-600 text-white px-4 py-2 text-sm font-semibold shadow hover:bg-sky-700">Book consultation</a>
   </header>
 
   <!-- Hero -->
@@ -172,7 +174,11 @@
         <label class="text-sm">Message<textarea class="mt-1 w-full rounded-lg border px-3 py-2" rows="4" placeholder="Tell us what you’re interested in"></textarea></label>
         <button type="button" class="mt-2 rounded-xl bg-sky-600 text-white px-4 py-2 font-semibold hover:bg-sky-700">Send enquiry</button>
         <p class="text-xs text-slate-500">By sending, you agree to our privacy notice. We’ll never share your details.</p>
-      </form>
+      <form name="contact" method="POST" data-netlify="true"
+  class="bg-white text-slate-800 rounded-2xl p-6 shadow grid grid-cols-1 gap-3">
+  <input type="hidden" name="form-name" value="contact">
+  <!-- keep your inputs here -->
+
     </div>
   </section>
 
