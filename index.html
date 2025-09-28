@@ -1,162 +1,96 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Renew Clinic | Aesthetics & Wellbeing in Bath</title>
-<meta name="description" content="Renew Clinic — Aesthetics & Wellbeing in Bath. HCPC-registered independent prescriber. Natural anti-wrinkle and dermal filler treatments. Mobile appointments, evenings & weekends.">
-<link rel="canonical" href="https://www.renewclinic.uk/">
-<meta property="og:title" content="Renew Clinic | Aesthetics & Wellbeing in Bath">
-<meta property="og:description" content="Natural results. Professional care.">
-<meta property="og:type" content="website">
-
+<meta name="description" content="Renew Clinic — Aesthetics & Wellbeing in Bath. HCPC-registered independent prescriber. Natural anti-wrinkle and dermal filler treatments. Mobile evenings & weekends.">
 <style>
-/* ==== Brand palette (switch here) ==== */
-/* Fresh clinic palette */
 :root{
-  --bg:#f8fafc; --ink:#0f172a; --muted:#475569;
-  --brand:#0ea5e9; /* accent */
-  --brand-ink:#0b1220; --border:#e2e8f0; --surface:#ffffff;
+  --bg:#0b0b0d; --surface:#111215; --ink:#f5f7fa; --muted:#c7cbd3;
+  --gold:#e6c55a; --gold-strong:#ffd15a; --border:#22242a;
 }
-/* If you want black & gold instead, swap to:
-:root{
-  --bg:#0b1220; --ink:#e5e7eb; --muted:#94a3b8;
-  --brand:#d4af37; --brand-ink:#111827; --border:#1f2937; --surface:#111827;
-}
-*/
-
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
 .container{max-width:1100px;margin:0 auto;padding:0 16px}
-header{position:sticky;top:0;z-index:10;background:var(--surface);border-bottom:1px solid var(--border)}
-a{color:inherit;text-decoration:none}
-nav a{margin-left:18px;opacity:.9}
-nav a:hover{color:var(--brand)}
-.btn{display:inline-block;background:var(--brand);color:#fff;padding:10px 16px;border-radius:12px;font-weight:600;text-decoration:none;border:0}
-.btn-outline{display:inline-block;border:1px solid var(--brand);color:#0369a1;background:transparent;padding:10px 16px;border-radius:12px;font-weight:600;text-decoration:none}
-.grid{display:grid;gap:20px}
-.grid-2{grid-template-columns:1fr}
-@media(min-width:900px){.grid-2{grid-template-columns:1fr 1fr}}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:0 6px 18px rgba(2,6,23,.04);padding:18px}
-h1,h2,h3{margin:0 0 10px}
-h1{font-size:44px;line-height:1.1}
-h2{font-size:28px}
-h3{font-size:18px}
-.lead{color:var(--muted);font-size:18px}
-.small{font-size:12px;color:#64748b}
+header{position:sticky;top:0;z-index:10;background:rgba(11,11,13,.85);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--border)}
+a{color:inherit;text-decoration:none}nav a{margin-left:18px;opacity:.9}nav a:hover{color:var(--gold-strong)}
+.btn{display:inline-block;background:var(--gold);color:#111;padding:10px 16px;border-radius:12px;font-weight:700;text-decoration:none;border:0}.btn:hover{background:var(--gold-strong)}
+.btn-outline{display:inline-block;border:1px solid var(--gold);color:var(--gold);background:transparent;padding:10px 16px;border-radius:12px;font-weight:700;text-decoration:none}
+.grid{display:grid;gap:20px}.grid-2{grid-template-columns:1fr}@media(min-width:900px){.grid-2{grid-template-columns:1fr 1fr}}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:0 6px 18px rgba(0,0,0,.45);padding:18px}
+h1,h2,h3{margin:0 0 10px}h1{font-size:46px;line-height:1.08}h2{font-size:28px}h3{font-size:18px;color:var(--gold)}
+.lead{color:var(--muted);font-size:18px}.small{font-size:12px;color:#aeb5c0}
 .section{padding:56px 0}
 .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-.badge{background:#e2f2fb;color:#0b69a3;border:1px solid #bfe6fb;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:600}
-.hero{display:flex;align-items:center;justify-content:center;height:320px;border:1px dashed var(--border);border-radius:18px;background:var(--surface);color:#94a3b8}
-.input, textarea{width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:#fff;color:var(--ink)}
-label{display:block;margin:8px 0 4px;font-size:14px}
-form .actions{margin-top:8px}
-footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);margin-top:40px;color:#64748b}
-
-/* ===== Intro splash ===== */
-.splash{
-  position:fixed;inset:0;background:#0b1220;display:flex;
-  align-items:center;justify-content:center;z-index:50;color:#d4af37;
-  animation:fadeOut 1.6s ease 1.2s forwards; /* show 1.2s then fade 0.4s */
-}
-.splash-inner{text-align:center}
-.splash .brand{font-size:56px;font-weight:800;letter-spacing:.02em}
-.splash .strap{margin-top:6px;font-size:16px;letter-spacing:.12em;text-transform:uppercase}
-@keyframes fadeOut{to{opacity:0;visibility:hidden}}
-/* In light palette, override splash colours for contrast */
-@media(prefers-color-scheme: light){
-  .splash{background:#0b1220;color:#d4af37}
-}
-
-/* Header logo size + strapline */
+.badge{background:#1a1b1f;color:#ffd15a;border:1px solid #2a2c33;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700}
+.hero{display:flex;align-items:center;justify-content:center;min-height:320px;border:1px dashed var(--border);border-radius:18px;background:#0f1013;color:#8d93a3}
+.input, textarea{width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:#0f1013;color:#f5f7fa}
+label{display:block;margin:8px 0 4px;font-size:14px}form .actions{margin-top:8px}
+footer{border-top:1px solid var(--border);padding:28px 0;background:#0b0b0d;margin-top:40px;color:#9aa3b2}
+.logo{height:52px;width:52px;border-radius:10px;object-fit:cover;border:1px solid #222;background:#000}
 .brand-wrap{display:flex;align-items:center;gap:12px}
-.brand-title{display:block;font-weight:800;font-size:22px;line-height:1}
-.brand-strap{display:block;font-size:13px;color:var(--muted);letter-spacing:.06em}
-.logo{height:40px;width:40px;border-radius:10px;object-fit:cover;border:1px solid var(--border);background:#000}
+.brand-title{display:block;font-weight:900;font-size:26px;line-height:1;color:var(--gold)}
+.brand-strap{display:block;font-size:13px;color:#d9bd61;letter-spacing:.08em}
+.link{color:#9ecbff;text-decoration:underline}
+/* Splash */
+.splash{position:fixed;inset:0;background:#000;display:flex;align-items:center;justify-content:center;z-index:50;color:var(--gold);animation:fadeOut 1.8s ease 1.4s forwards}
+.splash-inner{text-align:center}.splash .brand{font-size:66px;font-weight:900;letter-spacing:.02em}.splash .strap{margin-top:6px;font-size:16px;letter-spacing:.18em;text-transform:uppercase;color:#e6c55a}
+@keyframes fadeOut{to{opacity:0;visibility:hidden}}
 </style>
 </head>
 <body>
-
-<!-- Intro splash -->
-<div class="splash" aria-hidden="true">
-  <div class="splash-inner">
-    <div class="brand">RENEW</div>
-    <div class="strap">AESTHETICS &amp; WELLBEING</div>
-  </div>
-</div>
+<div class="splash" aria-hidden="true"><div class="splash-inner"><div class="brand">RENEW</div><div class="strap">AESTHETICS &amp; WELLBEING</div></div></div>
 
 <header>
   <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:12px 0">
     <a href="/" class="brand-wrap">
       <img class="logo" src="/logo.png" alt="Renew Clinic emblem">
-      <span>
-        <span class="brand-title">Renew</span>
-        <span class="brand-strap">Aesthetics &amp; Wellbeing</span>
-      </span>
+      <span><span class="brand-title">Renew</span><span class="brand-strap">Aesthetics &amp; Wellbeing</span></span>
     </a>
     <nav>
       <a href="#services">Treatments</a>
       <a href="#about">About</a>
       <a href="#safety">Safety</a>
-      <a href="#contact" class="btn">Book consultation</a>
+      <a class="btn" href="#contact">Book</a>
     </nav>
   </div>
 </header>
 
-<!-- HERO -->
 <section class="section">
   <div class="container grid grid-2">
     <div>
-      <h1>Natural results. <span style="color:var(--brand)">Professional care.</span></h1>
+      <h1><span style="color:var(--gold)">Natural results.</span> Professional care.</h1>
       <p class="lead">Discreet, HCPC-led aesthetics brought to your home. Anti-wrinkle treatments and dermal fillers that keep you looking like you — just fresher.</p>
       <div class="badges">
-        <span class="badge">HCPC-registered</span>
-        <span class="badge">Independent Prescriber</span>
-        <span class="badge">Mobile clinic</span>
-        <span class="badge">Bath & nearby</span>
+        <span class="badge">HCPC-registered</span><span class="badge">Independent Prescriber</span><span class="badge">Mobile clinic</span><span class="badge">Bath & nearby</span>
       </div>
       <div style="margin-top:16px">
         <a class="btn" href="#contact">Book consultation</a>
         <a class="btn-outline" href="#about" style="margin-left:8px">Meet your clinician</a>
       </div>
-      <p class="small" style="margin-top:10px">We do not advertise prescription-only medicines. All treatments follow a face-to-face assessment and informed consent.</p>
+      <p class="small" style="margin-top:10px">We never advertise prescription-only medicines. Treatments follow a face-to-face assessment and informed consent.</p>
     </div>
-    <div><div class="hero">Add a photo here later</div></div>
+    <div><div class="hero">Hero image / before-after placeholder</div></div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="section" style="background:#eef6fb">
+<section id="services" class="section">
   <div class="container">
-    <h2>Treatments</h2>
+    <h2 style="color:var(--gold)">Treatments</h2>
     <p class="lead">Your plan is always personalised after a face-to-face assessment in your home.</p>
     <div class="grid grid-2" style="margin-top:16px">
-      <div class="card">
-        <h3>Anti-wrinkle treatments</h3>
-        <ul>
-          <li>Consultation & medical history</li>
-          <li>Treatment + written aftercare</li>
-          <li>Two-week review & tweak if needed</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Dermal fillers</h3>
-        <ul>
-          <li>Conservative, proportionate dosing</li>
-          <li>Safety-first techniques</li>
-          <li>Clear risks & alternatives explained</li>
-        </ul>
-      </div>
+      <div class="card"><h3>Anti-wrinkle treatments</h3><ul>
+        <li>Consultation & medical history</li><li>Treatment + written aftercare</li><li>Two-week review & tweak if needed</li></ul></div>
+      <div class="card"><h3>Dermal fillers</h3><ul>
+        <li>Conservative, proportionate dosing</li><li>Safety-first techniques</li><li>Clear risks & alternatives explained</li></ul></div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about" class="section">
   <div class="container grid grid-2">
     <div>
-      <h2>About Renew Clinic</h2>
+      <h2 style="color:var(--gold)">About Renew Clinic</h2>
       <p class="lead">I’m <strong>Adam Rochford</strong>, HCPC-registered Physiotherapist & <strong>Independent Prescriber</strong>. My approach is conservative and safety-first: subtle enhancements, clear expectations, thorough aftercare.</p>
       <ul>
         <li>HCPC reg. Physiotherapist (PH******)</li>
@@ -166,41 +100,29 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surfac
         <li>Availability: Mon–Thu 17:00–19:00, Fri 13:00–18:00, Sat 11:30–16:00</li>
       </ul>
     </div>
-    <div class="card">
-      <h3>Qualifications & memberships</h3>
-      <ul>
-        <li>BSc (Hons) Physiotherapy</li>
-        <li>HCPC (Health & Care Professions Council)</li>
-        <li>Member: CSP</li>
-        <li>Complications training & emergency pathways in place</li>
-      </ul>
-      <p class="small">Full documentation available at consultation.</p>
+    <div class="card"><h3>Governance</h3>
+      <p>Medical history, informed consent and photos recorded securely. Two-week review for new clients or dose changes. Emergency pathways and hyaluronidase kit available.</p>
     </div>
   </div>
 </section>
 
-<!-- SAFETY -->
-<section id="safety" class="section" style="background:#f5f7fb">
+<section id="safety" class="section">
   <div class="container grid grid-2">
-    <div class="card"><h3>Medical standards</h3><p>Medical history, informed consent and photos recorded securely. We follow UK advertising rules and never promote POMs to the public.</p></div>
+    <div class="card"><h3>Medical standards</h3><p>We follow UK advertising rules and never promote POMs to the public. Suitability assessed at consultation.</p></div>
     <div class="card"><h3>Review & aftercare</h3><p>Two-week review for new clients and after dose changes. Written aftercare for every treatment.</p></div>
     <div class="card"><h3>Emergency readiness</h3><p>Complication pathways; hyaluronidase & emergency kit available. We prioritise proportionate, natural results.</p></div>
     <div class="card"><h3>Service area</h3><p>Mobile appointments in Bath and nearby towns.</p></div>
   </div>
 </section>
 
-<!-- CONTACT / FORM -->
 <section id="contact" class="section">
   <div class="container grid grid-2">
     <div>
-      <h2>Book a consultation</h2>
+      <h2 style="color:var(--gold)">Book a consultation</h2>
       <p class="lead">Appointments are mobile and confidential. Exact arrangements confirmed on booking.</p>
-      <p class="small">📞 <a href="tel:+447855409788">07855 409788</a><br>
-      ✉️ <a href="mailto:info@renewclinic.uk">info@renewclinic.uk</a><br>
-      📍 Bath, UK</p>
+      <p class="small">📞 <a class="link" href="tel:+447855409788">07855 409788</a><br>
+      ✉️ <a class="link" href="mailto:info@renewclinic.uk">info@renewclinic.uk</a><br>📍 Bath, UK</p>
     </div>
-
-    <!-- Netlify form -->
     <form name="contact" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field" class="card">
       <input type="hidden" name="form-name" value="contact">
       <p style="display:none"><label>Don’t fill this: <input name="bot-field"></label></p>
@@ -208,7 +130,6 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surfac
       <label>Email <input class="input" name="email" type="email" required></label>
       <label>Phone <input class="input" name="phone" type="tel"></label>
       <label>Message <textarea class="input" name="message" rows="4" required></textarea></label>
-      <div data-netlify-recaptcha="true"></div>
       <div class="actions"><button class="btn" type="submit">Send enquiry</button></div>
       <p class="small">By sending, you agree to our privacy notice. We’ll never share your details.</p>
     </form>
@@ -217,11 +138,10 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surfac
 
 <footer>
   <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
-    <span class="small">© <span id="y"></span> Renew Clinic. All rights reserved.</span>
-    <span class="small"><a href="privacy.html">Privacy</a> • <a href="aftercare.html">Aftercare</a> • <a href="pre-appointment.html">Pre-Appointment</a></span>
+    <span class="small">© <span id="y"></span> Renew Clinic</span>
+    <span class="small"><a class="link" href="privacy.html">Privacy</a> • <a class="link" href="aftercare.html">Aftercare</a> • <a class="link" href="pre-appointment.html">Pre-Appointment</a></span>
   </div>
 </footer>
-
 <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
