@@ -1,164 +1,136 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Renew Clinic | Aesthetics & Wellbeing in Bath</title>
-<meta name="description" content="Renew Clinic — Aesthetics & Wellbeing in Bath. HCPC-registered independent prescriber. Natural anti-wrinkle and dermal filler treatments. Mobile evenings & weekends.">
-<style>
-:root{
-  --bg:#0b0b0d; --surface:#111215; --ink:#f5f7fa; --muted:#c7cbd3;
-  --gold:#e6c55a; --gold-strong:#ffd15a; --border:#22242a;
-}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
-.container{max-width:1100px;margin:0 auto;padding:0 16px}
-header{position:sticky;top:0;z-index:10;background:rgba(11,11,13,.85);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--border)}
-a{color:inherit;text-decoration:none}nav a{margin-left:18px;opacity:.9}nav a:hover{color:var(--gold-strong)}
-.btn{display:inline-block;background:var(--gold);color:#111;padding:10px 16px;border-radius:12px;font-weight:700;text-decoration:none;border:0}.btn:hover{background:var(--gold-strong)}
-.btn-outline{display:inline-block;border:1px solid var(--gold);color:var(--gold);background:transparent;padding:10px 16px;border-radius:12px;font-weight:700;text-decoration:none}
-.grid{display:grid;gap:20px}.grid-2{grid-template-columns:1fr}@media(min-width:900px){.grid-2{grid-template-columns:1fr 1fr}}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:0 6px 18px rgba(0,0,0,.45);padding:18px}
-h1,h2,h3{margin:0 0 10px}h1{font-size:46px;line-height:1.08}h2{font-size:28px}h3{font-size:18px;color:var(--gold)}
-.lead{color:var(--muted);font-size:18px}.small{font-size:12px;color:#aeb5c0}
-.section{padding:56px 0}
-.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-.badge{background:#1a1b1f;color:#ffd15a;border:1px solid #2a2c33;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700}
-.hero{display:flex;align-items:center;justify-content:center;min-height:320px;border:1px dashed var(--border);border-radius:18px;background:#0f1013;color:#8d93a3}
-.input, textarea{width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:#0f1013;color:#f5f7fa}
-label{display:block;margin:8px 0 4px;font-size:14px}form .actions{margin-top:8px}
-footer{border-top:1px solid var(--border);padding:28px 0;background:#0b0b0d;margin-top:40px;color:#9aa3b2}
-.logo{height:52px;width:52px;border-radius:10px;object-fit:cover;border:1px solid #222;background:#000}
-.brand-wrap{display:flex;align-items:center;gap:12px}
-.brand-title{display:block;font-weight:900;font-size:26px;line-height:1;color:var(--gold)}
-.brand-strap{display:block;font-size:13px;color:#d9bd61;letter-spacing:.08em}
-.link{color:#9ecbff;text-decoration:underline}
-/* Splash */
-.splash{position:fixed;inset:0;background:#000;display:flex;align-items:center;justify-content:center;z-index:50;color:var(--gold);animation:fadeOut 1.8s ease 1.4s forwards}
-.splash-inner{text-align:center}.splash .brand{font-size:66px;font-weight:900;letter-spacing:.02em}.splash .strap{margin-top:6px;font-size:16px;letter-spacing:.18em;text-transform:uppercase;color:#e6c55a}
-@keyframes fadeOut{to{opacity:0;visibility:hidden}}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Renew Aesthetics & Wellbeing | Natural Results, Professional Care</title>
+  <link rel="icon" type="image/png" href="/logo.png">
+  <style>
+    :root{--bg:#000;--panel:#111;--ink:#fff;--gold:#f5d76e;--muted:#cfcfcf;--line:#272727}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+    header{background:#111;border-bottom:1px solid #1c1c1c}
+    .wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+    .bar{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:var(--gold)}
+    .brand img{height:48px;width:48px;border-radius:10px;object-fit:cover;border:1px solid #222;background:#000}
+    .brand .t1{font-weight:900;font-size:24px;color:var(--gold)}
+    .brand .t2{display:block;font-size:12px;letter-spacing:.08em;color:#e9ca72}
+    nav a{color:var(--gold);text-decoration:none;margin-left:18px;opacity:.95}
+    nav a:hover{text-decoration:underline}
+    main{padding:60px 0}
+    h1{font-size:42px;margin:0 0 12px;color:var(--gold);text-align:center}
+    .lead{color:#ccc;text-align:center;font-size:18px;margin-bottom:50px}
+    .intro{max-width:850px;margin:0 auto 50px auto;text-align:center;color:#ddd;font-size:17px;line-height:1.7}
+    .grid{display:grid;gap:24px}
+    @media(min-width:900px){.grid{grid-template-columns:1fr 1fr 1fr}}
+    .card{background:#111;border:1px solid var(--line);border-radius:16px;padding:22px;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,.45)}
+    .card h2{color:var(--gold);margin-bottom:8px}
+    .card p{color:#ccc;font-size:15px;margin:0 0 18px}
+    .btn{display:inline-block;background:var(--gold);color:#111;padding:12px 18px;border-radius:12px;font-weight:800;text-decoration:none}
+    .btn:hover{opacity:.85}
+    .btn.outline{background:transparent;border:1px solid var(--gold);color:var(--gold)}
+    .meet{margin-top:60px;padding:40px 20px;background:#111;border-radius:18px;border:1px solid var(--line);text-align:center;box-shadow:0 6px 18px rgba(0,0,0,.45)}
+    .meet h2{color:var(--gold);font-size:26px;margin-bottom:12px}
+    .meet p{max-width:800px;margin:10px auto;color:#ccc;font-size:16px;line-height:1.7}
+    footer{border-top:1px solid var(--line);padding:28px 0;background:#0b0b0d;margin-top:50px;color:#9aa3b2}
+
+    /* --- subtle reveal animation --- */
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease, transform .7s ease}
+    .reveal.in{opacity:1;transform:none}
+  </style>
 </head>
 <body>
-<div class="splash" aria-hidden="true"><div class="splash-inner"><div class="brand">RENEW</div><div class="strap">AESTHETICS &amp; WELLBEING</div></div></div>
-
 <header>
-  <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:12px 0">
-    <a href="/" class="brand-wrap">
-      <img class="logo" src="/logo.png" alt="Renew Clinic emblem">
-      <span><span class="brand-title">Renew</span><span class="brand-strap">Aesthetics &amp; Wellbeing</span></span>
+  <div class="wrap bar">
+    <a href="/" class="brand">
+      <img src="/logo.png" alt="Renew emblem">
+      <span><span class="t1">Renew</span><span class="t2">Aesthetics & Wellbeing</span></span>
     </a>
     <nav>
-  <a href="#services">Treatments</a>
-  <a href="#about">About</a>
-  <a href="/safety.html">Safety</a>
-  <a class="btn" href="#contact">Book</a>
-</nav>
-
+      <a href="/">Home</a>
+      <a href="/pre-appointment.html">Pre-Appointment</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/safety.html">Safety</a>
+      <a href="/privacy.html">Privacy</a>
+    </nav>
   </div>
 </header>
 
-<section class="section">
-  <div class="container grid grid-2">
-    <div>
-      <h1><span style="color:var(--gold)">Natural results.</span> Professional care.</h1>
-      <p class="lead">Discreet, HCPC-led aesthetics brought to your home. Anti-wrinkle treatments and dermal fillers that keep you looking like you — just fresher.</p>
-      <div class="badges">
-        <span class="badge">HCPC-registered</span><span class="badge">Independent Prescriber</span><span class="badge">Mobile clinic</span><span class="badge">Bath & nearby</span>
-      </div>
-      <div style="margin-top:16px">
-        <a class="btn" href="#contact">Book consultation</a>
-        <a class="btn-outline" href="#about" style="margin-left:8px">Meet your clinician</a>
-      </div>
-      <p class="small" style="margin-top:10px">We never advertise prescription-only medicines. Treatments follow a face-to-face assessment and informed consent.</p>
-    </div>
-    <div><div class="hero">Hero image / before-after placeholder</div></div>
-  </div>
-</section>
+<main>
+  <div class="wrap">
+    <h1>Renew Aesthetics & Wellbeing</h1>
+    <p class="lead">Subtle, natural aesthetics in Bath. Safe treatments by an HCPC-registered Independent Prescriber.</p>
 
-<section id="services" class="section">
-  <div class="container">
-    <h2 style="color:var(--gold)">Treatments</h2>
-    <p class="lead">Your plan is always personalised after a face-to-face assessment in your home.</p>
-    <div class="grid grid-2" style="margin-top:16px">
-      <div class="card"><h3>Anti-wrinkle treatments</h3><ul>
-        <li>Consultation & medical history</li><li>Treatment + written aftercare</li><li>Two-week review & tweak if needed</li></ul></div>
-      <div class="card"><h3>Dermal fillers</h3><ul>
-        <li>Conservative, proportionate dosing</li><li>Safety-first techniques</li><li>Clear risks & alternatives explained</li></ul></div>
+    <div class="intro">
+      <p>Renew Aesthetics & Wellbeing offers a calm, patient-centred approach to skin and facial rejuvenation. Treatments are delivered by <strong>James Adam Rochford</strong>, an HCPC-registered Physiotherapist and Independent Prescriber with advanced training in non-surgical aesthetic medicine.</p>
+      <p>We specialise in soft, natural results that enhance your confidence — not change who you are. Every consultation includes a full medical assessment, discussion of treatment options, and personalised aftercare support.</p>
     </div>
-  </div>
-</section>
 
-<section id="about" class="section">
-  <div class="container grid grid-2">
-    <div>
-      <h2 style="color:var(--gold)">About Renew Clinic</h2>
-      <p class="lead">I’m <strong>Adam Rochford</strong>, HCPC-registered Physiotherapist & <strong>Independent Prescriber</strong>. My approach is conservative and safety-first: subtle enhancements, clear expectations, thorough aftercare.</p>
-      <ul>
-        <li>HCPC reg. Physiotherapist (PH72853)</li>
-        <li>Independent Prescriber (NMP)</li>
-        <li>Advanced injection training — anti-wrinkle & dermal fillers</li>
-        <li>Mobile appointments across Bath & surrounding areas</li>
-        <li>Availability: Mon–Thu 17:00–19:00, Fri 13:00–18:00, Sat 11:30–16:00</li>
-      </ul>
+    <div class="grid">
+      <section class="card reveal">
+        <h2>Anti-wrinkle Treatments</h2>
+        <p>Smooth frown lines, forehead creases, or crow’s feet with precision dosing using Azzalure® or Bocouture®.</p>
+        <a class="btn" href="/pricing.html">View Pricing</a>
+      </section>
+
+      <section class="card reveal">
+        <h2>Dermal Fillers</h2>
+        <p>Subtle volume restoration for lips and smile lines using CE-marked hyaluronic acid fillers for safe, natural outcomes.</p>
+        <a class="btn" href="/pricing.html">View Pricing</a>
+      </section>
+
+      <section class="card reveal">
+        <h2>Medical Consultation</h2>
+        <p>Includes medical history, treatment planning, and pre-treatment photography. A follow-up review is included for every client.</p>
+        <a class="btn outline" href="/pre-appointment.html">Pre-Appointment Form</a>
+      </section>
     </div>
-    <div class="card"><h3>Governance</h3>
-      <p>Medical history, informed consent and photos recorded securely. Two-week review for new clients or dose changes. Emergency pathways and hyaluronidase kit available.</p>
+
+    <div style="text-align:center;margin-top:40px;">
+      <a href="/pricing.html"
+         style="display:inline-block;
+                padding:16px 26px;
+                background:#f5d76e;
+                color:#111;
+                font-weight:800;
+                border-radius:12px;
+                text-decoration:none;
+                box-shadow:0 3px 10px rgba(245,215,110,0.3);">
+        💰 View Full Pricing
+      </a>
     </div>
-  </div>
-</section>
 
-<section id="safety" class="section">
-  <div class="container grid grid-2">
-    <div class="card"><h3>Medical standards</h3><p>We follow UK advertising rules and never promote POMs to the public. Suitability assessed at consultation.</p></div>
-    <div class="card"><h3>Review & aftercare</h3><p>Two-week review for new clients and after dose changes. Written aftercare for every treatment.</p></div>
-    <div class="card"><h3>Emergency readiness</h3><p>Complication pathways; hyaluronidase & emergency kit available. We prioritise proportionate, natural results.</p></div>
-    <div class="card"><h3>Service area</h3><p>Mobile appointments in Bath and nearby towns.</p></div>
+    <section class="meet reveal">
+      <h2>Meet Adam</h2>
+      <p><strong>James Adam Rochford</strong> is an Advanced Physiotherapy Practitioner and Independent Prescriber with over 20 years of NHS experience. From 2017 to 2015 he served as the <strong>Head of MSK Physiotherapy and Orthopaedic Interface Services (OIS)</strong> for BaNES Community NHS Services, and he continues to work in the NHS as a senior clinician and manager.</p>
+      <p>Adam combines advanced anatomy and clinical assessment skills with a calm, patient-focused approach to aesthetics. His practice prioritises safety, natural results, and clear communication — ensuring that every client receives professional, ethical care in line with medical standards.</p>
+      <p>HCPC Registered | Fully Insured | Continuing to Practice in the NHS</p>
+    </section>
   </div>
-</section>
-
-<section id="contact" class="section">
-  <div class="container grid grid-2">
-    <div>
-      <a href="https://forms.gle/your-form-id" target="_blank" class="btn">Book Consultation</a>
-<div style="text-align: center; margin-top: 30px;">
-  <a href="https://forms.gle/7mzCsAnyuJgSs9MQ6"
-     target="_blank" 
-     style="display: inline-block; 
-            padding: 20px 40px; 
-            font-size: 22px; 
-            font-weight: bold; 
-            background-color: #d4af37; 
-            color: black; 
-            text-decoration: none; 
-            border-radius: 8px; 
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
-    📋 Complete Pre-Appointment Form
-  </a>
-</div>
-
-      <p class="lead">Appointments are mobile and confidential. Exact arrangements confirmed on booking.</p>
-      <p class="small">📞 <a class="link" href="tel:+447855409788">07855 409788</a><br>
-      ✉️ <a class="link" href="mailto:info@renewclinic.uk">info@renewclinic.uk</a><br>📍 Bath, UK</p>
-    </div>
-    <form name="contact" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field" class="card">
-      <input type="hidden" name="form-name" value="contact">
-      <p style="display:none"><label>Don’t fill this: <input name="bot-field"></label></p>
-      <label>Name <input class="input" name="name" required></label>
-      <label>Email <input class="input" name="email" type="email" required></label>
-      <label>Phone <input class="input" name="phone" type="tel"></label>
-      <label>Message <textarea class="input" name="message" rows="4" required></textarea></label>
-      <div class="actions"><button class="btn" type="submit">Send enquiry</button></div>
-      <p class="small">By sending, you agree to our privacy notice. We’ll never share your details.</p>
-    </form>
-  </div>
-</section>
+</main>
 
 <footer>
-  <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
-    <span class="small">© <span id="y"></span> Renew Clinic</span>
-    <span class="small"><a class="link" href="privacy.html">Privacy</a> • <a class="link" href="aftercare.html">Aftercare</a> • <a class="link" href="pre-appointment.html">Pre-Appointment</a></span>
+  <div class="wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
+    <span>© <span id="y"></span> Renew Clinic</span>
+    <span><a href="/privacy.html" style="color:#9ecbff">Privacy</a> • <a href="/safety.html" style="color:#9ecbff">Safety</a></span>
   </div>
 </footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+
+<script>
+  // year
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  // reveal on scroll
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold: 0.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
 </body>
 </html>
