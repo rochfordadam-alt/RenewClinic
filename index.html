@@ -1,42 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Renew Aesthetics & Wellbeing | Natural Results, Professional Care</title>
   <link rel="icon" type="image/png" href="/logo.png">
+
+  <!-- Brand fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
   <style>
-    :root{--bg:#000;--panel:#111;--ink:#fff;--gold:#f5d76e;--muted:#cfcfcf;--line:#272727}
+    :root{
+      --bg:#000; --panel:#111; --ink:#f4f4f4;
+      --gold:#d4af37;           /* refined metallic gold */
+      --muted:#cfcfcf; --line:#222
+    }
     *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
-    header{background:#111;border-bottom:1px solid #1c1c1c}
+    body{margin:0;background:var(--bg);color:var(--ink);line-height:1.6;font-family:'Poppins',sans-serif}
+
+    /* Header / Nav */
+    header{background:#0e0e0e;border-bottom:1px solid #1a1a1a}
     .wrap{max-width:1100px;margin:0 auto;padding:0 18px}
     .bar{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:var(--gold)}
-    .brand img{height:48px;width:48px;border-radius:10px;object-fit:cover;border:1px solid #222;background:#000}
-    .brand .t1{font-weight:900;font-size:24px;color:var(--gold)}
-    .brand .t2{display:block;font-size:12px;letter-spacing:.08em;color:#e9ca72}
-    nav a{color:var(--gold);text-decoration:none;margin-left:18px;opacity:.95}
-    nav a:hover{text-decoration:underline}
+    .brand{display:flex;gap:12px;align-items:center;text-decoration:none}
+    .brand img{height:48px;width:48px;border-radius:10px;border:1px solid #222;background:#000;object-fit:cover}
+    .brand .t1{font-family:'Playfair Display',serif;font-weight:600;font-size:24px;color:var(--gold);letter-spacing:.4px}
+    .brand .t2{display:block;font-size:12px;letter-spacing:.1em;color:#caa63a;text-transform:uppercase}
+
+    nav a{
+      color:var(--gold); text-decoration:none; margin-left:18px;
+      font-size:13px; letter-spacing:1px; text-transform:uppercase; font-weight:600;
+      opacity:.95
+    }
+    nav a:hover{color:#fff}
+
+    /* Hero / cards */
     main{padding:60px 0}
-    h1{font-size:42px;margin:0 0 12px;color:var(--gold);text-align:center}
-    .lead{color:#ccc;text-align:center;font-size:18px;margin-bottom:50px}
-    .intro{max-width:850px;margin:0 auto 50px auto;text-align:center;color:#ddd;font-size:17px;line-height:1.7}
+    h1{font-family:'Playfair Display',serif;font-weight:600;font-size:42px;color:var(--gold);text-align:center;margin:0 0 12px;text-shadow:0 0 6px rgba(212,175,55,.25)}
+    .lead{text-align:center;color:#d7d7d7;font-size:18px;margin-bottom:50px}
+    .intro{max-width:850px;margin:0 auto 50px auto;text-align:center;color:#d9d9d9;font-size:17px}
     .grid{display:grid;gap:24px}
     @media(min-width:900px){.grid{grid-template-columns:1fr 1fr 1fr}}
     .card{background:#111;border:1px solid var(--line);border-radius:16px;padding:22px;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,.45)}
-    .card h2{color:var(--gold);margin-bottom:8px}
-    .card p{color:#ccc;font-size:15px;margin:0 0 18px}
+    .card h2{font-family:'Playfair Display',serif;color:var(--gold);margin:0 0 8px}
+    .card p{color:#cfcfcf;margin:0 0 18px}
     .btn{display:inline-block;background:var(--gold);color:#111;padding:12px 18px;border-radius:12px;font-weight:800;text-decoration:none}
-    .btn:hover{opacity:.85}
+    .btn:hover{opacity:.9}
     .btn.outline{background:transparent;border:1px solid var(--gold);color:var(--gold)}
+
+    /* Meet Adam */
     .meet{margin-top:60px;padding:40px 20px;background:#111;border-radius:18px;border:1px solid var(--line);text-align:center;box-shadow:0 6px 18px rgba(0,0,0,.45)}
-    .meet h2{color:var(--gold);font-size:26px;margin-bottom:12px}
-    .meet p{max-width:800px;margin:10px auto;color:#ccc;font-size:16px;line-height:1.7}
+    .meet h2{font-family:'Playfair Display',serif;color:var(--gold);font-size:26px;margin-bottom:12px}
+    .meet p{max-width:820px;margin:10px auto;color:#d0d0d0}
+
+    /* Footer */
     footer{border-top:1px solid var(--line);padding:28px 0;background:#0b0b0d;margin-top:50px;color:#9aa3b2}
 
-    /* --- subtle reveal animation --- */
-    .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease, transform .7s ease}
+    /* Subtle reveal animation */
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
     .reveal.in{opacity:1;transform:none}
   </style>
 </head>
@@ -48,16 +69,14 @@
       <span><span class="t1">Renew</span><span class="t2">Aesthetics & Wellbeing</span></span>
     </a>
     <nav>
-  <a href="/">Home</a>
-  <a href="/#treatments">Treatments</a>
-  <a href="/#book">Book</a>
-  <a href="/pre-appointment.html">Pre-Appointment</a>
-  <a href="/pricing.html">Pricing</a>
-  <a href="/safety.html">Safety</a>
-  <a href="/myth-busters.html">Myth Busters</a>
-  <a href="/privacy.html">Privacy</a>
-</nav>
-
+      <a href="/">Home</a>
+      <a href="/treatments.html">Treatments</a>
+      <a href="/pre-appointment.html">Pre-Appointment</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/safety.html">Safety</a>
+      <a href="/myth-busters.html">Myth Busters</a>
+      <a href="/privacy.html">Privacy</a>
+    </nav>
   </div>
 </header>
 
@@ -67,49 +86,43 @@
     <p class="lead">Subtle, natural aesthetics in Bath. Safe treatments by an HCPC-registered Independent Prescriber.</p>
 
     <div class="intro">
-      <p>Renew Aesthetics & Wellbeing offers a calm, patient-centred approach to skin and facial rejuvenation. Treatments are delivered by <strong>Adam Rochford</strong>, an HCPC-registered Physiotherapist and Independent Prescriber with advanced training in non-surgical aesthetic medicine.</p>
+      <p>Renew offers a calm, patient-centred approach to skin and facial rejuvenation. Treatments are delivered by <strong>James Adam Rochford</strong>, an HCPC-registered Physiotherapist and Independent Prescriber with advanced training in non-surgical aesthetic medicine.</p>
       <p>We specialise in soft, natural results that enhance your confidence — not change who you are. Every consultation includes a full medical assessment, discussion of treatment options, and personalised aftercare support.</p>
     </div>
 
     <div class="grid">
       <section class="card reveal">
         <h2>Anti-wrinkle Treatments</h2>
-        <p>Smooth frown lines, forehead creases, or crow’s feet with precision dosing using Azzalure® or Bocouture®.</p>
+        <p>Smooth frown, forehead, and crow’s feet lines with precision dosing using Azzalure® or Bocouture®.</p>
         <a class="btn" href="/pricing.html">View Pricing</a>
       </section>
 
       <section class="card reveal">
         <h2>Dermal Fillers</h2>
-        <p>Subtle volume restoration for lips and smile lines using CE-marked hyaluronic acid fillers for safe, natural outcomes.</p>
+        <p>Subtle volume for lips and smile lines using CE-marked HA fillers for safe, natural outcomes.</p>
         <a class="btn" href="/pricing.html">View Pricing</a>
       </section>
 
       <section class="card reveal">
         <h2>Medical Consultation</h2>
-        <p>Includes medical history, treatment planning, and pre-treatment photography. A follow-up review is included for every client.</p>
+        <p>Includes medical history, treatment planning, and pre-treatment photography. Follow-up review included.</p>
         <a class="btn outline" href="/pre-appointment.html">Pre-Appointment Form</a>
       </section>
     </div>
 
     <div style="text-align:center;margin-top:40px;">
       <a href="/pricing.html"
-         style="display:inline-block;
-                padding:16px 26px;
-                background:#f5d76e;
-                color:#111;
-                font-weight:800;
-                border-radius:12px;
-                text-decoration:none;
-                box-shadow:0 3px 10px rgba(245,215,110,0.3);">
+         class="btn"
+         style="padding:16px 26px;box-shadow:0 3px 10px rgba(212,175,55,.30);">
         💰 View Full Pricing
       </a>
     </div>
 
     <section class="meet reveal">
       <h2>Meet Adam</h2>
-      <p><strong> Adam Rochford</strong> is an Advanced Physiotherapy Practitioner and Independent Prescriber with over 20 years of NHS experience. From 2017 to 2025 he served as the <strong>Head of MSK Physiotherapy and Orthopaedic Interface Services (OIS)</strong> for BaNES Community NHS Services, and he continues to work in the NHS as a senior clinician and manager.</p>
+      <p><strong>James Adam Rochford</strong> is an Advanced Physiotherapy Practitioner and Independent Prescriber with over 20 years of NHS experience. From 2017 to 2015 he served as the <strong>Head of MSK Physiotherapy and Orthopaedic Interface Services (OIS)</strong> for BaNES Community NHS Services, and he continues to work in the NHS as a senior clinician and manager.</p>
       <p>Adam combines advanced anatomy and clinical assessment skills with a calm, patient-focused approach to aesthetics. His practice prioritises safety, natural results, and clear communication — ensuring that every client receives professional, ethical care in line with medical standards.</p>
-      <p>HCPC Registered | Fully Insured | Continuing to Practice in the NHS</p>
+      <p>HCPC Registered • Fully Insured • Continuing to Practice in the NHS</p>
     </section>
   </div>
 </main>
@@ -128,12 +141,9 @@
   // reveal on scroll
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{
-      if(e.isIntersecting){
-        e.target.classList.add('in');
-        io.unobserve(e.target);
-      }
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
     });
-  }, {threshold: 0.15});
+  }, {threshold: .15});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 </body>
