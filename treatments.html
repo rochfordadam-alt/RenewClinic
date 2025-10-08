@@ -5,24 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Treatments | Renew Aesthetics & Wellbeing</title>
 <link rel="icon" type="image/png" href="/logo.png">
+
+<!-- Brand fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
 <style>
-:root{--bg:#000;--panel:#111;--ink:#fff;--gold:#f5d76e;--muted:#cfcfcf;--line:#272727}
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
-header{background:#111;border-bottom:1px solid #1c1c1c}
+:root{--bg:#000;--panel:#111;--ink:#f4f4f4;--gold:#d4af37;--muted:#cfcfcf;--line:#222}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);line-height:1.6;font-family:'Poppins',sans-serif}
+header{background:#0e0e0e;border-bottom:1px solid #1a1a1a}
 .wrap{max-width:1100px;margin:0 auto;padding:0 18px}
 .bar{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-.brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:var(--gold)}
-.brand img{height:48px;width:48px;border-radius:10px;object-fit:cover;border:1px solid #222;background:#000}
-.brand .t1{font-weight:900;font-size:24px;color:var(--gold)}
-.brand .t2{display:block;font-size:12px;letter-spacing:.08em;color:#e9ca72}
-nav a{color:var(--gold);text-decoration:none;margin-left:18px;opacity:.95}
-nav a:hover{text-decoration:underline}
+.brand{display:flex;gap:12px;align-items:center;text-decoration:none}
+.brand img{height:48px;width:48px;border-radius:10px;border:1px solid #222;background:#000;object-fit:cover}
+.brand .t1{font-family:'Playfair Display',serif;font-weight:600;font-size:24px;color:var(--gold);letter-spacing:.4px}
+.brand .t2{display:block;font-size:12px;letter-spacing:.1em;color:#caa63a;text-transform:uppercase}
+nav a{color:var(--gold);text-decoration:none;margin-left:18px;font-size:13px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+nav a:hover{color:#fff}
+
 main{padding:56px 0}
-h1{font-size:34px;margin:0 0 6px;color:var(--gold)}
+h1{font-family:'Playfair Display',serif;font-weight:600;font-size:34px;color:var(--gold);margin:0 0 8px;text-shadow:0 0 6px rgba(212,175,55,.25)}
 .lead{color:var(--muted);margin:0 0 22px}
 .section{background:#111;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,.45);margin-top:18px}
-.section h2{margin:6px 0 8px;color:#ffd777}
-.section p, .section li{color:#ddd}
+.section h2{font-family:'Playfair Display',serif;color:#ffd777;margin:6px 0 8px}
+.section h3{font-family:'Playfair Display',serif;color:#f2d27f;margin:8px 0}
+.section p, .section li{color:#dbdbdb}
 .badge{display:inline-block;padding:4px 10px;border:1px solid var(--gold);color:var(--gold);border-radius:999px;font-size:12px;margin-left:8px}
 .grid{display:grid;gap:18px}
 @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
@@ -56,7 +62,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#0b0b0d;margin
   <h1>Treatments</h1>
   <p class="lead">Focused, safe treatments delivered by an HCPC-registered Independent Prescriber. Every appointment includes a medical assessment and personalised aftercare.</p>
 
-  <!-- BOTOX -->
+  <!-- Wrinkle-Relaxing -->
   <section class="section">
     <h2>Wrinkle-Relaxing (Botulinum Toxin)</h2>
     <div class="grid">
@@ -73,10 +79,9 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#0b0b0d;margin
       <div>
         <h3>Teeth Grinding / Jawline Slimming (Masseter)</h3>
         <p>Targeted injections into the masseter muscle can reduce clenching/grinding, jaw ache and wideness. Results build over 4–6 weeks; may also soften the jawline.</p>
-        <p class="small"><em>Note:</em> Offered following individual assessment. If this is new for you clinically, list as “available on request / limited availability” until you’re ready to offer routinely.</p>
         <h3 style="margin-top:14px">Underarm Sweating (Hyperhidrosis)</h3>
         <p>Injections reduce sweat activity for 4–6+ months in most people.</p>
-        <p class="small"><em>Availability:</em> If this is not yet in your scope, keep this paragraph and mark as “coming soon”.</p>
+        <p class="small"><em>Availability:</em> Offer following assessment; mark as “coming soon” if you haven’t opened this yet.</p>
       </div>
     </div>
     <div class="cta">
@@ -85,15 +90,15 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#0b0b0d;margin
     </div>
   </section>
 
-  <!-- FILLERS -->
+  <!-- Fillers -->
   <section class="section">
     <h2>Dermal Fillers (Hyaluronic Acid)</h2>
     <div class="grid">
       <div>
         <h3>Nasolabial Folds</h3>
-        <p>Softens the “smile lines” running from nose to mouth, restoring gentle support while keeping natural expression.</p>
+        <p>Softens the “smile lines” from nose to mouth, restoring gentle support while keeping natural expression.</p>
         <h3 style="margin-top:12px">Marionette Lines</h3>
-        <p>Fills shadowing at the corners of the mouth to reduce a “downturned” look.</p>
+        <p>Fills shadowing at the corners of the mouth to reduce a downturned appearance.</p>
       </div>
       <div>
         <h3>Lip Fillers</h3>
@@ -107,7 +112,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#0b0b0d;margin
     </div>
   </section>
 
-  <!-- Safety note -->
+  <!-- Safety -->
   <section class="section">
     <h2>Your Safety First</h2>
     <p>As a medical prescriber, I source medicines from UK-regulated pharmacies, follow evidence-based dosing, and provide a 2–3 week review. You’ll only be treated if it’s clinically appropriate following consultation.</p>
