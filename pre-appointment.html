@@ -1,59 +1,123 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Pre-appointment | Renew Clinic Bath</title>
-<meta name="description" content="Complete your confidential medical history before your consultation with Renew Clinic Bath.">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pre-Appointment | Renew Clinic Bath</title>
+<meta name="description" content="Complete your confidential medical history and consent form before your consultation with Renew Clinic Bath.">
+<link rel="icon" type="image/png" href="/logo.png">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
-:root{--bg:#0b0b0d;--surface:#111215;--ink:#f5f7fa;--muted:#c7cbd3;--gold:#e6c55a;--border:#22242a}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
-.container{max-width:1100px;margin:0 auto;padding:0 16px}header{position:sticky;top:0;z-index:10;background:#0b0b0d;border-bottom:1px solid var(--border)}
-a{color:inherit;text-decoration:none}nav a{margin-left:18px;opacity:.9}nav a:hover{color:var(--gold)}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:0 6px 18px rgba(0,0,0,.45);padding:18px;margin-top:16px}
-.section{padding:56px 0}.lead{color:var(--muted)}.small{font-size:12px;color:#aeb5c0}
-.logo{height:52px;width:52px;border-radius:10px;object-fit:cover;border:1px solid #222;background:#000}
-.brand-wrap{display:flex;align-items:center;gap:12px}.brand-title{font-weight:900;font-size:26px;color:#e6c55a}.brand-strap{font-size:13px;color:#d9bd61;letter-spacing:.08em}
-.link{color:#9ecbff;text-decoration:underline}
-</style></head><body>
-<header><div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:12px 0">
-  <a href="/" class="brand-wrap"><img class="logo" src="/logo.png" alt="Renew Clinic emblem"><span><span class="brand-title">Renew</span><span class="brand-strap">Aesthetics &amp; Wellbeing</span></span></a>
-<nav>
-  <a href="/">Home</a>
-  <a href="/treatments.html">Treatments</a>
-  <a href="/pre-appointment.html">Pre-Appointment</a>
-  <a href="/pricing.html">Pricing</a>
-  <a href="/safety.html">Safety</a>
-  <a href="/myth-busters.html">Myth Busters</a>
-  <a href="/privacy.html">Privacy</a>
-</nav>
+:root {
+  --bg: #0b0b0d;
+  --panel: #111215;
+  --ink: #f5f7fa;
+  --muted: #c7cbd3;
+  --gold: #e6c55a;
+  --border: #22242a;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font: 16px/1.55 'Poppins', sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #0b0b0d;
+  border-bottom: 1px solid var(--border);
+}
+a { color: inherit; text-decoration: none; }
+nav a { margin-left: 18px; opacity: 0.9; text-transform: uppercase; font-weight: 600; font-size: 13px; }
+nav a:hover { color: var(--gold); }
 
+.logo {
+  height: 52px;
+  width: 52px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid #222;
+  background: #000;
+}
+.brand-wrap { display: flex; align-items: center; gap: 12px; }
+.brand-title { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 26px; color: var(--gold); }
+.brand-strap { font-size: 13px; color: #d9bd61; letter-spacing: .08em; text-transform: uppercase; }
 
-</div></header>
+.section { padding: 56px 0; text-align: center; }
+.section h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+.section p { color: var(--muted); max-width: 700px; margin: 0 auto 24px; }
 
-<!-- Pre-Appointment Form Section -->
-<section id="pre-appointment" class="py-20 bg-black text-white">
-  <div class="max-w-5xl mx-auto px-4">
-    <h2 class="text-4xl font-bold text-center text-[#D4AF37] mb-6">Pre-Appointment Medical & Consent Form</h2>
-    <p class="text-center text-gray-300 mb-10">Please complete this confidential form before your appointment. 
-    It helps us prepare your prescription and ensure safe, personalised treatment. 
-    Your information is stored securely and never shared without consent.</p>
+.form-container {
+  border: 1px solid var(--gold);
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--panel);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .4);
+  padding: 8px;
+}
+iframe { width: 100%; height: 2087px; border: none; }
 
-    <div class="rounded-2xl overflow-hidden border border-[#D4AF37] shadow-lg">
-      <iframe 
-        src="https://docs.google.com/forms/d/e/1FAIpQLSdWGjdD5I94-p1RvoGlR6QmGeUYqjcl3-G5tPwvF5LY5b7mAg/viewform?embedded=true"
-        width="100%"
-        height="2087"
-        frameborder="0"
-        marginheight="0"
-        marginwidth="0">
-        Loading…
-      </iframe>
-    </div>
+footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 0;
+  background: #0b0b0d;
+  color: #9aa3b2;
+  text-align: center;
+  margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;">
+    <a href="/" class="brand-wrap">
+      <img class="logo" src="/logo.png" alt="Renew Clinic emblem">
+      <span>
+        <span class="brand-title">Renew</span><br>
+        <span class="brand-strap">Aesthetics & Wellbeing</span>
+      </span>
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/treatments.html">Treatments</a>
+      <a href="/pre-appointment.html">Pre-Appointment</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/safety.html">Safety</a>
+      <a href="/myth-busters.html">Myth Busters</a>
+      <a href="/privacy.html">Privacy</a>
+    </nav>
   </div>
-</section>
-<!-- End Pre-Appointment Form Section -->
+</header>
 
+<main class="section container">
+  <h1>Pre-Appointment Medical & Consent Form</h1>
+  <p>Please complete this secure form before your appointment. It helps us prepare your prescription and ensure safe, personalised care. Your information is stored securely and never shared without consent.</p>
 
-<footer style="border-top:1px solid var(--border);padding:28px 0;background:#0b0b0d;color:#9aa3b2">
-  <div class="container">© <span id="y"></span> Renew Clinic</div>
+  <div class="form-container">
+    <!-- Embedded Google Form -->
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdWGjdD5I94-p1RvoGlR6QmGeUYqjcl3-G5tPwvF5LY5b7mAg/viewform?embedded=true"
+    width="640" height="2087" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
+
+  <p style="margin-top:20px;color:#c7cbd3;">If the form does not load, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdWGjdD5I94-p1RvoGlR6QmGeUYqjcl3-G5tPwvF5LY5b7mAg/viewform" target="_blank" style="color:#e6c55a;">click here to open it in a new tab</a>.</p>
+</main>
+
+<footer>
+  © <span id="y"></span> Renew Clinic Bath | All Rights Reserved
 </footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
-</body></html>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
