@@ -10,6 +10,7 @@
   :root{
     --bg:#F2F6F3; --surface:#FFFFFF; --ink:#1F2937; --muted:#4B5563;
     --accent:#8DAA93; --accent-2:#6D8A6E; --border:#D1D8D3; --ink-on-accent:#FFFFFF;
+    --promo:#E7F0EB; /* pale sage for banner */
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
@@ -32,6 +33,12 @@
   #siteNav{display:none;border-top:1px solid var(--border);background:var(--surface)}
   #siteNav .container{display:grid;grid-template-columns:1fr;gap:10px;padding:12px 0}
   @media (min-width:900px){#navToggle{display:none} #siteNav{display:block;border-top:0} #siteNav .container{display:flex;gap:18px;padding:0}}
+
+  /* PROMO banner */
+  .promo{background:var(--promo);border-bottom:1px solid var(--border)}
+  .promo .inner{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;justify-content:space-between;flex-wrap:wrap}
+  .promo strong{color:var(--accent-2)}
+  .promo .close{border:1px solid var(--border);background:#fff;border-radius:8px;padding:6px 10px;cursor:pointer}
 
   /* SECTIONS */
   main{padding:56px 0}
@@ -57,6 +64,9 @@
 </head>
 <body>
 
+<!-- Toggle this flag to disable the banner quickly -->
+<script>window.PROMO_ACTIVE = true;</script>
+
 <header class="site-header">
   <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0">
     <a href="/" class="brand">
@@ -72,6 +82,17 @@
     </div>
   </nav>
 </header>
+
+<!-- Promo banner (introductory offer) -->
+<div id="promo" class="promo" style="display:none">
+  <div class="inner">
+    <div><strong>Introductory offer:</strong> Three areas anti-wrinkle treatment for <strong>£180</strong> (limited time).</div>
+    <div style="display:flex;gap:10px">
+      <a class="btn outline" href="/pricing.html">See details</a>
+      <button class="close" aria-label="Dismiss">Dismiss</button>
+    </div>
+  </div>
+</div>
 
 <main>
   <div class="container">
@@ -126,12 +147,21 @@
 
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
+
+  // mobile nav
   const btn = document.getElementById('navToggle');
   const nav = document.getElementById('siteNav');
   function toggleNav(){ const open = nav.style.display==='block'; nav.style.display=open?'none':'block'; btn.setAttribute('aria-expanded', String(!open)); }
   btn.addEventListener('click', toggleNav);
   function syncNav(){ if (window.matchMedia('(min-width: 900px)').matches){ nav.style.display='block'; btn.style.display='none'; } else { nav.style.display='none'; btn.style.display='inline-flex'; btn.setAttribute('aria-expanded','false'); } }
   window.addEventListener('resize', syncNav); window.addEventListener('DOMContentLoaded', syncNav);
+
+  // promo banner (dismiss + remember)
+  const promo = document.getElementById('promo');
+  const CLOSED = localStorage.getItem('renew_promo_closed') === '1';
+  function showPromo(){ if (window.PROMO_ACTIVE && !CLOSED){ promo.style.display='block'; } }
+  document.addEventListener('DOMContentLoaded', showPromo);
+  promo?.querySelector('.close')?.addEventListener('click', ()=>{ promo.style.display='none'; localStorage.setItem('renew_promo_closed','1'); });
 </script>
 
 </body>
