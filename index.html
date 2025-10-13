@@ -10,13 +10,60 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
   <style>
-   :root {
-  --bg: #F8FBF9;          /* soft sage-tinted white background */
-  --surface: #FFFFFF;     /* clean white for cards/sections */
-  --ink: #2E2E2E;         /* slate grey text */
-  --muted: #6F7B74;       /* muted sage-grey for secondary text */
-  --accent: #B8C1B2;      /* sage green accent */
-  --border: #DDE2DD;      /* light neutral border tone */
+:root{
+  /* Refined Slate & Sage */
+  --bg:        #F2F6F3;   /* slightly darker than before for contrast */
+  --surface:   #FFFFFF;   /* cards/sections */
+  --ink:       #1F2937;   /* slate-800: main text (much darker) */
+  --muted:     #4B5563;   /* slate-600: secondary text */
+  --accent:    #8DAA93;   /* deeper sage */
+  --accent-2:  #6D8A6E;   /* CTA sage (darker) */
+  --border:    #D1D8D3;   /* light neutral border */
+  --ink-on-accent: #FFFFFF;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{
+  margin:0;
+  font:17px/1.65 system-ui,-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+}
+
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+.section{padding:56px 0}
+a{color:var(--accent-2);text-decoration:none}
+a:hover{text-decoration:underline}
+
+h1,h2,h3{
+  font-weight:700;
+  color:var(--ink);
+  letter-spacing:.2px;
+  line-height:1.25;
+  margin:0 0 .6em;
+}
+h1{font-size:clamp(28px,4.5vw,38px)}
+h2{font-size:clamp(22px,3.5vw,28px)}
+h3{font-size:clamp(18px,3vw,22px)}
+.lead{color:var(--muted)}
+.card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:18px;
+  box-shadow:0 8px 24px rgba(0,0,0,.06);
+  padding:20px;
+}
+
+/* Stronger section headers with subtle accent bar */
+.section-title{
+  position:relative;
+  padding-top:10px;
+}
+.section-title:before{
+  content:"";
+  position:absolute;top:0;left:0;width:64px;height:4px;
+  background:var(--accent-2);border-radius:4px;
 }
 
     *{box-sizing:border-box}
@@ -48,9 +95,24 @@
     .card{background:#111;border:1px solid var(--line);border-radius:16px;padding:22px;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,.45)}
     .card h2{font-family:'Playfair Display',serif;color:var(--gold);margin:0 0 8px}
     .card p{color:#cfcfcf;margin:0 0 18px}
-    .btn{display:inline-block;background:var(--gold);color:#111;padding:12px 18px;border-radius:12px;font-weight:800;text-decoration:none}
-    .btn:hover{opacity:.9}
-    .btn.outline{background:transparent;border:1px solid var(--gold);color:var(--gold)}
+   .btn{
+  display:inline-block;
+  background:var(--accent-2);
+  color:var(--ink-on-accent);
+  padding:12px 18px;
+  border-radius:10px;
+  font-weight:700;
+  text-decoration:none;
+  border:1px solid transparent;
+}
+.btn:hover{background:#61826A}
+.btn.outline{
+  background:transparent;
+  color:var(--accent-2);
+  border:1px solid var(--accent-2);
+}
+.btn.outline:hover{background:rgba(109,138,110,.08)}
+
 
     /* Meet Adam */
     .meet{margin-top:60px;padding:40px 20px;background:#111;border-radius:18px;border:1px solid var(--line);text-align:center;box-shadow:0 6px 18px rgba(0,0,0,.45)}
