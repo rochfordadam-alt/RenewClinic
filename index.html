@@ -32,7 +32,11 @@
   #navToggle .bar:before{top:-6px} #navToggle .bar:after{top:6px}
   #siteNav{display:none;border-top:1px solid var(--border);background:var(--surface)}
   #siteNav .container{display:grid;grid-template-columns:1fr;gap:10px;padding:12px 0}
-  @media (min-width:900px){#navToggle{display:none} #siteNav{display:block;border-top:0} #siteNav .container{display:flex;gap:18px;padding:0}}
+  @media (min-width:900px){
+    #navToggle{display:none}
+    #siteNav{display:block;border-top:0}
+    #siteNav .container{display:flex;gap:18px;padding:0}
+  }
 
   /* PROMO banner */
   .promo{background:var(--promo);border-bottom:1px solid var(--border)}
@@ -48,7 +52,8 @@
   h3{font-size:clamp(18px,3vw,22px)}
   .lead{text-align:center;color:var(--muted);font-size:18px;margin-bottom:36px}
   .card{background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:0 8px 24px rgba(0,0,0,.06);padding:20px}
-  .grid{display:grid;gap:24px;margin-top:40px} @media(min-width:900px){.grid{grid-template-columns:1fr 1fr 1fr}}
+  .grid{display:grid;gap:24px;margin-top:40px}
+  @media(min-width:900px){.grid{grid-template-columns:1fr 1fr 1fr}}
 
   .btn{display:inline-block;background:var(--accent-2);color:var(--ink-on-accent);padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none;border:1px solid transparent}
   .btn:hover{background:#61826A}
@@ -86,7 +91,7 @@
 <!-- Promo banner (introductory offer) -->
 <div id="promo" class="promo" style="display:none">
   <div class="inner">
-    <div><strong>Introductory offer:</strong> Three areas anti-wrinkle treatment for <strong>£195</strong> (limited time).</div>
+    <div><strong>Introductory offer:</strong> Three areas anti-wrinkle treatment for <strong>£180</strong> (limited time).</div>
     <div style="display:flex;gap:10px">
       <a class="btn outline" href="/pricing.html">See details</a>
       <button class="close" aria-label="Dismiss">Dismiss</button>
@@ -113,7 +118,7 @@
 
       <section class="card">
         <h2>Dermal Fillers</h2>
-        <p>Subtle volume for lips and smile lines using CE-marked, top of the range HA fillers for safe, natural outcomes.</p>
+        <p>Subtle volume for lips and smile lines using CE-marked HA fillers for safe, natural outcomes.</p>
         <a class="btn" href="/pricing.html">View Pricing</a>
       </section>
 
@@ -121,6 +126,20 @@
         <h2>Medical Consultation</h2>
         <p>Includes medical history, treatment planning, and pre-treatment photography. Follow-up review included.</p>
         <a class="btn outline" href="/pre-appointment.html">Pre-Appointment Form</a>
+      </section>
+
+      <!-- NEW: Teeth grinding -->
+      <section class="card">
+        <h2>Teeth Grinding (Masseter)</h2>
+        <p>Targeted injections to help reduce clenching/grinding and ease jaw tension. Results build over 4–6 weeks; review included.</p>
+        <a class="btn" href="/pricing.html">View Pricing</a>
+      </section>
+
+      <!-- NEW: Underarm sweating -->
+      <section class="card">
+        <h2>Underarm Sweating</h2>
+        <p>Injections to reduce sweat activity in the underarms. Typical results last 4–6+ months for most people.</p>
+        <a class="btn" href="/pricing.html">View Pricing</a>
       </section>
     </div>
 
