@@ -1,133 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pricing | Renew Aesthetics & Wellbeing</title>
-  <link rel="icon" type="image/png" href="/logo.png">
-  <style>
-    :root{--bg:#000;--panel:#111;--ink:#fff;--gold:#f5d76e;--muted:#cfcfcf;--line:#272727}
-    *{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
-    header{background:#111;border-bottom:1px solid #1c1c1c}
-    .wrap{max-width:1100px;margin:0 auto;padding:0 18px}
-    .bar{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:var(--gold)}
-    .brand img{height:48px;width:48px;border-radius:10px;object-fit:cover;border:1px solid #222;background:#000}
-    .brand .t1{font-weight:900;font-size:24px;color:var(--gold)}
-    .brand .t2{display:block;font-size:12px;letter-spacing:.08em;color:#e9ca72}
-    nav a{color:var(--gold);text-decoration:none;margin-left:18px;opacity:.95}
-    nav a:hover{text-decoration:underline}
-    main{padding:56px 0}
-    h1{font-size:34px;margin:0 0 6px;color:var(--gold)}
-    .lead{color:var(--muted);margin:0 0 28px}
-    .grid{display:grid;gap:22px}
-    @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
-    .card{background:#111;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,.45)}
-    .card h2{margin:0 0 8px}
-    table{width:100%;border-collapse:collapse;margin-top:10px}
-    th,td{padding:12px 10px;border-bottom:1px solid var(--line)}
-    th{color:#e9ca72;text-align:left;font-weight:700}
-    td{color:#f7f7f7}
-    .hint{color:#bdbdbd;font-size:13px;margin-top:8px}
-    .btnbar{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
-    .btn{display:inline-block;background:var(--gold);color:#111;padding:12px 18px;border-radius:12px;font-weight:800;text-decoration:none}
-    .btn.outline{background:transparent;border:1px solid var(--gold);color:var(--gold)}
-    .promise{margin-top:40px;background:#111;border:1px solid var(--line);border-radius:16px;padding:22px;color:var(--muted)}
-    .promise strong{color:var(--gold)}
-    details{margin-top:16px;border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:#0b0b0d}
-    summary{cursor:pointer;font-weight:600;color:var(--gold);outline:none}
-    details p{margin:10px 0 0;color:#ddd;font-size:15px}
-    footer{border-top:1px solid var(--line);padding:28px 0;background:#0b0b0d;margin-top:40px;color:#9aa3b2}
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing | Renew Aesthetics & Wellbeing</title>
+<link rel="icon" type="image/png" href="/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F2F6F3;--surface:#FFFFFF;--ink:#1F2937;--muted:#4B5563;--accent:#8DAA93;--accent-2:#6D8A6E;--border:#D1D8D3;--ink-on-accent:#FFF;--promo:#E7F0EB}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{margin:0;font:17px/1.65 system-ui,-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+a{color:var(--accent-2);text-decoration:none} a:hover{text-decoration:underline}
+
+/* Header */
+.site-header{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50}
+.site-header .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.site-header .brand img{height:44px;width:44px;border-radius:8px;object-fit:cover;border:1px solid var(--border);background:#fff}
+.site-header .brand .t1{display:block;font-weight:700;font-size:18px;letter-spacing:.2px;color:var(--ink)}
+.site-header .brand .t2{display:block;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;font-size:12px}
+.site-nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:13px;letter-spacing:.04em;text-transform:uppercase}
+.site-nav a:hover{color:var(--accent-2);text-decoration:none}
+#navToggle{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid var(--border);border-radius:9px;background:var(--surface)}
+#navToggle .bar{width:20px;height:2px;background:var(--ink);position:relative;display:block}
+#navToggle .bar:before,#navToggle .bar:after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--ink)}
+#navToggle .bar:before{top:-6px} #navToggle .bar:after{top:6px}
+#siteNav{display:none;border-top:1px solid var(--border);background:var(--surface)}
+#siteNav .container{display:grid;grid-template-columns:1fr;gap:10px;padding:12px 0}
+@media(min-width:900px){#navToggle{display:none} #siteNav{display:block;border-top:0} #siteNav .container{display:flex;gap:18px;padding:0}}
+
+main{padding:56px 0}
+h1,h2,h3{font-weight:700;color:var(--ink);letter-spacing:.2px;line-height:1.25;margin:0 0 .6em}
+h1{font-size:clamp(28px,4.5vw,38px);text-align:center}
+h2{font-size:clamp(22px,3.5vw,28px)}
+h3{font-size:clamp(18px,3vw,22px)}
+.lead{text-align:center;color:var(--muted);font-size:18px;margin:0 auto 36px;max-width:820px}
+
+.grid{display:grid;gap:24px} @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:0 8px 24px rgba(0,0,0,.06);padding:20px}
+.price{font-weight:800;color:var(--ink)}
+.small{color:var(--muted);font-size:13px}
+hr{border:0;border-top:1px solid var(--border);margin:18px 0}
+.badge{display:inline-block;background:rgba(109,138,110,.12);color:var(--accent-2);font-weight:700;border:1px solid var(--accent-2);padding:4px 10px;border-radius:999px;font-size:12px;letter-spacing:.02em}
+.btn{display:inline-block;background:var(--accent-2);color:var(--ink-on-accent);padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none;border:1px solid transparent}
+.btn:hover{background:#61826A}
+.btn.outline{background:transparent;color:var(--accent-2);border:1px solid var(--accent-2)}
+.btn.outline:hover{background:rgba(109,138,110,.08)}
+.notice{background:#F8FBF9;border:1px dashed var(--border);border-radius:12px;padding:14px;color:var(--muted)}
+.promo{background:var(--promo);border:1px solid var(--border);border-radius:12px;padding:14px}
+footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);margin-top:50px;color:var(--muted);text-align:center}
+</style>
 </head>
 <body>
-<header>
-  <div class="wrap bar">
-    <a href="/" class="brand">
-      <img src="/logo.png" alt="Renew emblem">
-      <span><span class="t1">Renew</span><span class="t2">Aesthetics & Wellbeing</span></span>
-    </a>
-<nav>
-  <a href="/">Home</a>
-  <a href="/treatments.html">Treatments</a>
-  <a href="/pre-appointment.html">Pre-Appointment</a>
-  <a href="/pricing.html">Pricing</a>
-  <a href="/safety.html">Safety</a>
-  <a href="/myth-busters.html">Myth Busters</a>
-  <a href="/privacy.html">Privacy</a>
-</nav>
 
+<header class="site-header">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0">
+    <a href="/" class="brand"><img src="/logo.png" alt="Renew logo"><span><span class="t1">Renew</span><span class="t2">Aesthetics &amp; Wellbeing</span></span></a>
+    <button id="navToggle" aria-expanded="false" aria-controls="siteNav"><span class="bar"></span></button>
   </div>
+  <nav id="siteNav" class="site-nav">
+    <div class="container">
+      <a href="/">Home</a><a href="/treatments.html">Treatments</a><a href="/pre-appointment.html">Pre-Appointment</a>
+      <a href="/pricing.html">Pricing</a><a href="/safety.html">Safety</a><a href="/myth-busters.html">Myth Busters</a><a href="/privacy.html">Privacy</a>
+    </div>
+  </nav>
 </header>
 
 <main>
-  <div class="wrap">
+  <div class="container">
     <h1>Pricing</h1>
-    <p class="lead">Launching with a safe, focused treatment list. Prices include a medical assessment and a follow-up review at 2–3 weeks. Treatments are provided by an HCPC-registered Independent Prescriber.</p>
+    <p class="lead">Transparent, fair pricing with a clinical review included. If treatment isn’t appropriate on the day, there’s no obligation to proceed.</p>
+
+    <!-- Introductory offer -->
+    <section class="promo" style="margin-bottom:18px">
+      <strong>Introductory offer:</strong> Three areas anti-wrinkle treatment for <strong>£180</strong> (limited time). Standard price £240.
+    </section>
 
     <div class="grid">
+      <!-- Anti-wrinkle -->
       <section class="card">
-        <h2>Anti-wrinkle (Botulinum Toxin)</h2>
-        <p class="hint">Subtle, natural softening of movement in the upper face.</p>
-        <table>
-          <thead><tr><th>Treatment</th><th>Price (from)</th></tr></thead>
-          <tbody>
-            <tr><td>1 area (frown OR forehead OR crow’s feet)</td><td>£160</td></tr>
-            <tr><td>2 areas</td><td>£220</td></tr>
-            <tr><td>3 areas (full upper face)</td><td>£250</td></tr>
-            <tr><td>Add-on: bunny lines / lip flip / chin dimpling</td><td>£60</td></tr>
-          </tbody>
-        </table>
-        <p class="hint">Results last 3–4 months. Medical-grade toxin brands (Azzalure® / Bocouture®).</p>
+        <h2 style="color:var(--accent-2)">Anti-wrinkle (Botulinum Toxin)</h2>
+        <p class="small">Azzalure® / Bocouture® • Full effect 10–14 days • Typical longevity 3–4 months</p>
+        <hr>
+        <p><strong>1 area</strong> (e.g., frown) — <span class="price">£140</span></p>
+        <p><strong>2 areas</strong> (e.g., frown + forehead) — <span class="price">£190</span></p>
+        <p><strong>3 areas</strong> (frown + forehead + crow’s feet)</strong> — <span class="price">£240</span> <span class="badge">Standard</span></p>
+        <p class="small"><em>Introductory offer:</em> three areas for <strong>£180</strong> — limited time.</p>
+        <p class="small">Small add-on areas (e.g., bunny lines / lip flip / DAO) from £40 (case-by-case).</p>
+        <hr>
+        <p><strong>Teeth grinding / jawline (masseter)</strong> — <span class="price">£295</span></p>
+        <p class="small">Review at 4–6 weeks for function/comfort. Aesthetic slimming varies person-to-person.</p>
+        <hr>
+        <p><strong>Underarm sweating (hyperhidrosis)</strong> — <span class="price">£395</span> (both underarms)</p>
+        <p class="small">Typical longevity 4–6+ months. Includes full consultation and aftercare.</p>
+        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn" href="/pre-appointment.html">Pre-Appointment Form</a>
+          <a class="btn outline" href="/treatments.html">Treatment Info</a>
+        </div>
       </section>
 
+      <!-- Fillers -->
       <section class="card">
-        <h2>Dermal Filler (Hyaluronic Acid)</h2>
-        <p class="hint">Early practice focus: lips and smile-line softening only.</p>
-        <table>
-          <thead><tr><th>Area</th><th>Price (from)</th></tr></thead>
-          <tbody>
-            <tr><td>Lips (shape or volume, up to 1 mL)</td><td>£275</td></tr>
-            <tr><td>Nasolabial or marionette lines (1 mL)</td><td>£295</td></tr>
-            <tr><td>Dissolving / corrective treatment (hyaluronidase)</td><td>£250</td></tr>
-          </tbody>
-        </table>
-        <p class="hint">CE-marked fillers only (Revolax®, Teosyal®). Higher-risk areas added after advanced training.</p>
+        <h2 style="color:var(--accent-2)">Dermal Fillers (Hyaluronic Acid)</h2>
+        <p class="small">CE-marked HA fillers • Natural shaping and support • Reversible if clinically indicated</p>
+        <hr>
+        <p><strong>Lips</strong> — <span class="price">£230</span> (1.0 ml)</p>
+        <p><strong>Nasolabial folds</strong> — <span class="price">£240</span> (1.0 ml)</p>
+        <p><strong>Marionette lines</strong> — <span class="price">£240</span> (1.0 ml)</p>
+        <p class="small">Add-on within 4 weeks (0.5 ml) — £120</p>
+        <hr>
+        <p class="small"><em>Dissolving (hyaluronidase):</em> from £180 (includes consultation & prescription; emergency use if clinically required).</p>
+        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn" href="/pre-appointment.html">Pre-Appointment Form</a>
+          <a class="btn outline" href="/safety.html">Safety & Aftercare</a>
+        </div>
       </section>
     </div>
 
-    <div class="promise">
-      <strong>Price Promise:</strong> All fees include consultation, treatment, and follow-up care — no hidden extras. You’ll only ever be charged for treatments that are medically suitable and agreed in advance.
-    </div>
+    <!-- What’s included -->
+    <section class="card" style="margin-top:24px">
+      <h2 style="color:var(--accent-2)">What’s Included</h2>
+      <ul style="margin:0;padding-left:18px;color:var(--muted)">
+        <li>Medical consultation and facial assessment by HCPC Independent Prescriber</li>
+        <li>Named-patient prescription (where appropriate)</li>
+        <li>Treatment and sterile consumables</li>
+        <li>Clinical photography for records</li>
+        <li><strong>2–3 week review</strong> and adjustment if clinically indicated (anti-wrinkle)</li>
+        <li>Written aftercare and safety contact details</li>
+      </ul>
+    </section>
 
-    <details>
-      <summary>How many units do I need for Botox?</summary>
-      <p>Each area typically requires 10–25 units depending on strength of muscle activity and gender. This is assessed individually at consultation — we focus on natural, balanced results rather than fixed “packages.”</p>
-    </details>
+    <!-- Booking & policies -->
+    <section class="card" style="margin-top:18px">
+      <h2 style="color:var(--accent-2)">Booking & Policies</h2>
+      <p class="notice"><strong>Consultation fee:</strong> £30 to secure appointments — fully redeemable against treatment on the day. If treatment isn’t appropriate following assessment, there’s no obligation to proceed and the consultation stands alone.</p>
+      <p class="small">Mobile service within Bath included. Nearby areas by arrangement (small travel fee may apply).</p>
+      <p class="small">Payment: card or bank transfer on the day. Receipts provided.</p>
+    </section>
 
-    <details>
-      <summary>When will I see results?</summary>
-      <p>Botulinum toxin results begin around day 3–5 and reach full effect by 14 days. Dermal filler results are immediate but settle further over 2–3 weeks as swelling reduces.</p>
-    </details>
+    <!-- FAQs -->
+    <section class="card" style="margin-top:18px">
+      <h2 style="color:var(--accent-2)">FAQs</h2>
+      <p><strong>Do you do top-ups?</strong><br><span class="small">Yes — anti-wrinkle review at 2–3 weeks. If further dosing is clinically indicated to achieve the planned outcome, it’s included.</span></p>
+      <p><strong>Will I definitely be treated?</strong><br><span class="small">Only if safe and appropriate after medical assessment. Your wellbeing comes first.</span></p>
+      <p><strong>Where do you source products?</strong><br><span class="small">UK-regulated medical pharmacies. Cold-chain maintained.</span></p>
+      <p><strong>Is dissolving available?</strong><br><span class="small">Yes, where clinically indicated. Elective dissolving from £180 (includes consultation & prescription).</span></p>
+    </section>
 
-    <details>
-      <summary>Do I need to come back for review?</summary>
-      <p>Yes — follow-up at 2–3 weeks ensures safety and satisfaction. Adjustments are made only if clinically appropriate, and are included in your treatment cost.</p>
-    </details>
-
-    <div class="btnbar">
-      <a class="btn" href="/pre-appointment.html">📋 Complete Pre-Appointment Form</a>
-      <a class="btn outline" href="mailto:info@renewclinic.uk">✉️ Email to Book a Consultation</a>
+    <div style="text-align:center;margin-top:24px">
+      <a class="btn" href="/pre-appointment.html">Complete Pre-Appointment Form</a>
+      <a class="btn outline" style="margin-left:10px" href="mailto:info@renewclinic.uk">Ask a Question</a>
     </div>
   </div>
 </main>
 
-<footer>
-  <div class="wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
-    <span>© <span id="y"></span> Renew Clinic</span>
-    <span><a href="/privacy.html" style="color:#9ecbff">Privacy</a> • <a href="/safety.html" style="color:#9ecbff">Safety</a></span>
-  </div>
-</footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+<footer>© <span id="y"></span> Renew Clinic • <a href="/privacy.html">Privacy</a> • <a href="/safety.html">Safety</a></footer>
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+const btn=document.getElementById('navToggle'),nav=document.getElementById('siteNav');
+function toggleNav(){const o=nav.style.display==='block';nav.style.display=o?'none':'block';btn.setAttribute('aria-expanded',String(!o))}
+btn.addEventListener('click',toggleNav);
+function syncNav(){if(window.matchMedia('(min-width: 900px)').matches){nav.style.display='block';btn.style.display='none'}else{nav.style.display='none';btn.style.display='inline-flex';btn.setAttribute('aria-expanded','false')}}window.addEventListener('resize',syncNav);window.addEventListener('DOMContentLoaded',syncNav);
+</script>
 </body>
 </html>
