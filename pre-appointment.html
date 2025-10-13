@@ -1,78 +1,41 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Language" content="en-GB">
 <title>Pre-Appointment | Renew Aesthetics & Wellbeing</title>
 <link rel="icon" type="image/png" href="/logo.png">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- your existing fonts + styles here -->
 <style>
-:root{--bg:#F2F6F3;--surface:#FFFFFF;--ink:#1F2937;--muted:#4B5563;--accent:#8DAA93;--accent-2:#6D8A6E;--border:#D1D8D3;--ink-on-accent:#FFF}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{margin:0;font:17px/1.65 system-ui,-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
-.container{max-width:1100px;margin:0 auto;padding:0 16px}
-a{color:var(--accent-2);text-decoration:none} a:hover{text-decoration:underline}
-
-/* Header */
-.site-header{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50}
-.site-header .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
-.site-header .brand img{height:44px;width:44px;border-radius:8px;object-fit:cover;border:1px solid var(--border);background:#fff}
-.site-header .brand .t1{display:block;font-weight:700;font-size:18px;letter-spacing:.2px;color:var(--ink)}
-.site-header .brand .t2{display:block;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;font-size:12px}
-.site-nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:13px;letter-spacing:.04em;text-transform:uppercase}
-.site-nav a:hover{color:var(--accent-2);text-decoration:none}
-#navToggle{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid var(--border);border-radius:9px;background:var(--surface)}
-#navToggle .bar{width:20px;height:2px;background:var(--ink);position:relative;display:block}
-#navToggle .bar:before,#navToggle .bar:after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--ink)}
-#navToggle .bar:before{top:-6px} #navToggle .bar:after{top:6px}
-#siteNav{display:none;border-top:1px solid var(--border);background:var(--surface)}
-#siteNav .container{display:grid;grid-template-columns:1fr;gap:10px;padding:12px 0}
-@media(min-width:900px){#navToggle{display:none} #siteNav{display:block;border-top:0} #siteNav .container{display:flex;gap:18px;padding:0}}
-
-main{padding:56px 0}
-h1{font-weight:700;color:var(--ink);letter-spacing:.2px;line-height:1.25;margin:0 0 .6em;font-size:clamp(28px,4.5vw,38px);text-align:center}
-.lead{text-align:center;color:var(--muted);font-size:18px;margin:0 auto 24px;max-width:760px}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:0 8px 24px rgba(0,0,0,.06);padding:12px}
-footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);margin-top:40px;color:var(--muted);text-align:center}
+  /* make the form responsive */
+  .form-wrap { position: relative; padding-top: 0; }
+  .form-wrap iframe { width: 100%; height: 2100px; border: 0; }
+  @media (min-width: 900px) { .form-wrap iframe { height: 2000px; } }
 </style>
 </head>
 <body>
+  <!-- …header… -->
 
-<header class="site-header">
-  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0">
-    <a href="/" class="brand"><img src="/logo.png" alt="Renew logo"><span><span class="t1">Renew</span><span class="t2">Aesthetics &amp; Wellbeing</span></span></a>
-    <button id="navToggle" aria-expanded="false" aria-controls="siteNav"><span class="bar"></span></button>
-  </div>
-  <nav id="siteNav" class="site-nav">
+  <main>
     <div class="container">
-      <a href="/">Home</a><a href="/treatments.html">Treatments</a><a href="/pre-appointment.html">Pre-Appointment</a>
-      <a href="/pricing.html">Pricing</a><a href="/safety.html">Safety</a><a href="/myth-busters.html">Myth Busters</a><a href="/privacy.html">Privacy</a>
+      <h1>Pre-Appointment Medical & Consent Form</h1>
+      <p class="lead">Please complete this secure form before your appointment…</p>
+
+      <div class="card form-wrap">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdWGjdD5I94-p1RvoGlR6QmGeUYqjcl3-G5tPwvF5LY5b7mAg/viewform?embedded=true&hl=en-GB"
+          allow="clipboard-write; fullscreen">
+        </iframe>
+      </div>
+
+      <p class="lead" style="font-size:14px;margin-top:14px">
+        If the form doesn’t load, 
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdWGjdD5I94-p1RvoGlR6QmGeUYqjcl3-G5tPwvF5LY5b7mAg/viewform?hl=en-GB" target="_blank" rel="noopener">open it in a new tab</a>.
+      </p>
     </div>
-  </nav>
-</header>
+  </main>
 
-<main>
-  <div class="container">
-    <h1>Pre-Appointment Medical & Consent Form</h1>
-    <p class="lead">Please complete this secure form before your appointment. It helps us prepare your prescription and ensure safe, personalised care. Your information is stored securely and never shared without consent.</p>
-
-    <div class="card">
-<iframe src="https://docs.google.com/forms/d/e/FORM_ID/viewform?embedded=true&hl=en-GB"
- width="640" height="2086" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </div>
-
-    <p class="lead" style="font-size:14px;margin-top:14px">If the form doesn’t load, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdWGjdD5I94-p1RvoGlR6QmGeUYqjcl3-G5tPwvF5LY5b7mAg/viewform" target="_blank">open it in a new tab</a>.</p>
-  </div>
-</main>
-
-<footer>© <span id="y"></span> Renew Clinic • <a href="/privacy.html">Privacy</a></footer>
-
-<script>
-document.getElementById('y').textContent = new Date().getFullYear();
-const btn=document.getElementById('navToggle'),nav=document.getElementById('siteNav');
-function toggleNav(){const o=nav.style.display==='block';nav.style.display=o?'none':'block';btn.setAttribute('aria-expanded',String(!o))}
-btn.addEventListener('click',toggleNav);
-function syncNav(){if(window.matchMedia('(min-width: 900px)').matches){nav.style.display='block';btn.style.display='none'}else{nav.style.display='none';btn.style.display='inline-flex';btn.setAttribute('aria-expanded','false')}}window.addEventListener('resize',syncNav);window.addEventListener('DOMContentLoaded',syncNav);
-</script>
+  <!-- …footer + scripts… -->
 </body>
 </html>
