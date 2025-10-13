@@ -6,70 +6,32 @@
   <title>Renew Aesthetics & Wellbeing | Natural Results, Professional Care</title>
   <link rel="icon" type="image/png" href="/logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-
   <style>
   :root{
-    --bg:#F2F6F3;
-    --surface:#FFFFFF;
-    --ink:#1F2937;
-    --muted:#4B5563;
-    --accent:#8DAA93;
-    --accent-2:#6D8A6E;
-    --border:#D1D8D3;
-    --ink-on-accent:#FFFFFF;
+    --bg:#F2F6F3; --surface:#FFFFFF; --ink:#1F2937; --muted:#4B5563;
+    --accent:#8DAA93; --accent-2:#6D8A6E; --border:#D1D8D3; --ink-on-accent:#FFFFFF;
   }
-
   *{box-sizing:border-box}
   html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-  body{
-    margin:0;
-    font:17px/1.65 system-ui,-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif;
-    color:var(--ink);
-    background:var(--bg);
-  }
+  body{margin:0;font:17px/1.65 system-ui,-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
   .container{max-width:1100px;margin:0 auto;padding:0 16px}
-  a{color:var(--accent-2);text-decoration:none}
-  a:hover{text-decoration:underline}
+  a{color:var(--accent-2);text-decoration:none} a:hover{text-decoration:underline}
 
   /* HEADER */
-  .site-header{
-    background:var(--surface);
-    border-bottom:1px solid var(--border);
-    position:sticky;top:0;z-index:50;
-  }
-  .site-header .brand{
-    display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)
-  }
-  .site-header .brand img{
-    height:44px;width:44px;border-radius:8px;object-fit:cover;
-    border:1px solid var(--border);background:#fff
-  }
-  .site-header .brand .t1{
-    display:block;font-weight:700;font-size:18px;letter-spacing:.2px;color:var(--ink)
-  }
-  .site-header .brand .t2{
-    display:block;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;font-size:12px
-  }
-  .site-nav a{
-    color:var(--ink);text-decoration:none;font-weight:600;font-size:13px;letter-spacing:.04em;text-transform:uppercase;
-  }
+  .site-header{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50}
+  .site-header .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+  .site-header .brand img{height:44px;width:44px;border-radius:8px;object-fit:cover;border:1px solid var(--border);background:#fff}
+  .site-header .brand .t1{display:block;font-weight:700;font-size:18px;letter-spacing:.2px;color:var(--ink)}
+  .site-header .brand .t2{display:block;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;font-size:12px}
+  .site-nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:13px;letter-spacing:.04em;text-transform:uppercase}
   .site-nav a:hover{color:var(--accent-2);text-decoration:none}
-  #navToggle{
-    display:inline-flex;align-items:center;justify-content:center;
-    width:42px;height:42px;border:1px solid var(--border);border-radius:9px;background:var(--surface)
-  }
+  #navToggle{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid var(--border);border-radius:9px;background:var(--surface)}
   #navToggle .bar{width:20px;height:2px;background:var(--ink);position:relative;display:block}
-  #navToggle .bar:before,#navToggle .bar:after{
-    content:"";position:absolute;left:0;width:20px;height:2px;background:var(--ink)
-  }
+  #navToggle .bar:before,#navToggle .bar:after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--ink)}
   #navToggle .bar:before{top:-6px} #navToggle .bar:after{top:6px}
   #siteNav{display:none;border-top:1px solid var(--border);background:var(--surface)}
   #siteNav .container{display:grid;grid-template-columns:1fr;gap:10px;padding:12px 0}
-  @media (min-width:900px){
-    #navToggle{display:none}
-    #siteNav{display:block;border-top:0}
-    #siteNav .container{display:flex;gap:18px;padding:0}
-  }
+  @media (min-width:900px){#navToggle{display:none} #siteNav{display:block;border-top:0} #siteNav .container{display:flex;gap:18px;padding:0}}
 
   /* SECTIONS */
   main{padding:56px 0}
@@ -78,32 +40,12 @@
   h2{font-size:clamp(22px,3.5vw,28px)}
   h3{font-size:clamp(18px,3vw,22px)}
   .lead{text-align:center;color:var(--muted);font-size:18px;margin-bottom:36px}
-  .card{
-    background:var(--surface);
-    border:1px solid var(--border);
-    border-radius:18px;
-    box-shadow:0 8px 24px rgba(0,0,0,.06);
-    padding:20px;
-  }
-  .grid{display:grid;gap:24px;margin-top:40px}
-  @media(min-width:900px){.grid{grid-template-columns:1fr 1fr 1fr}}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:0 8px 24px rgba(0,0,0,.06);padding:20px}
+  .grid{display:grid;gap:24px;margin-top:40px} @media(min-width:900px){.grid{grid-template-columns:1fr 1fr 1fr}}
 
-  .btn{
-    display:inline-block;
-    background:var(--accent-2);
-    color:var(--ink-on-accent);
-    padding:12px 18px;
-    border-radius:10px;
-    font-weight:700;
-    text-decoration:none;
-    border:1px solid transparent;
-  }
+  .btn{display:inline-block;background:var(--accent-2);color:var(--ink-on-accent);padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none;border:1px solid transparent}
   .btn:hover{background:#61826A}
-  .btn.outline{
-    background:transparent;
-    color:var(--accent-2);
-    border:1px solid var(--accent-2);
-  }
+  .btn.outline{background:transparent;color:var(--accent-2);border:1px solid var(--accent-2)}
   .btn.outline:hover{background:rgba(109,138,110,.08)}
 
   .meet{margin-top:60px;padding:40px 20px;background:var(--surface);border-radius:18px;border:1px solid var(--border);text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.06)}
@@ -113,33 +55,20 @@
   footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);margin-top:50px;color:var(--muted);text-align:center}
   </style>
 </head>
-
 <body>
 
 <header class="site-header">
   <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0">
     <a href="/" class="brand">
       <img src="/logo.png" alt="Renew logo">
-      <span>
-        <span class="t1">Renew</span>
-        <span class="t2">Aesthetics &amp; Wellbeing</span>
-      </span>
+      <span><span class="t1">Renew</span><span class="t2">Aesthetics &amp; Wellbeing</span></span>
     </a>
-
-    <button id="navToggle" aria-expanded="false" aria-controls="siteNav">
-      <span class="bar"></span>
-    </button>
+    <button id="navToggle" aria-expanded="false" aria-controls="siteNav"><span class="bar"></span></button>
   </div>
-
   <nav id="siteNav" class="site-nav">
     <div class="container">
-      <a href="/">Home</a>
-      <a href="/treatments.html">Treatments</a>
-      <a href="/pre-appointment.html">Pre-Appointment</a>
-      <a href="/pricing.html">Pricing</a>
-      <a href="/safety.html">Safety</a>
-      <a href="/myth-busters.html">Myth Busters</a>
-      <a href="/privacy.html">Privacy</a>
+      <a href="/">Home</a><a href="/treatments.html">Treatments</a><a href="/pre-appointment.html">Pre-Appointment</a>
+      <a href="/pricing.html">Pricing</a><a href="/safety.html">Safety</a><a href="/myth-busters.html">Myth Busters</a><a href="/privacy.html">Privacy</a>
     </div>
   </nav>
 </header>
@@ -175,10 +104,8 @@
     </div>
 
     <div style="text-align:center;margin-top:40px;">
-      <a href="/pricing.html"
-         class="btn"
-         style="padding:16px 26px;box-shadow:0 3px 10px rgba(109,138,110,.30);">
-        💰 View Full Pricing
+      <a href="/pricing.html" class="btn" style="padding:16px 26px;box-shadow:0 3px 10px rgba(109,138,110,.30);">
+        View Full Pricing
       </a>
     </div>
 
@@ -199,28 +126,12 @@
 
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
-
   const btn = document.getElementById('navToggle');
   const nav = document.getElementById('siteNav');
-  function toggleNav(){
-    const open = nav.style.display === 'block';
-    nav.style.display = open ? 'none' : 'block';
-    btn.setAttribute('aria-expanded', String(!open));
-  }
+  function toggleNav(){ const open = nav.style.display==='block'; nav.style.display=open?'none':'block'; btn.setAttribute('aria-expanded', String(!open)); }
   btn.addEventListener('click', toggleNav);
-
-  function syncNav(){
-    if (window.matchMedia('(min-width: 900px)').matches){
-      nav.style.display = 'block';
-      btn.style.display = 'none';
-    } else {
-      nav.style.display = 'none';
-      btn.style.display = 'inline-flex';
-      btn.setAttribute('aria-expanded','false');
-    }
-  }
-  window.addEventListener('resize', syncNav);
-  window.addEventListener('DOMContentLoaded', syncNav);
+  function syncNav(){ if (window.matchMedia('(min-width: 900px)').matches){ nav.style.display='block'; btn.style.display='none'; } else { nav.style.display='none'; btn.style.display='inline-flex'; btn.setAttribute('aria-expanded','false'); } }
+  window.addEventListener('resize', syncNav); window.addEventListener('DOMContentLoaded', syncNav);
 </script>
 
 </body>
