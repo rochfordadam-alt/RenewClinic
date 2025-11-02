@@ -6,43 +6,6 @@
 <link rel="icon" type="image/png" href="logo.png"/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
-  ... existing css ...
-
-  /* Compact photo header used on all subpages */
-  .subhero{
-    position:relative;
-    background: center/cover no-repeat url("/clinic-bed.jpg");
-    min-height: 28vh;
-    display:flex; align-items:flex-end;
-    color:#fff;
-    border-bottom:1px solid #E8DCD4;
-  }
-  .subhero::before{
-    content:"";
-    position:absolute; inset:0;
-    background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.15));
-  }
-  .subhero .inner{
-    position:relative; z-index:1;
-    max-width:1100px; margin:0 auto; padding:28px 16px;
-    width:100%;
-  }
-  .subhero h1{
-    margin:0;
-    font-size:clamp(24px,3.8vw,34px);
-    font-weight:700;
-    text-shadow:0 2px 12px rgba(0,0,0,.35);
-  }
-  .subhero p.lead{
-    margin:.4rem 0 0;
-    color:#F1F4F3;
-    max-width:780px;
-  }
-  @media (max-width: 899px){
-    .subhero{ min-height: 24vh; }
-  }
-</style>
-
 :root{--bg:#F8F3EF;--surface:#FFFFFF;--ink:#232323;--muted:#5F5F5F;--border:#E8DCD4;--accent:#C6A48A;--accent-2:#B18F78;--ink-on-accent:#fff}
 *{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{margin:0;font:17px/1.65 Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
@@ -62,15 +25,20 @@ nav.site-nav .container{display:grid;grid-template-columns:1fr;gap:10px;padding:
 nav.site-nav a{font-weight:600;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink)}
 nav.site-nav a:hover{color:var(--accent-2);text-decoration:none}
 @media(min-width:900px){#navToggle{display:none}nav.site-nav{display:block;border-top:0}nav.site-nav .container{display:flex;gap:18px;padding:0}}
-.pagehead{background:var(--surface);border-bottom:1px solid var(--border)}
-.pagehead .inner{max-width:1100px;margin:0 auto;padding:22px 16px}
+/* Subpage photo header */
+.subhero{position:relative;background:center/cover no-repeat url("clinic-bed.jpg");min-height:28vh;display:flex;align-items:flex-end;color:#fff;border-bottom:1px solid var(--border)}
+.subhero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.15))}
+.subhero .inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:28px 16px;width:100%}
+.subhero h1{margin:0;font-size:clamp(24px,3.8vw,34px);font-weight:700;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+.subhero p.lead{margin:.4rem 0 0;color:#F1F4F3;max-width:780px}
+@media(max-width:899px){.subhero{min-height:24vh}}
 main{padding:48px 0}
 h1,h2,h3{margin:0 0 .6em}
-h1{font-size:clamp(26px,4vw,36px)}h2{font-size:clamp(20px,3vw,26px)}h3{font-size:clamp(18px,2.6vw,22px)}
-.grid{display:grid;gap:22px;margin-top:26px}@media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+h2{font-size:clamp(20px,3vw,26px)}
+.grid{display:grid;gap:22px;margin-top:26px}
+@media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
 .card{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,0.9) inset;padding:22px}
-.small{color:var(--muted);font-size:14px}
-ul{margin:0;padding-left:18px}
+ul{margin:0;padding-left:18px}.small{color:var(--muted);font-size:14px}
 footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);color:var(--muted);text-align:center}
 </style>
 </head>
@@ -89,62 +57,41 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surfac
 
 <section class="subhero" role="img" aria-label="Calm clinic space">
   <div class="inner">
-    <h1>Pricing</h1>
-    <p class="lead">Transparent, fair pricing. Consultation and review included.</p>
+    <h1>Treatments</h1>
+    <p class="lead">Clinician-led plans tailored to your goals and medical history.</p>
   </div>
 </section>
-
 
 <main><div class="container">
   <div class="grid">
     <section class="card">
       <h2>Anti-wrinkle (upper face)</h2>
       <p>Targets dynamic lines such as frown, forehead and crow’s feet with precise, individualised dosing.</p>
-      <ul>
-        <li>Assessment of muscle activity and skin quality</li>
-        <li>Treatment plan tailored to your goals</li>
-        <li>Review appointment included</li>
-      </ul>
+      <ul><li>Assessment of muscle activity and skin quality</li><li>Treatment plan tailored to your goals</li><li>Review appointment included</li></ul>
     </section>
-
     <section class="card">
       <h2>Teeth grinding (masseter)</h2>
       <p>Helps reduce jaw clenching and grinding, easing tension and softening the masseter bulk gradually.</p>
-      <ul>
-        <li>Outcomes build over weeks; review included</li>
-        <li>May improve jaw comfort and reduce wear</li>
-      </ul>
+      <ul><li>Outcomes build over weeks; review included</li><li>May improve jaw comfort and reduce wear</li></ul>
     </section>
-
     <section class="card">
       <h2>Underarm sweating</h2>
-      <p>Injections reduce sweat activity in the underarm area. Typical results last several months.</p>
-      <ul>
-        <li>Assessment and mapping included</li>
-        <li>Personalised aftercare guidance</li>
-      </ul>
+      <p>Injections to reduce sweat activity in the underarm area. Typical results last several months.</p>
+      <ul><li>Assessment and mapping included</li><li>Personalised aftercare guidance</li></ul>
     </section>
-
     <section class="card">
       <h2>Dermal fillers</h2>
       <p>Subtle volume and refinement for lips and smile lines using CE-marked hyaluronic acid fillers.</p>
-      <ul>
-        <li>Medical consultation & photography</li>
-        <li>Gradual, natural-looking results</li>
-      </ul>
+      <ul><li>Medical consultation & photography</li><li>Gradual, natural-looking results</li></ul>
     </section>
   </div>
 </div></main>
 
-<footer>
-  <div class="container">© <span id="y"></span> Renew Clinic • <a href="privacy.html">Privacy</a> • <a href="safety.html">Safety</a></div>
-</footer>
+<footer><div class="container">© <span id="y"></span> Renew Clinic • <a href="privacy.html">Privacy</a> • <a href="safety.html">Safety</a></div></footer>
 <script>
 document.getElementById('y').textContent=new Date().getFullYear();
 const btn=document.getElementById('navToggle'),nav=document.getElementById('siteNav');
-function t(){const o=nav.style.display==='block';nav.style.display=o?'none':'block';btn.setAttribute('aria-expanded',String(!o))}
-btn.addEventListener('click',t);
+function t(){const o=nav.style.display==='block';nav.style.display=o?'none':'block';btn.setAttribute('aria-expanded',String(!o))}btn.addEventListener('click',t);
 function s(){if(window.matchMedia('(min-width: 900px)').matches){nav.style.display='block';btn.style.display='none'}else{nav.style.display='none';btn.style.display='inline-flex';btn.setAttribute('aria-expanded','false')}}window.addEventListener('resize',s);window.addEventListener('DOMContentLoaded',s);
 </script>
-</body>
-</html>
+</body></html>
