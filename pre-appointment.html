@@ -1,51 +1,75 @@
-<!doctype html>
-<html lang="en-GB">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Language" content="en-GB">
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Pre-Appointment | Renew Aesthetics & Wellbeing</title>
-<link rel="icon" type="image/png" href="/logo.png">
-<!-- your existing fonts + styles here -->
+<link rel="icon" type="image/png" href="logo.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
-  /* make the form responsive */
-  .form-wrap { position: relative; padding-top: 0; }
-  .form-wrap iframe { width: 100%; height: 2100px; border: 0; }
-  @media (min-width: 900px) { .form-wrap iframe { height: 2000px; } }
+:root{--bg:#F8F3EF;--surface:#FFFFFF;--ink:#232323;--muted:#5F5F5F;--border:#E8DCD4;--accent:#C6A48A;--accent-2:#B18F78;--ink-on-accent:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{margin:0;font:17px/1.65 Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:var(--accent-2)}a:hover{text-decoration:underline}
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+.site-header{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--border)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+.brand{display:flex;gap:10px;align-items:center;color:var(--ink);text-decoration:none}
+.brand img{width:44px;height:44px;border-radius:8px;object-fit:cover;border:1px solid var(--border);background:#fff}
+.brand .t1{display:block;font-weight:700}.brand .t2{display:block;font-size:12px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+#navToggle{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid var(--border);border-radius:9px;background:var(--surface)}
+#navToggle .burger{width:20px;height:2px;background:#1f2937;position:relative;display:block}
+#navToggle .burger:before,#navToggle .burger:after{content:"";position:absolute;left:0;width:20px;height:2px;background:#1f2937}
+#navToggle .burger:before{top:-6px}#navToggle .burger:after{top:6px}
+nav.site-nav{display:none;border-top:1px solid var(--border);background:var(--surface)}
+nav.site-nav .container{display:grid;grid-template-columns:1fr;gap:10px;padding:12px 0}
+nav.site-nav a{font-weight:600;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink)}
+nav.site-nav a:hover{color:var(--accent-2);text-decoration:none}
+@media(min-width:900px){#navToggle{display:none}nav.site-nav{display:block;border-top:0}nav.site-nav .container{display:flex;gap:18px;padding:0}}
+.pagehead{background:var(--surface);border-bottom:1px solid var(--border)}
+.pagehead .inner{max-width:1100px;margin:0 auto;padding:22px 16px}
+main{padding:40px 0}
+.card{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,0.9) inset;padding:0;overflow:hidden}
+.card .hd{padding:16px 18px;border-bottom:1px solid var(--border);font-weight:700}
+.frame{width:100%;height:2087px;border:0}
+.tip{color:var(--muted);font-size:14px;padding:12px 18px;border-top:1px solid var(--border)}
+footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);color:var(--muted);text-align:center}
 </style>
 </head>
 <body>
-  <!-- …header… -->
-
-  <main>
+<header class="site-header">
+  <div class="container bar">
+    <a href="/" class="brand"><img src="logo.png" alt="Renew logo"/><span><span class="t1">Renew</span><span class="t2">Aesthetics & Wellbeing</span></span></a>
+    <button id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Menu"><span class="burger"></span></button>
+  </div>
+  <nav id="siteNav" class="site-nav">
     <div class="container">
-      <h1>Pre-Appointment Medical & Consent Form</h1>
-      <p class="lead">Please complete this secure form before your appointment…</p>
-
-    <div class="card" style="text-align:center;padding:28px">
-  <p style="margin:0 0 14px;color:#4B5563">
-    The form opens in a secure Google page with UK date format.
-  </p>
-  <a
-    href="https://docs.google.com/forms/d/e/1FAIpQLSdWGjdD5I94-p1RvoGlR6QmGeUYqjcl3-G5tPwvF5LY5b7mAg/viewform?hl=en-GB"
-    target="_blank" rel="noopener"
-    style="display:inline-block;padding:12px 18px;border-radius:10px;background:#6D8A6E;color:#fff;
-           font-weight:600;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.08)">
-    Open Pre-Appointment Form
-  </a>
-  <p class="lead" style="font-size:14px;margin-top:12px">
-    Having trouble? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdWGjdD5I94-p1RvoGlR6QmGeUYqjcl3-G5tPwvF5LY5b7mAg/viewform?hl=en-GB" target="_blank" rel="noopener">Open in a new tab</a>.
-  </p>
-</div>
-
-
-      <p class="lead" style="font-size:14px;margin-top:14px">
-        If the form doesn’t load, 
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdWGjdD5I94-p1RvoGlR6QmGeUYqjcl3-G5tPwvF5LY5b7mAg/viewform?hl=en-GB" target="_blank" rel="noopener">open it in a new tab</a>.
-      </p>
+      <a href="/">Home</a><a href="treatments.html">Treatments</a><a href="pre-appointment.html">Pre-Appointment</a><a href="pricing.html">Pricing</a><a href="safety.html">Safety</a><a href="myth-busters.html">Myth Busters</a><a href="privacy.html">Privacy</a>
     </div>
-  </main>
+  </nav>
+</header>
 
-  <!-- …footer + scripts… -->
+<div class="pagehead"><div class="inner">
+  <h1>Pre-Appointment</h1>
+  <p style="color:#5F5F5F">Please complete this confidential form before your appointment to help us prepare safely.</p>
+</div></div>
+
+<main><div class="container">
+  <section class="card">
+    <div class="hd">Medical History & Consent Form</div>
+    <iframe class="frame" src="https://docs.google.com/forms/d/e/1FAIpQLSdWGjdD5I94-p1RvoGlR6QmGeUYqjcl3-G5tPwvF5LY5b7mAg/viewform?embedded=true">Loading…</iframe>
+    <div class="tip">If the form doesn’t load, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdWGjdD5I94-p1RvoGlR6QmGeUYqjcl3-G5tPwvF5LY5b7mAg/viewform" target="_blank" rel="noopener">open it in a new tab</a>.</div>
+  </section>
+</div></main>
+
+<footer>
+  <div class="container">© <span id="y"></span> Renew Clinic • <a href="privacy.html">Privacy</a> • <a href="safety.html">Safety</a></div>
+</footer>
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+const btn=document.getElementById('navToggle'),nav=document.getElementById('siteNav');
+function t(){const o=nav.style.display==='block';nav.style.display=o?'none':'block';btn.setAttribute('aria-expanded',String(!o))}
+btn.addEventListener('click',t);
+function s(){if(window.matchMedia('(min-width: 900px)').matches){nav.style.display='block';btn.style.display='none'}else{nav.style.display='none';btn.style.display='inline-flex';btn.setAttribute('aria-expanded','false')}}window.addEventListener('resize',s);window.addEventListener('DOMContentLoaded',s);
+</script>
 </body>
 </html>
