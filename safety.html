@@ -1,119 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Safety & Aftercare | Renew Aesthetics & Wellbeing</title>
-<link rel="icon" type="image/png" href="/logo.png">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="logo.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
-:root{--bg:#F2F6F3;--surface:#FFFFFF;--ink:#1F2937;--muted:#4B5563;--accent:#8DAA93;--accent-2:#6D8A6E;--border:#D1D8D3;--ink-on-accent:#FFF}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{margin:0;font:17px/1.65 system-ui,-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+:root{--bg:#F8F3EF;--surface:#FFFFFF;--ink:#232323;--muted:#5F5F5F;--border:#E8DCD4;--accent:#C6A48A;--accent-2:#B18F78;--ink-on-accent:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{margin:0;font:17px/1.65 Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:var(--accent-2)}a:hover{text-decoration:underline}
 .container{max-width:1100px;margin:0 auto;padding:0 16px}
-a{color:var(--accent-2);text-decoration:none} a:hover{text-decoration:underline}
-
-/* Header (same across site) */
-.site-header{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50}
-.site-header .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
-.site-header .brand img{height:44px;width:44px;border-radius:8px;object-fit:cover;border:1px solid var(--border);background:#fff}
-.site-header .brand .t1{display:block;font-weight:700;font-size:18px;letter-spacing:.2px;color:var(--ink)}
-.site-header .brand .t2{display:block;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;font-size:12px}
-.site-nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:13px;letter-spacing:.04em;text-transform:uppercase}
-.site-nav a:hover{color:var(--accent-2);text-decoration:none}
+.site-header{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--border)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+.brand{display:flex;gap:10px;align-items:center;color:var(--ink);text-decoration:none}
+.brand img{width:44px;height:44px;border-radius:8px;object-fit:cover;border:1px solid var(--border);background:#fff}
+.brand .t1{display:block;font-weight:700}.brand .t2{display:block;font-size:12px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
 #navToggle{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid var(--border);border-radius:9px;background:var(--surface)}
-#navToggle .bar{width:20px;height:2px;background:var(--ink);position:relative;display:block}
-#navToggle .bar:before,#navToggle .bar:after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--ink)}
-#navToggle .bar:before{top:-6px} #navToggle .bar:after{top:6px}
-#siteNav{display:none;border-top:1px solid var(--border);background:var(--surface)}
-#siteNav .container{display:grid;grid-template-columns:1fr;gap:10px;padding:12px 0}
-@media(min-width:900px){#navToggle{display:none} #siteNav{display:block;border-top:0} #siteNav .container{display:flex;gap:18px;padding:0}}
-
-main{padding:56px 0}
-h1,h2,h3{font-weight:700;color:var(--ink);letter-spacing:.2px;line-height:1.25;margin:0 0 .6em}
-h1{font-size:clamp(28px,4.5vw,38px);text-align:center}
-.lead{text-align:center;color:var(--muted);font-size:18px;margin:0 auto 36px;max-width:820px}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:0 8px 24px rgba(0,0,0,.06);padding:20px;margin-top:18px}
-ul{margin:0;padding-left:18px;color:var(--muted)}
-.badge{display:inline-block;background:rgba(109,138,110,.12);color:var(--accent-2);border:1px solid var(--accent-2);padding:3px 8px;border-radius:999px;font-size:12px;font-weight:700}
-footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);margin-top:50px;color:var(--muted);text-align:center}
+#navToggle .burger{width:20px;height:2px;background:#1f2937;position:relative;display:block}
+#navToggle .burger:before,#navToggle .burger:after{content:"";position:absolute;left:0;width:20px;height:2px;background:#1f2937}
+#navToggle .burger:before{top:-6px}#navToggle .burger:after{top:6px}
+nav.site-nav{display:none;border-top:1px solid var(--border);background:var(--surface)}
+nav.site-nav .container{display:grid;grid-template-columns:1fr;gap:10px;padding:12px 0}
+nav.site-nav a{font-weight:600;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink)}
+nav.site-nav a:hover{color:var(--accent-2);text-decoration:none}
+@media(min-width:900px){#navToggle{display:none}nav.site-nav{display:block;border-top:0}nav.site-nav .container{display:flex;gap:18px;padding:0}}
+.pagehead{background:var(--surface);border-bottom:1px solid var(--border)}
+.pagehead .inner{max-width:1100px;margin:0 auto;padding:22px 16px}
+main{padding:48px 0}
+h1,h2,h3{margin:0 0 .6em}
+h1{font-size:clamp(26px,4vw,36px)}h2{font-size:clamp(20px,3vw,26px)}.small{color:var(--muted);font-size:14px}
+.grid{display:grid;gap:22px;margin-top:26px}@media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,0.9) inset;padding:22px}
+ul{margin:0;padding-left:18px}
+footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);color:var(--muted);text-align:center}
 </style>
 </head>
 <body>
-
 <header class="site-header">
-  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0">
-    <a href="/" class="brand"><img src="/logo.png" alt="Renew logo"><span><span class="t1">Renew</span><span class="t2">Aesthetics &amp; Wellbeing</span></span></a>
-    <button id="navToggle" aria-expanded="false" aria-controls="siteNav"><span class="bar"></span></button>
+  <div class="container bar">
+    <a href="/" class="brand"><img src="logo.png" alt="Renew logo"/><span><span class="t1">Renew</span><span class="t2">Aesthetics & Wellbeing</span></span></a>
+    <button id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Menu"><span class="burger"></span></button>
   </div>
   <nav id="siteNav" class="site-nav">
     <div class="container">
-      <a href="/">Home</a><a href="/treatments.html">Treatments</a><a href="/pre-appointment.html">Pre-Appointment</a>
-      <a href="/pricing.html">Pricing</a><a href="/safety.html">Safety</a><a href="/myth-busters.html">Myth Busters</a><a href="/privacy.html">Privacy</a>
+      <a href="/">Home</a><a href="treatments.html">Treatments</a><a href="pre-appointment.html">Pre-Appointment</a><a href="pricing.html">Pricing</a><a href="safety.html">Safety</a><a href="myth-busters.html">Myth Busters</a><a href="privacy.html">Privacy</a>
     </div>
   </nav>
 </header>
 
-<main>
-  <div class="container">
-    <h1>Safety & Aftercare</h1>
-    <p class="lead">Clinical, patient-centred care with clear guidance and a built-in review. Please read the relevant aftercare below.</p>
+<div class="pagehead"><div class="inner">
+  <h1>Safety & Aftercare</h1>
+  <p class="small">Your safety is our priority. Please read the key risks and follow the aftercare guidance below.</p>
+</div></div>
 
+<main><div class="container">
+
+  <div class="grid">
     <section class="card">
-      <h2 style="color:var(--accent-2)">Anti-wrinkle Aftercare (Upper Face, Masseter, Underarms)</h2>
+      <h2>Anti-wrinkle injections — risks & side effects</h2>
       <ul>
-        <li>Make-up: avoid over treated areas for 4 hours. No rubbing/massage that time.</li>
-        <li>Exercise/sauna/alcohol: avoid for the rest of the day.</li>
-        <li>Sleep: try not to lie face-down the first night.</li>
-        <li>Onset &amp; duration: effect builds over 3–7 days (full by ~14 days). Typical duration 3–4 months.</li>
-        <li>Review: included at 2–3 weeks. Further dosing only if clinically indicated for the agreed plan.</li>
-        <li>Masseter: results for clenching build over 4–6 weeks.</li>
-        <li>Underarms: reduced sweating may last 4–6+ months.</li>
+        <li>Common: mild redness, small bumps, tenderness, transient headache (usually settle within 24–48h)</li>
+        <li>Less common: bruising, swelling, asymmetry, eyelid/eyebrow heaviness (usually temporary)</li>
+        <li>Rare: infection, allergy. Seek advice if symptoms persist or worsen.</li>
       </ul>
     </section>
 
     <section class="card">
-      <h2 style="color:var(--accent-2)">Dermal Filler Aftercare (Lips, Nasolabial, Marionette)</h2>
+      <h2>Dermal fillers — risks & side effects</h2>
       <ul>
-        <li>Swelling/bruising: common for 24–72h (lips can take longer). Cold compresses in short intervals can help.</li>
-        <li>Avoid: strenuous exercise, saunas, alcohol on the day; no dental work for 2 weeks unless urgent.</li>
-        <li>Make-up: avoid over injection points for 24h.</li>
-        <li>Lumps: gentle fingertip smoothing after 48–72h only if advised.</li>
-        <li>Call urgently if you notice: severe pain, dusky/white skin, increasing mottled discolouration, or visual symptoms.</li>
+        <li>Common: redness, swelling, tenderness, bruising</li>
+        <li>Less common: lumps/unevenness (often resolve with massage or review)</li>
+        <li>Important but rare: vascular compromise (blanching, severe pain, colour change). Contact us urgently if concerned.</li>
       </ul>
     </section>
 
     <section class="card">
-      <h2 style="color:var(--accent-2)">Risks – Summary</h2>
-      <p class="small" style="color:var(--muted)">We discuss personalised risks during consultation.</p>
+      <h2>Teeth grinding / masseter — notes</h2>
       <ul>
-        <li><strong>Anti-wrinkle:</strong> headache, mild bruising; temporary eyelid/eyebrow heaviness (usually rare and self-limiting); asymmetry may need adjustment.</li>
-        <li><strong>Masseter:</strong> temporary chewing fatigue, smile change (usually settles).</li>
-        <li><strong>Underarm:</strong> local tenderness, minor bruising.</li>
-        <li><strong>Filler:</strong> swelling/bruising, asymmetry/irregularity, infection (rare), delayed swelling; <strong>vascular compromise is rare but serious</strong> — we are trained and stocked for emergency management.</li>
+        <li>Jaw function may feel different while clenching reduces</li>
+        <li>Full effect develops gradually over weeks; review included</li>
       </ul>
-      <p class="small" style="color:var(--muted)">Emergency support information is provided on your aftercare sheet. If worried, contact us promptly.</p>
     </section>
 
     <section class="card">
-      <h2 style="color:var(--accent-2)">Contact & Reviews</h2>
+      <h2>Underarm sweating — notes</h2>
       <ul>
-        <li>Routine queries: <a href="mailto:info@renewclinic.uk">info@renewclinic.uk</a></li>
-        <li>Urgent concerns (business hours): reply to your confirmation email or call/text the number provided.</li>
-        <li>Review appointment: typically at 2–3 weeks for anti-wrinkle; earlier if advised for filler checks.</li>
+        <li>Results typically last several months; varies by individual</li>
+        <li>Avoid tight clothing and vigorous exercise on the day</li>
       </ul>
     </section>
   </div>
-</main>
 
-<footer>© <span id="y"></span> Renew Clinic • <a href="/privacy.html">Privacy</a></footer>
+  <section class="card" style="margin-top:24px">
+    <h2>Aftercare — general</h2>
+    <ul>
+      <li>Keep treated areas clean and avoid touching for 4–6 hours</li>
+      <li>No strenuous exercise, saunas or facials on the day</li>
+      <li>Sleep on your back if possible the first night</li>
+      <li>Make-up: ideally avoid for 4–6 hours; use clean tools if applying</li>
+      <li>If bruising occurs, cold compresses can help</li>
+      <li>If you feel unwell or worried, contact us: <a href="mailto:info@renewclinic.uk">info@renewclinic.uk</a></li>
+    </ul>
+  </section>
 
+</div></main>
+
+<footer>
+  <div class="container">© <span id="y"></span> Renew Clinic • <a href="privacy.html">Privacy</a></div>
+</footer>
 <script>
-document.getElementById('y').textContent = new Date().getFullYear();
+document.getElementById('y').textContent=new Date().getFullYear();
 const btn=document.getElementById('navToggle'),nav=document.getElementById('siteNav');
-function toggleNav(){const o=nav.style.display==='block';nav.style.display=o?'none':'block';btn.setAttribute('aria-expanded',String(!o))}
-btn.addEventListener('click',toggleNav);
-function syncNav(){if(window.matchMedia('(min-width: 900px)').matches){nav.style.display='block';btn.style.display='none'}else{nav.style.display='none';btn.style.display='inline-flex';btn.setAttribute('aria-expanded','false')}}window.addEventListener('resize',syncNav);window.addEventListener('DOMContentLoaded',syncNav);
+function t(){const o=nav.style.display==='block';nav.style.display=o?'none':'block';btn.setAttribute('aria-expanded',String(!o))}btn.addEventListener('click',t);
+function s(){if(window.matchMedia('(min-width: 900px)').matches){nav.style.display='block';btn.style.display='none'}else{nav.style.display='none';btn.style.display='inline-flex';btn.setAttribute('aria-expanded','false')}}window.addEventListener('resize',s);window.addEventListener('DOMContentLoaded',s);
 </script>
 </body>
 </html>
