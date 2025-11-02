@@ -1,235 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Renew Aesthetics & Wellbeing | Natural Results, Professional Care</title>
-  <meta name="description" content="Subtle, natural aesthetics in Bath. Anti-wrinkle treatments, dermal fillers, teeth-grinding injections and underarm sweating treatment by an HCPC-registered Independent Prescriber." />
-  <link rel="icon" type="image/png" href="/logo.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root{
-  /* Option A — warm nude / blush neutral */
-  --bg:        #F8F3EF;  /* page background (warm cream-blush) */
-  --surface:   #FFFFFF;  /* cards / header / footer */
-  --ink:       #232323;  /* main text (high contrast) */
-  --muted:     #5F5F5F;  /* secondary text */
-  --border:    #E8DCD4;  /* soft warm border */
-  /* Buttons (accessible warm taupe) */
-  --accent:    #C6A48A;  /* taupe button */
-  --accent-2:  #B18F78;  /* hover / darker taupe */
-  --ink-on-accent: #FFFFFF; /* button text */
-}
-
-/* (Optional) keep these, just ensuring consistent warmth */
-body{ background:var(--bg); color:var(--ink); }
-.card{
-  background:#FFFFFF;
-  border:1px solid var(--border);
-  border-radius:18px;
-  box-shadow:0 14px 32px rgba(0,0,0,.06), 0 0 0 2px rgba(255,255,255,0.9) inset;
-  padding:22px;
-}
-.lead{ color:var(--muted); }
-footer{ background:var(--surface); color:var(--muted); border-top:1px solid var(--border); }
-
-/* Buttons – warm taupe, high contrast */
-.btn{
-  display:inline-block;
-  background:var(--accent);
-  color:var(--ink-on-accent);
-  padding:12px 18px;
-  border-radius:10px;
-  font-weight:700;
-  border:1px solid transparent;
-  text-decoration:none;
-}
-.btn:hover{ background:var(--accent-2); }
-.btn.outline{
-  background:transparent;
-  color:var(--accent-2);
-  border:1px solid var(--accent-2);
-}
-.btn.outline:hover{ background:rgba(177,143,120,0.10); }
-
-/* Nav links a touch warmer on hover */
-nav.site-nav a:hover{ color:var(--accent-2); text-decoration:none; }
-
-
-    /* Header + nav */
-    .site-header{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--border)}
-    .brand{display:flex;gap:10px;align-items:center;color:var(--ink);text-decoration:none}
-    .brand img{width:44px;height:44px;border-radius:8px;object-fit:cover;border:1px solid var(--border);background:#fff}
-    .brand .t1{display:block;font-weight:700;letter-spacing:.2px}
-    .brand .t2{display:block;font-size:12px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
-
-    .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
-    #navToggle{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid var(--border);border-radius:9px;background:var(--surface)}
-    #navToggle .burger{width:20px;height:2px;background:var(--ink);position:relative;display:block}
-    #navToggle .burger:before,#navToggle .burger:after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--ink)}
-    #navToggle .burger:before{top:-6px} #navToggle .burger:after{top:6px}
-
-    nav.site-nav{display:none;border-top:1px solid var(--border);background:var(--surface)}
-    nav.site-nav .container{display:grid;grid-template-columns:1fr;gap:10px;padding:12px 0}
-    nav.site-nav a{font-weight:600;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink)}
-    nav.site-nav a:hover{color:var(--accent-2);text-decoration:none}
-
-    @media (min-width:900px){
-      #navToggle{display:none}
-      nav.site-nav{display:block;border-top:0}
-      nav.site-nav .container{display:flex;gap:18px;padding:0}
-    }
-
-    /* Hero (header image only) */
-    .hero{
-      position:relative;
-      background: #222 center/cover no-repeat url("/clinic-bed.jpg");
-      min-height: 46vh;
-      display:flex;align-items:center;
-      color:#fff;
-    }
-    .hero:before{
-      content:"";
-      position:absolute;inset:0;
-      background:linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.25));
-    }
-    .hero .inner{position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:40px 16px;text-align:center}
-    .hero h1{margin:0 0 10px;font-size:clamp(28px,4.5vw,40px);font-weight:700}
-    .hero p{margin:0 auto;max-width:820px;color:#EAEFF0}
-
-    /* Sections / cards */
-    main{padding:56px 0}
-    h2{font-size:clamp(22px,3.5vw,28px);margin:0 0 .6em;color:var(--ink)}
-    .lead{text-align:center;color:var(--muted);font-size:18px;margin-bottom:36px}
-    .grid{display:grid;gap:24px;margin-top:28px}
-    @media(min-width:900px){.grid{grid-template-columns:1fr 1fr 1fr}}
-    .card{background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:0 8px 24px rgba(0,0,0,.06);padding:20px}
-    .btn{display:inline-block;background:var(--accent-2);color:var(--ink-on-accent);padding:12px 18px;border-radius:10px;font-weight:700;border:1px solid transparent;text-decoration:none}
-    .btn:hover{background:#5f7f67}
-    .btn.outline{background:transparent;color:var(--accent-2);border:1px solid var(--accent-2)}
-    .btn.outline:hover{background:rgba(109,138,110,.09)}
-
-    /* Meet section */
-    .meet{margin-top:56px;padding:26px 20px;background:var(--surface);border-radius:18px;border:1px solid var(--border);text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.06)}
-    .meet p{max-width:860px;margin:10px auto;color:var(--muted)}
-
-    /* Footer */
-    footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);color:var(--muted);text-align:center}
-  </style>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Renew Aesthetics & Wellbeing | Natural Results, Professional Care</title>
+<meta name="description" content="Subtle, natural aesthetics in Bath. Anti-wrinkle treatments, dermal fillers, teeth-grinding injections and underarm sweating treatment by an HCPC-registered Independent Prescriber."/>
+<link rel="icon" type="image/png" href="logo.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#F8F3EF;--surface:#FFFFFF;--ink:#232323;--muted:#5F5F5F;--border:#E8DCD4;--accent:#C6A48A;--accent-2:#B18F78;--ink-on-accent:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{margin:0;font:17px/1.65 Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:var(--accent-2);text-decoration:none}a:hover{text-decoration:underline}
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+.site-header{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--border)}
+.brand{display:flex;gap:10px;align-items:center;color:var(--ink);text-decoration:none}
+.brand img{width:44px;height:44px;border-radius:8px;object-fit:cover;border:1px solid var(--border);background:#fff}
+.brand .t1{display:block;font-weight:700}.brand .t2{display:block;font-size:12px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+#navToggle{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid var(--border);border-radius:9px;background:var(--surface)}
+#navToggle .burger{width:20px;height:2px;background:#1f2937;position:relative;display:block}
+#navToggle .burger:before,#navToggle .burger:after{content:"";position:absolute;left:0;width:20px;height:2px;background:#1f2937}
+#navToggle .burger:before{top:-6px}#navToggle .burger:after{top:6px}
+nav.site-nav{display:none;border-top:1px solid var(--border);background:var(--surface)}
+nav.site-nav .container{display:grid;grid-template-columns:1fr;gap:10px;padding:12px 0}
+nav.site-nav a{font-weight:600;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink)}
+nav.site-nav a:hover{color:var(--accent-2);text-decoration:none}
+@media (min-width:900px){#navToggle{display:none}nav.site-nav{display:block;border-top:0}nav.site-nav .container{display:flex;gap:18px;padding:0}}
+/* HERO (home only) */
+.hero{position:relative;background:#222 center/cover no-repeat url("clinic-bed.jpg");min-height:46vh;display:flex;align-items:center;color:#fff}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.25))}
+.hero .inner{position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:40px 16px;text-align:center}
+.hero h1{margin:0 0 10px;font-size:clamp(28px,4.5vw,40px);font-weight:700}
+.hero p{margin:0 auto;max-width:820px;color:#EAEFF0}
+main{padding:56px 0}
+h2{font-size:clamp(22px,3.5vw,28px);margin:0 0 .6em}
+.lead{text-align:center;color:var(--muted);font-size:18px;margin-bottom:36px}
+.grid{display:grid;gap:24px;margin-top:28px}
+@media(min-width:900px){.grid{grid-template-columns:1fr 1fr 1fr}}
+.card{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,0.9) inset;padding:22px}
+.btn{display:inline-block;background:var(--accent);color:var(--ink-on-accent);padding:12px 18px;border-radius:10px;font-weight:700;border:1px solid transparent}
+.btn:hover{background:var(--accent-2)}.btn.outline{background:transparent;color:var(--accent-2);border:1px solid var(--accent-2)}
+.btn.outline:hover{background:rgba(177,143,120,0.10)}
+.meet{margin-top:56px;padding:26px 20px;background:var(--surface);border-radius:18px;border:1px solid var(--border);text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.06)}
+.meet p{max-width:860px;margin:10px auto;color:var(--muted)}
+footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);color:var(--muted);text-align:center}
+</style>
 </head>
 <body>
-
-  <header class="site-header">
-    <div class="container bar">
-      <a href="/" class="brand">
-        <img src="/logo.png" alt="Renew logo" />
-        <span>
-          <span class="t1">Renew</span>
-          <span class="t2">Aesthetics & Wellbeing</span>
-        </span>
-      </a>
-      <button id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Menu">
-        <span class="burger"></span>
-      </button>
+<header class="site-header">
+  <div class="container bar">
+    <a href="/" class="brand"><img src="logo.png" alt="Renew logo"/><span><span class="t1">Renew</span><span class="t2">Aesthetics & Wellbeing</span></span></a>
+    <button id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Menu"><span class="burger"></span></button>
+  </div>
+  <nav id="siteNav" class="site-nav">
+    <div class="container">
+      <a href="/">Home</a><a href="treatments.html">Treatments</a><a href="pre-appointment.html">Pre-Appointment</a><a href="pricing.html">Pricing</a><a href="safety.html">Safety</a><a href="myth-busters.html">Myth Busters</a><a href="privacy.html">Privacy</a>
     </div>
-    <nav id="siteNav" class="site-nav">
-      <div class="container">
-        <a href="/">Home</a>
-        <a href="/treatments.html">Treatments</a>
-        <a href="/pre-appointment.html">Pre-Appointment</a>
-        <a href="/pricing.html">Pricing</a>
-        <a href="/safety.html">Safety</a>
-        <a href="/myth-busters.html">Myth Busters</a>
-        <a href="/privacy.html">Privacy</a>
-      </div>
-    </nav>
-  </header>
+  </nav>
+</header>
 
-  <!-- HEADER-ONLY image hero -->
-  <section class="hero" role="img" aria-label="Clinic treatment bed">
-    <div class="inner">
-      <h1>Anti-wrinkle Injections in Bath</h1>
-      <p>Subtle, natural aesthetics by an HCPC-registered Independent Prescriber. Calm, clinician-led care with clear aftercare and reviews included.</p>
-    </div>
+<section class="hero" role="img" aria-label="Clinic treatment bed">
+  <div class="inner">
+    <h1>Anti-wrinkle Injections in Bath</h1>
+    <p>Subtle, natural aesthetics by an HCPC-registered Independent Prescriber. Calm, clinician-led care with clear aftercare and reviews included.</p>
+  </div>
+</section>
+
+<main><div class="container">
+  <p class="lead">We specialise in soft, confidence-building results. Every consultation includes a medical assessment, shared decisions, and personalised aftercare.</p>
+  <div class="grid">
+    <section class="card"><h2>Anti-wrinkle Treatments</h2><p>Smooth frown, forehead and crow’s feet lines with precise, clinician-led dosing. Review included.</p><a class="btn" href="pricing.html">View Pricing</a></section>
+    <section class="card"><h2>Dermal Fillers</h2><p>Subtle volume for lips and smile lines using high-quality HA fillers for natural outcomes.</p><a class="btn" href="pricing.html">View Pricing</a></section>
+    <section class="card"><h2>Medical Consultation</h2><p>Medical history, photography and treatment planning. Follow-up review included.</p><a class="btn outline" href="pre-appointment.html">Pre-Appointment Form</a></section>
+    <section class="card"><h2>Teeth Grinding (Masseter)</h2><p>Targeted injections to reduce clenching and ease jaw tension. Results build over several weeks.</p><a class="btn" href="pricing.html">View Pricing</a></section>
+    <section class="card"><h2>Underarm Sweating</h2><p>Injections to reduce sweat activity in the underarms. Typical results last several months.</p><a class="btn" href="pricing.html">View Pricing</a></section>
+  </div>
+  <section class="meet">
+    <h2>Meet Adam</h2>
+    <p><strong>Adam Rochford</strong> is an Advanced Physiotherapy Practitioner and Independent Prescriber with 20+ years of NHS experience. From 2017 to 2025 he led the <strong>MSK Physiotherapy & Orthopaedic Interface Service (OIS)</strong> for BaNES Community NHS Services and continues to practise as a senior clinician and manager.</p>
+    <p>HCPC Registered • Fully Insured • Clear, ethical and patient-centred care.</p>
   </section>
+</div></main>
 
-  <main>
-    <div class="container">
-      <p class="lead">We specialise in soft, confidence-building results — not changing who you are. Every consultation includes a full medical assessment, discussion of options, and personalised aftercare.</p>
-
-      <div class="grid">
-        <section class="card">
-          <h2>Anti-wrinkle Treatments</h2>
-          <p>Smooth frown, forehead and crow’s feet lines with precise, clinician-led dosing. Review included.</p>
-          <a class="btn" href="/pricing.html">View Pricing</a>
-        </section>
-
-        <section class="card">
-          <h2>Dermal Fillers</h2>
-          <p>Subtle volume for lips and smile lines using high-quality HA fillers for natural outcomes.</p>
-          <a class="btn" href="/pricing.html">View Pricing</a>
-        </section>
-
-        <section class="card">
-          <h2>Medical Consultation</h2>
-          <p>Includes medical history, treatment planning and pre-treatment photography. Follow-up review included.</p>
-          <a class="btn outline" href="/pre-appointment.html">Pre-Appointment Form</a>
-        </section>
-
-        <section class="card">
-          <h2>Teeth Grinding (Masseter)</h2>
-          <p>Targeted injections to reduce clenching and ease jaw tension. Results build over several weeks.</p>
-          <a class="btn" href="/pricing.html">View Pricing</a>
-        </section>
-
-        <section class="card">
-          <h2>Underarm Sweating</h2>
-          <p>Injections to reduce sweat activity in the underarms. Typical results last several months.</p>
-          <a class="btn" href="/pricing.html">View Pricing</a>
-        </section>
-      </div>
-
-      <section class="meet">
-        <h2>Meet Adam</h2>
-        <p><strong>Adam Rochford</strong> is an Advanced Physiotherapy Practitioner and Independent Prescriber with 20+ years of NHS experience. From 2017 to 2025 he led the <strong>MSK Physiotherapy & Orthopaedic Interface Service (OIS)</strong> for BaNES Community NHS Services and continues to practise as a senior clinician and manager.</p>
-        <p>HCPC Registered • Fully Insured • Clear, ethical and patient-centred care.</p>
-      </section>
-    </div>
-  </main>
-
-  <footer>
-    <div class="container">
-      © <span id="y"></span> Renew Clinic •
-      <a href="/privacy.html">Privacy</a> • <a href="/safety.html">Safety</a><br/>
-      <strong>Contact:</strong> <a href="mailto:info@renewclinic.uk">info@renewclinic.uk</a> • <a href="tel:+447855409788">07855 409788</a>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Mobile nav toggle
-    const btn = document.getElementById('navToggle');
-    const nav = document.getElementById('siteNav');
-    function toggleNav(){
-      const open = nav.style.display === 'block';
-      nav.style.display = open ? 'none' : 'block';
-      btn.setAttribute('aria-expanded', String(!open));
-    }
-    btn.addEventListener('click', toggleNav);
-
-    function syncNav(){
-      if (window.matchMedia('(min-width: 900px)').matches){
-        nav.style.display = 'block';
-        btn.style.display = 'none';
-      } else {
-        nav.style.display = 'none';
-        btn.style.display = 'inline-flex';
-        btn.setAttribute('aria-expanded','false');
-      }
-    }
-    window.addEventListener('resize', syncNav);
-    window.addEventListener('DOMContentLoaded', syncNav);
-  </script>
-</body>
-</html>
+<footer><div class="container">© <span id="y"></span> Renew Clinic • <a href="privacy.html">Privacy</a> • <a href="safety.html">Safety</a><br/><strong>Contact:</strong> <a href="mailto:info@renewclinic.uk">info@renewclinic.uk</a> • <a href="tel:+447855409788">07855 409788</a></div></footer>
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+const btn=document.getElementById('navToggle'),nav=document.getElementById('siteNav');
+function t(){const o=nav.style.display==='block';nav.style.display=o?'none':'block';btn.setAttribute('aria-expanded',String(!o))}
+btn.addEventListener('click',t);
+function s(){if(window.matchMedia('(min-width: 900px)').matches){nav.style.display='block';btn.style.display='none'}else{nav.style.display='none';btn.style.display='inline-flex';btn.setAttribute('aria-expanded','false')}}window.addEventListener('resize',s);window.addEventListener('DOMContentLoaded',s);
+</script>
+</body></html>
