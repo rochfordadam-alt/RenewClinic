@@ -6,6 +6,40 @@
 <link rel="icon" type="image/png" href="logo.png"/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
+  /* Compact photo header used on all subpages */
+.subhero{
+  position:relative;
+  background: center/cover no-repeat url("/clinic-bed.jpg");
+  min-height: 28vh;
+  display:flex; align-items:flex-end;
+  color:#fff;
+  border-bottom:1px solid #E8DCD4; /* warm border */
+}
+.subhero::before{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.15));
+}
+.subhero .inner{
+  position:relative; z-index:1;
+  max-width:1100px; margin:0 auto; padding:28px 16px;
+  width:100%;
+}
+.subhero h1{
+  margin:0;
+  font-size:clamp(24px,3.8vw,34px);
+  font-weight:700;
+  text-shadow:0 2px 12px rgba(0,0,0,.35);
+}
+.subhero p.lead{
+  margin:.4rem 0 0;
+  color:#F1F4F3;
+  max-width:780px;
+}
+@media (max-width: 899px){
+  .subhero{ min-height: 24vh; }
+}
+
 :root{--bg:#F8F3EF;--surface:#FFFFFF;--ink:#232323;--muted:#5F5F5F;--border:#E8DCD4;--accent:#C6A48A;--accent-2:#B18F78;--ink-on-accent:#fff}
 *{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{margin:0;font:17px/1.65 Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
