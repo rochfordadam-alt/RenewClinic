@@ -9,22 +9,51 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root{
-      /* Warmer slate & sage */
-      --bg:#F5F7F5;
-      --surface:#FFFFFF;
-      --ink:#1F2937;        /* main text */
-      --muted:#4B5563;      /* secondary text */
-      --accent:#7FA08A;     /* soft sage */
-      --accent-2:#6D8A6E;   /* darker sage for buttons */
-      --border:#D5DDD8;
-      --ink-on-accent:#fff;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-    body{margin:0;font:17px/1.65 Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
-    a{color:var(--accent-2);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:1100px;margin:0 auto;padding:0 16px}
+  /* Option A — warm nude / blush neutral */
+  --bg:        #F8F3EF;  /* page background (warm cream-blush) */
+  --surface:   #FFFFFF;  /* cards / header / footer */
+  --ink:       #232323;  /* main text (high contrast) */
+  --muted:     #5F5F5F;  /* secondary text */
+  --border:    #E8DCD4;  /* soft warm border */
+  /* Buttons (accessible warm taupe) */
+  --accent:    #C6A48A;  /* taupe button */
+  --accent-2:  #B18F78;  /* hover / darker taupe */
+  --ink-on-accent: #FFFFFF; /* button text */
+}
+
+/* (Optional) keep these, just ensuring consistent warmth */
+body{ background:var(--bg); color:var(--ink); }
+.card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:18px;
+  box-shadow:0 10px 28px rgba(77, 57, 44, 0.06);
+}
+.lead{ color:var(--muted); }
+footer{ background:var(--surface); color:var(--muted); border-top:1px solid var(--border); }
+
+/* Buttons – warm taupe, high contrast */
+.btn{
+  display:inline-block;
+  background:var(--accent);
+  color:var(--ink-on-accent);
+  padding:12px 18px;
+  border-radius:10px;
+  font-weight:700;
+  border:1px solid transparent;
+  text-decoration:none;
+}
+.btn:hover{ background:var(--accent-2); }
+.btn.outline{
+  background:transparent;
+  color:var(--accent-2);
+  border:1px solid var(--accent-2);
+}
+.btn.outline:hover{ background:rgba(177,143,120,0.10); }
+
+/* Nav links a touch warmer on hover */
+nav.site-nav a:hover{ color:var(--accent-2); text-decoration:none; }
+
 
     /* Header + nav */
     .site-header{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--border)}
