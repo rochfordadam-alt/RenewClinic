@@ -1,134 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Treatments | Renew Aesthetics & Wellbeing</title>
-<link rel="icon" type="image/png" href="/logo.png">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="logo.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
-:root{--bg:#F2F6F3;--surface:#FFFFFF;--ink:#1F2937;--muted:#4B5563;--accent:#8DAA93;--accent-2:#6D8A6E;--border:#D1D8D3;--ink-on-accent:#FFF}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{margin:0;font:17px/1.65 system-ui,-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+:root{--bg:#F8F3EF;--surface:#FFFFFF;--ink:#232323;--muted:#5F5F5F;--border:#E8DCD4;--accent:#C6A48A;--accent-2:#B18F78;--ink-on-accent:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{margin:0;font:17px/1.65 Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:var(--accent-2)}a:hover{text-decoration:underline}
 .container{max-width:1100px;margin:0 auto;padding:0 16px}
-a{color:var(--accent-2);text-decoration:none} a:hover{text-decoration:underline}
-
-/* Header (same as index) */
-.site-header{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50}
-.site-header .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
-.site-header .brand img{height:44px;width:44px;border-radius:8px;object-fit:cover;border:1px solid var(--border);background:#fff}
-.site-header .brand .t1{display:block;font-weight:700;font-size:18px;letter-spacing:.2px;color:var(--ink)}
-.site-header .brand .t2{display:block;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;font-size:12px}
-.site-nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:13px;letter-spacing:.04em;text-transform:uppercase}
-.site-nav a:hover{color:var(--accent-2);text-decoration:none}
+.site-header{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--border)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+.brand{display:flex;gap:10px;align-items:center;color:var(--ink);text-decoration:none}
+.brand img{width:44px;height:44px;border-radius:8px;object-fit:cover;border:1px solid var(--border);background:#fff}
+.brand .t1{display:block;font-weight:700}.brand .t2{display:block;font-size:12px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
 #navToggle{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid var(--border);border-radius:9px;background:var(--surface)}
-#navToggle .bar{width:20px;height:2px;background:var(--ink);position:relative;display:block}
-#navToggle .bar:before,#navToggle .bar:after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--ink)}
-#navToggle .bar:before{top:-6px} #navToggle .bar:after{top:6px}
-#siteNav{display:none;border-top:1px solid var(--border);background:var(--surface)}
-#siteNav .container{display:grid;grid-template-columns:1fr;gap:10px;padding:12px 0}
-@media(min-width:900px){#navToggle{display:none} #siteNav{display:block;border-top:0} #siteNav .container{display:flex;gap:18px;padding:0}}
-
-main{padding:56px 0}
-h1,h2,h3{font-weight:700;color:var(--ink);letter-spacing:.2px;line-height:1.25;margin:0 0 .6em}
-h1{font-size:clamp(28px,4.5vw,38px)} .lead{color:var(--muted);margin:0 0 22px}
-.section{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.06);margin-top:18px}
-.section h2{color:var(--accent-2);margin:6px 0 8px}
-.section h3{color:var(--ink);margin:8px 0}
-.section p,.section li{color:var(--muted)}
-.grid{display:grid;gap:18px} @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
-.cta{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;background:var(--accent-2);color:var(--ink-on-accent);padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none;border:1px solid transparent}
-.btn:hover{background:#61826A}
-.btn.outline{background:transparent;color:var(--accent-2);border:1px solid var(--accent-2)}
-.btn.outline:hover{background:rgba(109,138,110,.08)}
-footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);margin-top:40px;color:var(--muted);text-align:center}
+#navToggle .burger{width:20px;height:2px;background:#1f2937;position:relative;display:block}
+#navToggle .burger:before,#navToggle .burger:after{content:"";position:absolute;left:0;width:20px;height:2px;background:#1f2937}
+#navToggle .burger:before{top:-6px}#navToggle .burger:after{top:6px}
+nav.site-nav{display:none;border-top:1px solid var(--border);background:var(--surface)}
+nav.site-nav .container{display:grid;grid-template-columns:1fr;gap:10px;padding:12px 0}
+nav.site-nav a{font-weight:600;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink)}
+nav.site-nav a:hover{color:var(--accent-2);text-decoration:none}
+@media(min-width:900px){#navToggle{display:none}nav.site-nav{display:block;border-top:0}nav.site-nav .container{display:flex;gap:18px;padding:0}}
+.pagehead{background:var(--surface);border-bottom:1px solid var(--border)}
+.pagehead .inner{max-width:1100px;margin:0 auto;padding:22px 16px}
+main{padding:48px 0}
+h1,h2,h3{margin:0 0 .6em}
+h1{font-size:clamp(26px,4vw,36px)}h2{font-size:clamp(20px,3vw,26px)}h3{font-size:clamp(18px,2.6vw,22px)}
+.grid{display:grid;gap:22px;margin-top:26px}@media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,0.9) inset;padding:22px}
+.small{color:var(--muted);font-size:14px}
+ul{margin:0;padding-left:18px}
+footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);color:var(--muted);text-align:center}
 </style>
 </head>
 <body>
-
 <header class="site-header">
-  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0">
-    <a href="/" class="brand"><img src="/logo.png" alt="Renew logo"><span><span class="t1">Renew</span><span class="t2">Aesthetics &amp; Wellbeing</span></span></a>
-    <button id="navToggle" aria-expanded="false" aria-controls="siteNav"><span class="bar"></span></button>
+  <div class="container bar">
+    <a href="/" class="brand"><img src="logo.png" alt="Renew logo"/><span><span class="t1">Renew</span><span class="t2">Aesthetics & Wellbeing</span></span></a>
+    <button id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Menu"><span class="burger"></span></button>
   </div>
   <nav id="siteNav" class="site-nav">
     <div class="container">
-      <a href="/">Home</a><a href="/treatments.html">Treatments</a><a href="/pre-appointment.html">Pre-Appointment</a>
-      <a href="/pricing.html">Pricing</a><a href="/safety.html">Safety</a><a href="/myth-busters.html">Myth Busters</a><a href="/privacy.html">Privacy</a>
+      <a href="/">Home</a><a href="treatments.html">Treatments</a><a href="pre-appointment.html">Pre-Appointment</a><a href="pricing.html">Pricing</a><a href="safety.html">Safety</a><a href="myth-busters.html">Myth Busters</a><a href="privacy.html">Privacy</a>
     </div>
   </nav>
 </header>
 
-<main class="container">
+<div class="pagehead"><div class="inner">
   <h1>Treatments</h1>
-  <p class="lead">Focused, safe treatments delivered by an HCPC-registered Independent Prescriber. Every appointment includes a medical assessment and personalised aftercare.</p>
+  <p class="small">Every treatment begins with a clinician-led medical assessment and a shared decision on the best plan for you.</p>
+</div></div>
 
-  <section class="section">
-    <h2>Wrinkle-Relaxing (Botulinum Toxin)</h2>
-    <div class="grid">
-      <div>
-        <h3>Upper Face</h3>
-        <ul>
-          <li><strong>Glabella</strong> (frown lines)</li>
-          <li><strong>Frontalis</strong> (forehead lines)</li>
-          <li><strong>Crow’s feet</strong> (around eyes)</li>
-        </ul>
-        <p>Natural softening of movement while keeping expression. Full effect by 10–14 days; typical longevity 3–4 months.</p>
-        <p style="font-size:13px;color:var(--muted)">Brands: Azzalure® / Bocouture® (medical grade).</p>
-      </div>
-      <div>
-        <h3>Teeth Grinding / Jawline Slimming (Masseter)</h3>
-        <p>Targeted injections into the masseter can reduce clenching/grinding and may soften jawline width. Results build over 4–6 weeks.</p>
-        <h3 style="margin-top:14px">Underarm Sweating (Hyperhidrosis)</h3>
-        <p>Injections reduce sweat activity for 4–6+ months in most people.</p>
-      </div>
-    </div>
-    <div class="cta">
-      <a class="btn" href="/pricing.html">View Botox Pricing</a>
-      <a class="btn outline" href="/pre-appointment.html">Pre-Appointment Form</a>
-    </div>
-  </section>
+<main><div class="container">
+  <div class="grid">
+    <section class="card">
+      <h2>Anti-wrinkle (upper face)</h2>
+      <p>Targets dynamic lines such as frown, forehead and crow’s feet with precise, individualised dosing.</p>
+      <ul>
+        <li>Assessment of muscle activity and skin quality</li>
+        <li>Treatment plan tailored to your goals</li>
+        <li>Review appointment included</li>
+      </ul>
+    </section>
 
-  <section class="section">
-    <h2>Dermal Fillers (Hyaluronic Acid)</h2>
-    <div class="grid">
-      <div>
-        <h3>Nasolabial Folds</h3>
-        <p>Softens “smile lines” from nose to mouth, restoring gentle support while keeping natural expression.</p>
-        <h3 style="margin-top:12px">Marionette Lines</h3>
-        <p>Fills shadowing at the corners of the mouth to reduce a downturned appearance.</p>
-      </div>
-      <div>
-        <h3>Lip Fillers</h3>
-        <p>Shape, hydration and balanced volume using CE-marked HA fillers. Options from subtle border definition to fuller plump.</p>
-        <p style="font-size:13px;color:var(--muted)">Dissolving (hyaluronidase) available where clinically indicated.</p>
-      </div>
-    </div>
-    <div class="cta">
-      <a class="btn" href="/pricing.html">View Filler Pricing</a>
-      <a class="btn outline" href="/pre-appointment.html">Pre-Appointment Form</a>
-    </div>
-  </section>
+    <section class="card">
+      <h2>Teeth grinding (masseter)</h2>
+      <p>Helps reduce jaw clenching and grinding, easing tension and softening the masseter bulk gradually.</p>
+      <ul>
+        <li>Outcomes build over weeks; review included</li>
+        <li>May improve jaw comfort and reduce wear</li>
+      </ul>
+    </section>
 
-  <section class="section">
-    <h2>Your Safety First</h2>
-    <p>I source medicines from UK-regulated pharmacies, follow evidence-based dosing, and provide a 2–3 week review. You’ll only be treated if it’s clinically appropriate following consultation.</p>
-    <div class="cta">
-      <a class="btn" href="/safety.html">Read Safety & Aftercare</a>
-      <a class="btn outline" href="mailto:info@renewclinic.uk">Email a Question</a>
-    </div>
-  </section>
-</main>
+    <section class="card">
+      <h2>Underarm sweating</h2>
+      <p>Injections reduce sweat activity in the underarm area. Typical results last several months.</p>
+      <ul>
+        <li>Assessment and mapping included</li>
+        <li>Personalised aftercare guidance</li>
+      </ul>
+    </section>
 
-<footer>© <span id="y"></span> Renew Clinic • <a href="/privacy.html">Privacy</a></footer>
+    <section class="card">
+      <h2>Dermal fillers</h2>
+      <p>Subtle volume and refinement for lips and smile lines using CE-marked hyaluronic acid fillers.</p>
+      <ul>
+        <li>Medical consultation & photography</li>
+        <li>Gradual, natural-looking results</li>
+      </ul>
+    </section>
+  </div>
+</div></main>
 
+<footer>
+  <div class="container">© <span id="y"></span> Renew Clinic • <a href="privacy.html">Privacy</a> • <a href="safety.html">Safety</a></div>
+</footer>
 <script>
-document.getElementById('y').textContent = new Date().getFullYear();
+document.getElementById('y').textContent=new Date().getFullYear();
 const btn=document.getElementById('navToggle'),nav=document.getElementById('siteNav');
-function toggleNav(){const o=nav.style.display==='block';nav.style.display=o?'none':'block';btn.setAttribute('aria-expanded',String(!o))}
-btn.addEventListener('click',toggleNav);
-function syncNav(){if(window.matchMedia('(min-width: 900px)').matches){nav.style.display='block';btn.style.display='none'}else{nav.style.display='none';btn.style.display='inline-flex';btn.setAttribute('aria-expanded','false')}}window.addEventListener('resize',syncNav);window.addEventListener('DOMContentLoaded',syncNav);
+function t(){const o=nav.style.display==='block';nav.style.display=o?'none':'block';btn.setAttribute('aria-expanded',String(!o))}
+btn.addEventListener('click',t);
+function s(){if(window.matchMedia('(min-width: 900px)').matches){nav.style.display='block';btn.style.display='none'}else{nav.style.display='none';btn.style.display='inline-flex';btn.setAttribute('aria-expanded','false')}}window.addEventListener('resize',s);window.addEventListener('DOMContentLoaded',s);
 </script>
 </body>
 </html>
