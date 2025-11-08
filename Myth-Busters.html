@@ -6,69 +6,67 @@
 <link rel="icon" type="image/png" href="logo.png"/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
-:root{--bg:#F8F3EF;--surface:#FFFFFF;--ink:#232323;--muted:#5F5F5F;--border:#E8DCD4;--accent:#C6A48A;--accent-2:#B18F78}
+:root{--bg:#F8F3EF;--surface:#FFFFFF;--ink:#232323;--muted:#5F5F5F;--border:#E8DCD4;--accent:#C6A48A;--accent-2:#B18F78;--ink-on-accent:#fff}
 *{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{margin:0;font:17px/1.65 Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
-a{color:var(--accent-2)}
-.container{max-width:1100px;margin:0 auto;padding:0 16px}
+a{color:var(--accent-2)}a:hover{text-decoration:underline}
+.container{max-width:900px;margin:0 auto;padding:0 16px}
 .site-header{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--border)}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
-.brand{display:flex;gap:10px;align-items:center;color:var(--ink);text-decoration:none}
-.brand img{width:44px;height:44px;border-radius:8px;object-fit:cover;border:1px solid var(--border);background:#fff}
-.brand .t1{display:block;font-weight:700}.brand .t2{display:block;font-size:12px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
-#navToggle{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid var(--border);border-radius:9px;background:var(--surface)}
-#navToggle .burger{width:20px;height:2px;background:#1f2937;position:relative;display:block}
-#navToggle .burger:before,#navToggle .burger:after{content:"";position:absolute;left:0;width:20px;height:2px;background:#1f2937}
-#navToggle .burger:before{top:-6px}#navToggle .burger:after{top:6px}
-nav.site-nav{display:none;border-top:1px solid var(--border);background:var(--surface)}
-nav.site-nav .container{display:grid;grid-template-columns:1fr;gap:10px;padding:12px 0}
-nav.site-nav a{font-weight:600;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink)}
+.bar{display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 0}
+.brand{display:none}.brand img{display:none}
+nav.site-nav{display:block;background:var(--surface)}
+nav.site-nav .container{display:flex;gap:0;padding:0;justify-content:space-evenly;align-items:stretch;flex-wrap:wrap}
+nav.site-nav a{flex:1 1 auto;text-align:center;padding:12px 10px;font-weight:600;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);border-left:1px solid var(--border)}
+nav.site-nav a:first-child{border-left:0}
 nav.site-nav a:hover{color:var(--accent-2);text-decoration:none}
-@media(min-width:900px){#navToggle{display:none}nav.site-nav{display:block;border-top:0}nav.site-nav .container{display:flex;gap:18px;padding:0}}
-/* Subhero */
-.subhero{position:relative;background:center/cover no-repeat url("clinic-bed.jpg");min-height:28vh;display:flex;align-items:flex-end;color:#fff;border-bottom:1px solid var(--border)}
+.subhero{position:relative;background:center/cover no-repeat url("/myths.jpg");min-height:24vh;display:flex;align-items:flex-end;color:#fff;border-bottom:1px solid var(--border)}
 .subhero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.15))}
-.subhero .inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:28px 16px;width:100%}
-.subhero h1{margin:0;font-size:clamp(24px,3.8vw,34px);font-weight:700;text-shadow:0 2px 12px rgba(0,0,0,.35)}
-.subhero p.lead{margin:.4rem 0 0;color:#F1F4F3;max-width:780px}
-@media(max-width:899px){.subhero{min-height:24vh}}
-main{padding:48px 0}
-.card{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,0.9) inset;padding:22px;margin-bottom:18px}
+.subhero .inner{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:22px 16px;width:100%}
+.subhero h1{margin:0;font-size:clamp(24px,3.8vw,34px);font-weight:700}
+main{padding:36px 0}
+.card{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,.9) inset;padding:22px}
+h2{margin:0 0 .6em}
+.lead{color:var(--muted)}
 footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);color:var(--muted);text-align:center}
 </style>
 </head>
 <body>
 <header class="site-header">
-  <div class="container bar">
-    <a href="/" class="brand"><img src="logo.png" alt="Renew logo"/><span><span class="t1">Renew</span><span class="t2">Aesthetics & Wellbeing</span></span></a>
-    <button id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Menu"><span class="burger"></span></button>
-  </div>
+  <div class="container bar"></div>
   <nav id="siteNav" class="site-nav">
     <div class="container">
-      <a href="/">Home</a><a href="treatments.html">Treatments</a><a href="pre-appointment.html">Pre-Appointment</a><a href="pricing.html">Pricing</a><a href="safety.html">Safety</a><a href="myth-busters.html">Myth Busters</a><a href="privacy.html">Privacy</a>
+      <a href="/">Home</a>
+      <a href="treatments.html">Treatments</a>
+      <a href="pre-appointment.html">Pre-Appointment</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="safety.html">Safety</a>
+      <a href="myth-busters.html">Myth Busters</a>
+      <a href="privacy.html">Privacy</a>
     </div>
   </nav>
 </header>
 
-<section class="subhero" role="img" aria-label="Calm clinic space">
-  <div class="inner">
-    <h1>Myth Busters</h1>
-    <p class="lead">Straightforward answers to common questions.</p>
+<section class="subhero"><div class="inner"><h1>Myth Busters</h1></div></section>
+
+<main>
+  <div class="container">
+    <section class="card">
+      <h2>Common myths, answered</h2>
+      <ul>
+        <li><strong>“I’ll look frozen.”</strong> Our approach is conservative and natural.</li>
+        <li><strong>“Top-ups are always free.”</strong> Reviews are included; extra units may require a new vial and fee.</li>
+        <li><strong>“It’s instant.”</strong> Anti-wrinkle treatments develop over 3–14 days.</li>
+        <li><strong>“Everyone needs the same dose.”</strong> Dosing is individual and assessed clinically.</li>
+      </ul>
+      <p class="lead">Have a question? <a href="pre-appointment.html">Send it with your form</a> and we’ll cover it in consultation.</p>
+    </section>
   </div>
-</section>
+</main>
 
-<main><div class="container">
-  <section class="card"><h2>“Anti-wrinkle injections will freeze my face.”</h2><p>Not when dosed and placed carefully. The aim is softening movement, not removing expression. Your plan is tailored to your goals.</p></section>
-  <section class="card"><h2>“Fillers always look obvious.”</h2><p>Poor placement or over-filling looks obvious. Subtle volume with CE-marked HA fillers can look natural and hydrated, not “done”.</p></section>
-  <section class="card"><h2>“I can’t go out afterwards.”</h2><p>Most people have only mild redness or tiny marks that settle quickly. We’ll give you simple aftercare and what to expect.</p></section>
-  <section class="card"><h2>“I’m worried about safety.”</h2><p>Every treatment begins with a medical assessment, consent and photography. You’ll get clear aftercare, and we’re here if you have questions.</p></section>
-</div></main>
-
-<footer><div class="container">© <span id="y"></span> Renew Clinic • <a href="privacy.html">Privacy</a> • <a href="safety.html">Safety</a></div></footer>
-<script>
-document.getElementById('y').textContent=new Date().getFullYear();
-const btn=document.getElementById('navToggle'),nav=document.getElementById('siteNav');
-function t(){const o=nav.style.display==='block';nav.style.display=o?'none':'block';btn.setAttribute('aria-expanded',String(!o))}btn.addEventListener('click',t);
-function s(){if(window.matchMedia('(min-width: 900px)').matches){nav.style.display='block';btn.style.display='none'}else{nav.style.display='none';btn.style.display='inline-flex';btn.setAttribute('aria-expanded','false')}}window.addEventListener('resize',s);window.addEventListener('DOMContentLoaded',s);
-</script>
-</body></html>
+<footer>
+  <div class="container">© <span id="y"></span> Renew Clinic • <a href="privacy.html">Privacy</a> • <a href="safety.html">Safety</a><br/>
+  <strong>Contact:</strong> <a href="mailto:info@renewclinic.uk">info@renewclinic.uk</a></div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
