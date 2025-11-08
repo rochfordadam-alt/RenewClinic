@@ -6,59 +6,75 @@
 <link rel="icon" type="image/png" href="logo.png"/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
-:root{--bg:#F8F3EF;--surface:#FFFFFF;--ink:#232323;--muted:#5F5F5F;--border:#E8DCD4;--accent:#C6A48A;--accent-2:#B18F78;--ink-on-accent:#fff}
-*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+:root{
+  --bg:#F8F3EF;--surface:#FFFFFF;--ink:#232323;--muted:#5F5F5F;
+  --border:#E8DCD4;--accent:#C6A48A;--accent-2:#B18F78;--ink-on-accent:#fff
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{margin:0;font:17px/1.65 Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
 a{color:var(--accent-2);text-decoration:none}a:hover{text-decoration:underline}
 .container{max-width:1100px;margin:0 auto;padding:0 16px}
 
-/* Header without logo; evenly spaced tabs */
+/* Header (no logo) + evenly spaced tabs */
 .site-header{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--border)}
 .bar{display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 0}
 nav.site-nav{display:block;background:var(--surface)}
-nav.site-nav .container{display:flex;gap:0;padding:0;justify-content:space-evenly;align-items:stretch;flex-wrap:wrap;border-top:0}
-nav.site-nav a{flex:1 1 auto;text-align:center;padding:12px 10px;font-weight:600;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);border-left:1px solid var(--border)}
+nav.site-nav .container{display:flex;gap:0;padding:0;justify-content:space-evenly;align-items:stretch;flex-wrap:wrap}
+nav.site-nav a{
+  flex:1 1 auto;text-align:center;padding:12px 10px;font-weight:600;font-size:13px;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--ink);border-left:1px solid var(--border)
+}
 nav.site-nav a:first-child{border-left:0}
 nav.site-nav a:hover{color:var(--accent-2);text-decoration:none}
 
-/* HERO uses the treatment couch image across the top */
+/* HERO with treatment couch image */
 .hero{
-  position:relative;
-  background:center/cover no-repeat url('/clinic-bed.jpg');
-  min-height:56vh;
-  color:#fff;
-  display:flex; align-items:flex-end;
-  border-bottom:1px solid var(--border)
+  position:relative;background:center/cover no-repeat url('/clinic-bed.jpg');
+  min-height:56vh;color:#fff;display:flex;align-items:flex-end;border-bottom:1px solid var(--border)
 }
 .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.3),rgba(0,0,0,.12))}
 .hero .inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:40px 16px;width:100%}
 .hero h1{margin:0 0 .3rem;font-size:clamp(28px,6vw,44px);font-weight:700;text-shadow:0 2px 12px rgba(0,0,0,.35)}
 .hero p{margin:.3rem 0 0;max-width:720px;color:#F1F4F3}
 
+/* Cards row */
 main{padding:44px 0}
 .grid{display:grid;gap:22px}
 @media(min-width:900px){.grid.three{grid-template-columns:1fr 1fr 1fr}}
 .card{
   background:#fff;border:1px solid var(--border);border-radius:18px;
-  box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,.9) inset;
-  padding:22px
+  box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,.9) inset;padding:22px
 }
 h2{margin:0 0 .6em;font-size:clamp(20px,3vw,26px)}
 .lead{color:var(--muted)}
 .btn{display:inline-block;background:var(--accent);color:var(--ink-on-accent);padding:12px 18px;border-radius:10px;font-weight:700;border:1px solid transparent}
 .btn:hover{background:var(--accent-2)}
-footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);color:var(--muted);text-align:center}
 
-/* Meet Adam profile card (photo above text, centered) */
-.meet{max-width:760px;margin:26px auto 0;text-align:center;padding-top:28px;padding-bottom:10px}
+/* Meet Adam – standalone feature (no card border), photo LEFT */
+.meet-wrap{margin:34px 0 4px}
+.meet{
+  display:grid;grid-template-columns:320px 1fr;gap:26px;align-items:start;
+  background:var(--surface);border-radius:22px;padding:24px;border:1px solid var(--border);
+  box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,.9) inset;
+}
 .meet img{
-  width:160px;height:160px;object-fit:cover;border-radius:999px;
-  display:block;margin:0 auto 14px;border:3px solid #fff;box-shadow:0 6px 18px rgba(0,0,0,.12)
+  width:100%;height:320px;object-fit:cover;border-radius:16px;border:3px solid #fff;
+  box-shadow:0 6px 18px rgba(0,0,0,.12)
 }
 .meet h2{margin:.2rem 0 .4rem}
 .meet .sub{color:var(--muted);font-size:14px;margin-top:-4px}
-.meet ul{margin:.6rem auto 0;max-width:640px;text-align:left}
+.meet ul{margin:.6rem 0 0 1.2rem}
 .meet ul li{margin:.25rem 0}
+
+/* Stack on phones */
+@media (max-width: 820px){
+  .meet{grid-template-columns:1fr}
+  .meet img{height:240px;max-width:460px;margin:0 auto}
+}
+
+/* Footer */
+footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);color:var(--muted);text-align:center}
 </style>
 </head>
 <body>
@@ -87,6 +103,7 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surfac
 
 <main>
   <div class="container">
+    <!-- Service cards -->
     <div class="grid three">
       <section class="card">
         <h2>Anti-wrinkle treatments</h2>
@@ -105,37 +122,42 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surfac
       </section>
     </div>
 
-    <!-- Meet Adam (photo above text, centered) -->
-    <section class="card meet" id="meet-adam" style="display:grid;grid-template-columns:200px 1fr;gap:22px;align-items:start;max-width:960px;margin:32px auto 0">
-  <img src="/adam.jpg" alt="Adam Rochford" style="width:100%;height:200px;object-fit:cover;border-radius:14px;border:3px solid #fff;box-shadow:0 6px 18px rgba(0,0,0,.12)"/>
-  <div>
-    <h2>Meet Adam</h2>
-    <div class="sub" style="color:var(--muted);font-size:14px;margin-top:-4px">Clinician & Non-Medical Prescriber • HCPC registered</div>
-    <p style="margin:12px 0 14px" class="lead">
-      I’m Adam Rochford — a senior MSK clinician with an MSc, diploma in injection therapy and independent prescribing.
-      I lead multiple services across BaNES and bring the same evidence-based, light-touch approach to aesthetics:
-      treatments that look like you — just more rested.
-    </p>
-    <ul style="margin:0 0 14px 18px">
-      <li>MSc plus postgraduate injection therapy + independent prescribing.</li>
-      <li>HCPC registered; extensive safe injectables experience + governance background.</li>
-      <li>Known for conservative natural aesthetic, individual dosing + clear aftercare.</li>
-      <li>Private clinic on Entry Hill (or home visits across BaNES when clinically appropriate).</li>
-    </ul>
-    <a class="btn" href="pre-appointment.html">Book a consultation</a>
-  </div>
-</section>
-
+    <!-- Meet Adam (standalone feature, photo left) -->
+    <div class="meet-wrap">
+      <section class="meet" id="meet-adam">
+        <img src="/adam.jpg" alt="Adam Rochford"/>
+        <div>
+          <h2>Meet Adam</h2>
+          <div class="sub">Clinician &amp; Non-Medical Prescriber • HCPC registered</div>
+          <p class="lead" style="margin:12px 0 14px">
+            I’m Adam Rochford — a senior MSK clinician with an MSc, diploma in injection therapy and independent prescribing.
+            I lead multiple services across BaNES and bring the same evidence-based, light-touch approach to aesthetics:
+            treatments that look like you — just more rested.
+          </p>
+          <ul>
+            <li>MSc plus postgraduate injection therapy and independent prescribing.</li>
+            <li>HCPC registered; extensive safe injectables experience and clinical governance background.</li>
+            <li>Conservative, natural aesthetic — individual dosing and clear aftercare.</li>
+            <li>Private clinic near Entry Hill; home visits across BaNES where clinically appropriate.</li>
+          </ul>
+          <p style="margin-top:12px">
+            <a class="btn" href="pre-appointment.html">Book a consultation</a>
+          </p>
+        </div>
+      </section>
+    </div>
 
   </div>
 </main>
 
 <footer>
-  <div class="container">© <span id="y"></span> Renew Clinic • <a href="privacy.html">Privacy</a> • <a href="safety.html">Safety</a><br/>
-  <strong>Contact:</strong> <a href="mailto:info@renewclinic.uk">info@renewclinic.uk</a></div>
+  <div class="container">
+    © <span id="y"></span> Renew Clinic • <a href="privacy.html">Privacy</a> • <a href="safety.html">Safety</a><br/>
+    <strong>Contact:</strong> <a href="mailto:info@renewclinic.uk">info@renewclinic.uk</a>
+  </div>
 </footer>
 <script>
-document.getElementById('y').textContent=new Date().getFullYear();
+document.getElementById('y').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
