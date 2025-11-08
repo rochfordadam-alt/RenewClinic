@@ -11,19 +11,31 @@
 body{margin:0;font:17px/1.65 Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
 a{color:var(--accent-2);text-decoration:none}a:hover{text-decoration:underline}
 .container{max-width:1100px;margin:0 auto;padding:0 16px}
+
+/* Header without logo; evenly spaced tabs */
 .site-header{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--border)}
 .bar{display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 0}
-.brand{display:none} .brand img{display:none}
+.brand{display:none}.brand img{display:none}
 nav.site-nav{display:block;background:var(--surface)}
 nav.site-nav .container{display:flex;gap:0;padding:0;justify-content:space-evenly;align-items:stretch;flex-wrap:wrap;border-top:0}
 nav.site-nav a{flex:1 1 auto;text-align:center;padding:12px 10px;font-weight:600;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);border-left:1px solid var(--border)}
 nav.site-nav a:first-child{border-left:0}
 nav.site-nav a:hover{color:var(--accent-2);text-decoration:none}
-.hero{position:relative;background:center/cover no-repeat url("/hero.jpg");min-height:56vh;color:#fff;display:flex;align-items:flex-end;border-bottom:1px solid var(--border)}
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.3),rgba(0,0,0,.1))}
+
+/* HERO uses the treatment couch image across the top */
+.hero{
+  position:relative;
+  background:center/cover no-repeat url("/clinic-bed.jpg");
+  min-height:56vh;
+  color:#fff;
+  display:flex; align-items:flex-end;
+  border-bottom:1px solid var(--border)
+}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.3),rgba(0,0,0,.12))}
 .hero .inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:40px 16px;width:100%}
 .hero h1{margin:0 0 .3rem;font-size:clamp(28px,6vw,44px);font-weight:700;text-shadow:0 2px 12px rgba(0,0,0,.35)}
 .hero p{margin:.3rem 0 0;max-width:720px;color:#F1F4F3}
+
 main{padding:44px 0}
 .grid{display:grid;gap:22px}
 @media(min-width:900px){.grid{grid-template-columns:1fr 1fr 1fr}}
@@ -51,7 +63,7 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surfac
   </nav>
 </header>
 
-<section class="hero" role="img" aria-label="Calm clinic space">
+<section class="hero" role="img" aria-label="Treatment couch in calm clinic space">
   <div class="inner">
     <h1>Natural, clinician-led aesthetics in Bath</h1>
     <p class="lead">Subtle, safe treatments tailored to you. Appointments by consultation in a private clinic room near Entry Hill or via home visits across BaNES where appropriate.</p>
