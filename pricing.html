@@ -11,6 +11,8 @@
 body{margin:0;font:17px/1.65 Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
 a{color:var(--accent-2);text-decoration:none}a:hover{text-decoration:underline}
 .container{max-width:1100px;margin:0 auto;padding:0 16px}
+
+/* Header without logo; evenly spaced tabs */
 .site-header{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--border)}
 .bar{display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 0}
 .brand{display:none}.brand img{display:none}
@@ -19,11 +21,14 @@ nav.site-nav .container{display:flex;gap:0;padding:0;justify-content:space-evenl
 nav.site-nav a{flex:1 1 auto;text-align:center;padding:12px 10px;font-weight:600;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);border-left:1px solid var(--border)}
 nav.site-nav a:first-child{border-left:0}
 nav.site-nav a:hover{color:var(--accent-2);text-decoration:none}
-.subhero{position:relative;background:center/cover no-repeat url("/clinic-bed.jpg");min-height:28vh;display:flex;align-items:flex-end;color:#fff;border-bottom:1px solid var(--border)}
+
+/* Subhero base styles (image supplied inline on the section) */
+.subhero{position:relative;min-height:28vh;display:flex;align-items:flex-end;color:#fff;border-bottom:1px solid var(--border)}
 .subhero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.15))}
 .subhero .inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:28px 16px;width:100%}
 .subhero h1{margin:0;font-size:clamp(24px,3.8vw,34px);font-weight:700;text-shadow:0 2px 12px rgba(0,0,0,.35)}
 .subhero p.lead{margin:.4rem 0 0;color:#F1F4F3;max-width:780px}
+
 main{padding:48px 0}
 h1,h2{margin:0 0 .6em}h1{font-size:clamp(26px,4vw,36px)}h2{font-size:clamp(20px,3vw,26px)}
 .lead{color:var(--muted);margin-top:-6px}
@@ -56,8 +61,7 @@ hr.soft{border:0;border-top:1px solid var(--border);margin:16px 0}
   </nav>
 </header>
 
-<section class="subhero" role="img" aria-label="Calm clinic space" style="background-image:url('/clinic-bed.jpg')">
-
+<section class="subhero" role="img" aria-label="Calm clinic space" style="background:center/cover no-repeat url('/clinic-bed.jpg')">
   <div class="inner">
     <h1>Pricing</h1>
     <p class="lead">Transparent, fair pricing. Consultation and review included.</p>
