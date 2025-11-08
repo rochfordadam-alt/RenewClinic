@@ -11,6 +11,8 @@
 body{margin:0;font:17px/1.65 Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
 a{color:var(--accent-2);text-decoration:none}a:hover{text-decoration:underline}
 .container{max-width:1100px;margin:0 auto;padding:0 16px}
+
+/* Header (no logo) + evenly spaced tabs */
 .site-header{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--border)}
 .bar{display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 0}
 .brand{display:none}.brand img{display:none}
@@ -19,17 +21,27 @@ nav.site-nav .container{display:flex;gap:0;padding:0;justify-content:space-evenl
 nav.site-nav a{flex:1 1 auto;text-align:center;padding:12px 10px;font-weight:600;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);border-left:1px solid var(--border)}
 nav.site-nav a:first-child{border-left:0}
 nav.site-nav a:hover{color:var(--accent-2);text-decoration:none}
-.subhero{position:relative;background:center/cover no-repeat url("/treatments.jpg");min-height:28vh;display:flex;align-items:flex-end;color:#fff;border-bottom:1px solid var(--border)}
+
+/* Subhero uses inline background; make taller so it’s never visually “covered” */
+.subhero{position:relative;min-height:36vh;display:flex;align-items:flex-end;color:#fff;border-bottom:1px solid var(--border);background-size:cover;background-position:center}
 .subhero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.15))}
-.subhero .inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:28px 16px;width:100%}
-.subhero h1{margin:0;font-size:clamp(24px,3.8vw,34px);font-weight:700;text-shadow:0 2px 12px rgba(0,0,0,.35)}
-main{padding:48px 0}
+.subhero .inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:34px 16px;width:100%}
+.subhero h1{margin:0;font-size:clamp(26px,4vw,36px);font-weight:700;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+.subhero p.lead{margin:.4rem 0 0;color:#F1F4F3;max-width:820px}
+
+main{padding:44px 0}
 .grid{display:grid;gap:22px}
-@media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.grid.two{grid-template-columns:1fr 1fr}}
 .card{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,.9) inset;padding:22px}
-h2{margin:0 0 .6em}
+h2{margin:0 0 .6em;font-size:clamp(20px,3vw,26px)}
+h3{margin:1.1em 0 .4em;font-size:clamp(17px,2.4vw,20px)}
 .lead{color:var(--muted)}
+.badge{display:inline-block;background:#F0E7DF;color:#664C39;border:1px solid #E5D7CB;padding:4px 8px;border-radius:999px;font-size:12px;font-weight:600}
+.small{color:var(--muted);font-size:14px}
+.btn{display:inline-block;background:var(--accent);color:var(--ink-on-accent);padding:12px 18px;border-radius:10px;font-weight:700;border:1px solid transparent}
+.btn:hover{background:var(--accent-2)}
 footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);color:var(--muted);text-align:center}
+ul.clean{margin:.2rem 0 .8rem 1.2rem}
 </style>
 </head>
 <body>
@@ -49,31 +61,104 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surfac
 </header>
 
 <section class="subhero" role="img" aria-label="Calm clinic space" style="background-image:url('/clinic-bed.jpg')">
-
+  <div class="inner">
+    <h1>Treatments</h1>
+    <p class="lead">Subtle, natural results. Clinician-led consultation, individual dosing, and a calm, private setting near Entry Hill (home visits across BaNES available where appropriate).</p>
+  </div>
+</section>
 
 <main>
   <div class="container">
-    <div class="grid">
-      <section class="card">
-        <h2>Anti-wrinkle</h2>
-        <p class="lead">Upper-face treatments for frown, forehead and crow’s feet with a light-touch approach.</p>
-        <p><a href="pricing.html">See pricing</a></p>
+    <div class="grid two">
+      <!-- Anti-wrinkle -->
+      <section class="card" id="antiwrinkle">
+        <span class="badge">Upper face</span>
+        <h2>Anti-wrinkle treatment</h2>
+        <p class="lead">Softens dynamic lines caused by muscle movement — while keeping your expression natural. Review at ~2 weeks included.</p>
+        <h3>Good for</h3>
+        <ul class="clean">
+          <li>Frown lines (glabella)</li>
+          <li>Forehead lines (treated with glabella for brow support)</li>
+          <li>Crow’s feet (both eyes count as one area)</li>
+        </ul>
+        <h3>What to expect</h3>
+        <ul class="clean">
+          <li>Treatment time ~20–30 minutes</li>
+          <li>Onset 3–5 days, full effect ~14 days</li>
+          <li>Typical longevity ~3–4 months</li>
+        </ul>
+        <h3>Safety & dosing</h3>
+        <p class="small">Dosing is based on your assessment (muscle strength, anatomy, goals). A single 50-unit, single-patient vial is included per appointment; if more units are needed, opening a second vial is discussed first (£65 supply fee).</p>
+        <p style="margin-top:10px"><a class="btn" href="pricing.html#antiwrinkle">See pricing</a></p>
       </section>
-      <section class="card">
-        <h2>Masseter (clenching)</h2>
-        <p class="lead">Targeted injections to help reduce jaw clenching and soften muscle bulk.</p>
-        <p><a href="pricing.html#masseter">Learn more</a></p>
+
+      <!-- Masseter -->
+      <section class="card" id="masseter">
+        <span class="badge">Jaw</span>
+        <h2>Masseter (clenching / grinding)</h2>
+        <p class="lead">Targets the masseter muscles to reduce jaw clenching and gradually soften bulky jaw contours.</p>
+        <h3>Good for</h3>
+        <ul class="clean">
+          <li>Teeth grinding (bruxism) and jaw tension</li>
+          <li>Square or heavy jawline from muscle hypertrophy</li>
+        </ul>
+        <h3>What to expect</h3>
+        <ul class="clean">
+          <li>Treatment time ~20–30 minutes</li>
+          <li>Onset 1–2 weeks; review at 6–8 weeks</li>
+          <li>Longevity typically 3–5 months (varies)</li>
+        </ul>
+        <p class="small">Dose is individual; effects are muscular and don’t replace dental care where indicated.</p>
+        <p style="margin-top:10px"><a class="btn" href="pricing.html#masseter">Pricing</a></p>
       </section>
-      <section class="card">
-        <h2>Underarm sweating</h2>
-        <p class="lead">Treatment to reduce sweat activity for longer-lasting confidence.</p>
-        <p><a href="pricing.html#sweat">Options</a></p>
+
+      <!-- Underarm sweating -->
+      <section class="card" id="sweat">
+        <span class="badge">Sweat control</span>
+        <h2>Underarm sweating (hyperhidrosis)</h2>
+        <p class="lead">Reduces sweat gland activity in the underarms for longer-lasting dryness and comfort.</p>
+        <h3>Good for</h3>
+        <ul class="clean">
+          <li>Persistent underarm sweating affecting daily life</li>
+          <li>Event prep (weddings, presentations, performance)</li>
+        </ul>
+        <h3>What to expect</h3>
+        <ul class="clean">
+          <li>Treatment time ~30 minutes</li>
+          <li>Onset 1–2 weeks; duration can be several months</li>
+        </ul>
+        <p class="small">Suitability checked in consultation. Aftercare keeps the area clean and product undisturbed for the first day.</p>
+        <p style="margin-top:10px"><a class="btn" href="pricing.html#sweat">Pricing</a></p>
       </section>
-      <section class="card">
+
+      <!-- Fillers -->
+      <section class="card" id="fillers">
+        <span class="badge">HA Fillers</span>
         <h2>Dermal fillers</h2>
-        <p class="lead">Hyaluronic acid fillers for lips and lower-face rejuvenation.</p>
-        <p><a href="pricing.html">See pricing</a></p>
+        <p class="lead">Hyaluronic acid (HA) fillers can restore volume, refine contours and soften creases while keeping balance and proportion.</p>
+        <h3>Common areas</h3>
+        <ul class="clean">
+          <li>Lip definition and volume</li>
+          <li>Nasolabial folds and marionette lines</li>
+        </ul>
+        <h3>What to expect</h3>
+        <ul class="clean">
+          <li>Treatment time ~30–45 minutes</li>
+          <li>Immediate result; settles over 1–2 weeks</li>
+          <li>Longevity depends on area/product (typically months)</li>
+        </ul>
+        <p class="small">CE-marked HA products used. Full medical assessment and consent required.</p>
+        <p style="margin-top:10px"><a class="btn" href="pricing.html">Pricing</a></p>
       </section>
+    </div>
+
+    <div class="card" style="margin-top:24px">
+      <p class="small">
+        All treatments follow a clinician-led medical assessment to ensure suitability and safety. Prescription-only medicines are not advertised by brand name. Results vary with individual muscle strength, skin quality and aftercare.
+      </p>
+      <div style="text-align:center;margin-top:10px">
+        <a class="btn" href="pre-appointment.html">Complete Pre-Appointment Form</a>
+      </div>
     </div>
   </div>
 </main>
