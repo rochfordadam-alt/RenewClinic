@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Safety & Aftercare | Renew Aesthetics & Wellbeing</title>
+<title>Safety | Renew Aesthetics & Wellbeing</title>
 <link rel="icon" type="image/png" href="logo.png"/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
@@ -10,102 +10,64 @@
 *{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{margin:0;font:17px/1.65 Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
 a{color:var(--accent-2)}a:hover{text-decoration:underline}
-.container{max-width:1100px;margin:0 auto;padding:0 16px}
+.container{max-width:900px;margin:0 auto;padding:0 16px}
 .site-header{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--border)}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
-.brand{display:flex;gap:10px;align-items:center;color:var(--ink);text-decoration:none}
-.brand img{width:44px;height:44px;border-radius:8px;object-fit:cover;border:1px solid var(--border);background:#fff}
-.brand .t1{display:block;font-weight:700}.brand .t2{display:block;font-size:12px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
-#navToggle{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid var(--border);border-radius:9px;background:var(--surface)}
-#navToggle .burger{width:20px;height:2px;background:#1f2937;position:relative;display:block}
-#navToggle .burger:before,#navToggle .burger:after{content:"";position:absolute;left:0;width:20px;height:2px;background:#1f2937}
-#navToggle .burger:before{top:-6px}#navToggle .burger:after{top:6px}
-nav.site-nav{display:none;border-top:1px solid var(--border);background:var(--surface)}
-nav.site-nav .container{display:grid;grid-template-columns:1fr;gap:10px;padding:12px 0}
-nav.site-nav a{font-weight:600;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink)}
+.bar{display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 0}
+.brand{display:none}.brand img{display:none}
+nav.site-nav{display:block;background:var(--surface)}
+nav.site-nav .container{display:flex;gap:0;padding:0;justify-content:space-evenly;align-items:stretch;flex-wrap:wrap}
+nav.site-nav a{flex:1 1 auto;text-align:center;padding:12px 10px;font-weight:600;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);border-left:1px solid var(--border)}
+nav.site-nav a:first-child{border-left:0}
 nav.site-nav a:hover{color:var(--accent-2);text-decoration:none}
-@media(min-width:900px){#navToggle{display:none}nav.site-nav{display:block;border-top:0}nav.site-nav .container{display:flex;gap:18px;padding:0}}
-/* Subhero */
-.subhero{position:relative;background:center/cover no-repeat url("clinic-bed.jpg");min-height:28vh;display:flex;align-items:flex-end;color:#fff;border-bottom:1px solid var(--border)}
+.subhero{position:relative;background:center/cover no-repeat url("/safety.jpg");min-height:24vh;display:flex;align-items:flex-end;color:#fff;border-bottom:1px solid var(--border)}
 .subhero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.15))}
-.subhero .inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:28px 16px;width:100%}
-.subhero h1{margin:0;font-size:clamp(24px,3.8vw,34px);font-weight:700;text-shadow:0 2px 12px rgba(0,0,0,.35)}
-.subhero p.lead{margin:.4rem 0 0;color:#F1F4F3;max-width:780px}
-@media(max-width:899px){.subhero{min-height:24vh}}
-main{padding:48px 0}
-h1,h2,h3{margin:0 0 .6em}
-.grid{display:grid;gap:22px;margin-top:26px}@media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
-.card{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,0.9) inset;padding:22px}
-ul{margin:0;padding-left:18px}.small{color:var(--muted);font-size:14px}
+.subhero .inner{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:22px 16px;width:100%}
+.subhero h1{margin:0;font-size:clamp(24px,3.8vw,34px);font-weight:700}
+main{padding:36px 0}
+.card{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,.9) inset;padding:22px}
+h2{margin:0 0 .6em}
+.lead{color:var(--muted)}
 footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);color:var(--muted);text-align:center}
 </style>
 </head>
 <body>
 <header class="site-header">
-  <div class="container bar">
-    <a href="/" class="brand"><img src="logo.png" alt="Renew logo"/><span><span class="t1">Renew</span><span class="t2">Aesthetics & Wellbeing</span></span></a>
-    <button id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Menu"><span class="burger"></span></button>
-  </div>
+  <div class="container bar"></div>
   <nav id="siteNav" class="site-nav">
     <div class="container">
-      <a href="/">Home</a><a href="treatments.html">Treatments</a><a href="pre-appointment.html">Pre-Appointment</a><a href="pricing.html">Pricing</a><a href="safety.html">Safety</a><a href="myth-busters.html">Myth Busters</a><a href="privacy.html">Privacy</a>
+      <a href="/">Home</a>
+      <a href="treatments.html">Treatments</a>
+      <a href="pre-appointment.html">Pre-Appointment</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="safety.html">Safety</a>
+      <a href="myth-busters.html">Myth Busters</a>
+      <a href="privacy.html">Privacy</a>
     </div>
   </nav>
 </header>
 
-<section class="subhero" role="img" aria-label="Calm clinic space">
-  <div class="inner">
-    <h1>Safety & Aftercare</h1>
-    <p class="lead">Clear risks, realistic expectations and simple aftercare — always.</p>
-  </div>
-</section>
+<section class="subhero"><div class="inner"><h1>Safety</h1></div></section>
 
-<main><div class="container">
-  <div class="grid">
+<main>
+  <div class="container">
     <section class="card">
-      <h2>Anti-wrinkle injections — risks & side effects</h2>
+      <h2>Our approach</h2>
+      <p class="lead">Clinician-led consultation, evidence-based practice, and a light-touch aesthetic.</p>
       <ul>
-        <li>Common: mild redness, small bumps, tenderness, transient headache (settle within 24–48h)</li>
-        <li>Less common: bruising, swelling, asymmetry, eyelid/eyebrow heaviness (temporary)</li>
-        <li>Rare: infection, allergy. Seek advice if symptoms persist or worsen.</li>
+        <li>Medical history, consent and suitability check before treatment</li>
+        <li>Prescription-only medicines supplied and handled safely</li>
+        <li>Cold-chain storage and daily temperature logging</li>
+        <li>Two-week review for anti-wrinkle treatments</li>
+        <li>Clear aftercare and open follow-up</li>
       </ul>
     </section>
-    <section class="card">
-      <h2>Dermal fillers — risks & side effects</h2>
-      <ul>
-        <li>Common: redness, swelling, tenderness, bruising</li>
-        <li>Less common: lumps/unevenness (often resolve with massage or review)</li>
-        <li>Important but rare: vascular compromise (blanching, severe pain, colour change). Contact us urgently if concerned.</li>
-      </ul>
-    </section>
-    <section class="card">
-      <h2>Teeth grinding / masseter — notes</h2>
-      <ul><li>Jaw function may feel different while clenching reduces</li><li>Full effect develops gradually over weeks; review included</li></ul>
-    </section>
-    <section class="card">
-      <h2>Underarm sweating — notes</h2>
-      <ul><li>Results typically last several months; varies by individual</li><li>Avoid tight clothing and vigorous exercise on the day</li></ul>
-    </section>
   </div>
+</main>
 
-  <section class="card" style="margin-top:24px">
-    <h2>Aftercare — general</h2>
-    <ul>
-      <li>Keep treated areas clean and avoid touching for 4–6 hours</li>
-      <li>No strenuous exercise, saunas or facials on the day</li>
-      <li>Sleep on your back if possible the first night</li>
-      <li>Make-up: ideally avoid for 4–6 hours; use clean tools if applying</li>
-      <li>If bruising occurs, cold compresses can help</li>
-      <li>If you feel unwell or worried, contact us: <a href="mailto:info@renewclinic.uk">info@renewclinic.uk</a></li>
-    </ul>
-  </section>
-</div></main>
-
-<footer><div class="container">© <span id="y"></span> Renew Clinic • <a href="privacy.html">Privacy</a></div></footer>
-<script>
-document.getElementById('y').textContent=new Date().getFullYear();
-const btn=document.getElementById('navToggle'),nav=document.getElementById('siteNav');
-function t(){const o=nav.style.display==='block';nav.style.display=o?'none':'block';btn.setAttribute('aria-expanded',String(!o))}btn.addEventListener('click',t);
-function s(){if(window.matchMedia('(min-width: 900px)').matches){nav.style.display='block';btn.style.display='none'}else{nav.style.display='none';btn.style.display='inline-flex';btn.setAttribute('aria-expanded','false')}}window.addEventListener('resize',s);window.addEventListener('DOMContentLoaded',s);
-</script>
-</body></html>
+<footer>
+  <div class="container">© <span id="y"></span> Renew Clinic • <a href="privacy.html">Privacy</a> • <a href="safety.html">Safety</a><br/>
+  <strong>Contact:</strong> <a href="mailto:info@renewclinic.uk">info@renewclinic.uk</a></div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
