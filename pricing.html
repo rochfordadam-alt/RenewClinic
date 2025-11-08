@@ -83,9 +83,11 @@ hr.soft{border:0;border-top:1px solid var(--border);margin:16px 0}
 .price{font-weight:700}
 .badge{display:inline-block;background:#F0E7DF;color:#664C39;border:1px solid #E5D7CB;padding:4px 8px;border-radius:999px;font-size:12px;font-weight:600}
 .small{color:var(--muted);font-size:14px}
+.disclaimer{color:var(--muted);font-size:13px}
 .btn{display:inline-block;background:var(--accent);color:var(--ink-on-accent);padding:12px 18px;border-radius:10px;font-weight:700;border:1px solid transparent;text-decoration:none}
 .btn:hover{background:var(--accent-2)}
 footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);color:var(--muted);text-align:center}
+ul.clean{margin:0.4rem 0 0.2rem 1.2rem;padding:0}
 </style>
 </head>
 <body>
@@ -114,36 +116,49 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surfac
 <main><div class="container">
 
   <div class="grid">
+    <!-- Anti-wrinkle block with second-vial policy -->
     <section class="card">
       <h2>Anti-wrinkle (upper face)</h2>
-      <p><span class="price">1 area £160</span><br><span class="price">2 areas £200</span><br><span class="price">3 areas £240</span></p>
-      <p class="small">Areas: frown (glabella), forehead (frontalis), crow’s feet (lateral canthus). Precise dosing based on assessment.</p>
+      <p class="lead">A personalised treatment plan to soften lines while keeping your expression natural. A review at 2&nbsp;weeks is included.</p>
+      <p>
+        <span class="price">1 area £160</span><br/>
+        <span class="price">2 areas £200</span><br/>
+        <span class="price">3 areas £240</span>
+      </p>
+      <p class="small"><strong>Areas included:</strong> frown lines (glabella), forehead lines, crow’s feet (both sides count as one area). Precise dosing is based on your clinical assessment and goals.</p>
       <hr class="soft"/>
-      <span class="badge">Intro reviews included</span>
+      <p class="small"><strong>How reviews &amp; top-ups work:</strong> We include a review at around 2&nbsp;weeks to check your result and make any clinically indicated adjustments.</p>
+      <p class="small"><strong>About vials:</strong> Each appointment includes a 50-unit vial for <em>single-patient use</em>. In some cases where more units are required, a new 50-unit vial must be opened. If a second vial is required, this will always be discussed first and an additional <strong>£65 vial fee</strong> applies.</p>
+      <span class="badge">2-week review included</span>
     </section>
 
     <section class="card">
       <h2>Teeth grinding (masseter)</h2>
       <p><span class="price">From £260</span></p>
-      <p class="small">Reduces jaw clenching/grinding and softens masseter bulk over time. 6–8 week review included.</p>
+      <p class="small">Reduces jaw clenching and softens masseter bulk over time. Includes review at 6–8&nbsp;weeks.</p>
     </section>
 
     <section class="card">
       <h2>Underarm sweating</h2>
       <p><span class="price">From £300</span></p>
-      <p class="small">Injections to reduce sweat activity in the underarms. Typical results last several months.</p>
+      <p class="small">Targeted injections to reduce sweat activity in the underarms. Typical results last several months; individual results vary.</p>
     </section>
 
     <section class="card">
       <h2>Dermal fillers</h2>
-      <p><span class="price">From £220 (0.5 ml)</span><br><span class="price">From £280–£320 (1 ml)</span></p>
-      <p class="small">Areas: lips, nasolabial folds, marionette lines. CE-marked HA fillers; dose tailored to your goals.</p>
+      <p><span class="price">From £220 (0.5&nbsp;ml)</span><br/><span class="price">From £280–£320 (1&nbsp;ml)</span></p>
+      <p class="small">Common areas: lips, nasolabial folds, marionette lines. CE-marked HA fillers; dose and brand selected after consultation.</p>
     </section>
   </div>
 
-  <div class="card" style="margin-top:24px;text-align:center">
-    <p class="small">All treatments follow a clinician-led medical assessment. Prescription-only medicines are not advertised by brand names.</p>
-    <a class="btn" href="pre-appointment.html">Complete Pre-Appointment Form</a>
+  <!-- Gentle compliance statements -->
+  <div class="card" style="margin-top:24px">
+    <p class="disclaimer">
+      All treatments follow a clinician-led medical assessment to ensure suitability and safety. Prescription-only medicines are not advertised by brand name. Results vary with individual muscle strength, skin quality and aftercare. If a second vial is required for your goals or muscle strength, the £65 vial fee will be agreed with you in advance during consultation or review.
+    </p>
+    <div style="text-align:center;margin-top:10px">
+      <a class="btn" href="pre-appointment.html">Complete Pre-Appointment Form</a>
+    </div>
   </div>
 
 </div></main>
@@ -157,7 +172,14 @@ document.getElementById('y').textContent=new Date().getFullYear();
 const btn=document.getElementById('navToggle'),nav=document.getElementById('siteNav');
 function t(){const o=nav.style.display==='block';nav.style.display=o?'none':'block';btn.setAttribute('aria-expanded',String(!o))}
 btn.addEventListener('click',t);
-function s(){if(window.matchMedia('(min-width: 900px)').matches){nav.style.display='block';btn.style.display='none'}else{nav.style.display='none';btn.style.display='inline-flex';btn.setAttribute('aria-expanded','false')}}window.addEventListener('resize',s);window.addEventListener('DOMContentLoaded',s);
+function s(){
+  if(window.matchMedia('(min-width: 900px)').matches){
+    nav.style.display='block';btn.style.display='none'
+  }else{
+    nav.style.display='none';btn.style.display='inline-flex';btn.setAttribute('aria-expanded','false')
+  }
+}
+window.addEventListener('resize',s);window.addEventListener('DOMContentLoaded',s);
 </script>
 </body>
 </html>
