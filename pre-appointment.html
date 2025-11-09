@@ -10,9 +10,9 @@
 *{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{margin:0;font:17px/1.65 Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
 a{color:var(--accent-2);text-decoration:none}a:hover{text-decoration:underline}
-.container{max-width:900px;margin:0 auto;padding:0 16px}
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
 
-/* Header (no logo) + evenly spaced tabs */
+/* Header */
 .site-header{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--border)}
 .bar{display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 0}
 nav.site-nav{display:block;background:var(--surface)}
@@ -21,22 +21,32 @@ nav.site-nav a{flex:1 1 auto;text-align:center;padding:12px 10px;font-weight:600
 nav.site-nav a:first-child{border-left:0}
 nav.site-nav a:hover{color:var(--accent-2);text-decoration:none}
 
-/* Banner image */
-.subhero{position:relative;min-height:28vh;display:flex;align-items:flex-end;color:#fff;border-bottom:1px solid var(--border);background:center/cover no-repeat url('/clinic-bed.jpg')}
-.subhero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.15))}
-.subhero .inner{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:22px 16px;width:100%}
-.subhero h1{margin:0;font-size:clamp(24px,3.8vw,34px);font-weight:700}
+/* SUBPAGE HERO (fish image) — desktop 50%, mobile 60% */
+.subhero{
+  position:relative;
+  background:center 50%/cover no-repeat url('/assets/renew-fish-hero.jpg');
+  min-height:58vh;
+  display:flex;align-items:flex-end;
+  color:#fff;border-bottom:1px solid var(--border)
+}
+.subhero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.22),rgba(0,0,0,.10))}
+.subhero .inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:44px 16px;width:100%}
+.subhero h1{margin:0;font-size:clamp(26px,5.5vw,40px);font-weight:700;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+.subhero p.lead{margin:.4rem 0 0;color:#F1F4F3;max-width:780px}
+@media (max-width: 820px){
+  .subhero{min-height:56vh;background-position:center 60%}
+}
 
-main{padding:36px 0}
-.card{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,.9) inset;padding:22px}
+main{padding:48px 0}
+h2{margin:0 0 .6em;font-size:clamp(20px,3vw,26px)}
+.lead{color:var(--muted)}
+.grid{display:grid;gap:22px;margin-top:26px}
+@media(min-width:900px){.grid.two{grid-template-columns:1fr 1fr}}
+.card{background:#FFFFFF;border:1px solid var(--border);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,.9) inset;padding:22px}
 .small{color:var(--muted);font-size:14px}
+hr.soft{border:0;border-top:1px solid var(--border);margin:16px 0}
 .btn{display:inline-block;background:var(--accent);color:var(--ink-on-accent);padding:12px 18px;border-radius:10px;font-weight:700;border:1px solid transparent}
 .btn:hover{background:var(--accent-2)}
-footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);color:var(--muted);text-align:center}
-
-/* Responsive iframe */
-.form-wrap iframe{width:100%;height:1850px;border:0}
-@media (max-width:600px){.form-wrap iframe{height:2100px}}
 </style>
 </head>
 <body>
@@ -55,25 +65,38 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surfac
   </nav>
 </header>
 
-<section class="subhero" role="img" aria-label="Calm clinic space">
-  <div class="inner"><h1>Pre-Appointment Form</h1></div>
+<section class="subhero" role="img" aria-label="Renew brand hero – pre-appointment">
+  <div class="inner">
+    <h1>Pre-Appointment</h1>
+    <p class="lead">How to prepare, what to expect, parking and aftercare — all in one place.</p>
+  </div>
 </section>
 
 <main>
   <div class="container">
-    <section class="card">
-      <div class="form-wrap">
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSdWGjdD5I94-p1RvoGlR6QmGeUYqjcl3-G5tPwvF5LY5b7mAg/viewform?embedded=true"
-          allow="clipboard-write; encrypted-media; geolocation"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-      <p class="small" style="margin-top:10px">
-        If the form doesn’t load, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdWGjdD5I94-p1RvoGlR6QmGeUYqjcl3-G5tPwvF5LY5b7mAg/viewform" target="_blank" rel="noopener">open it in a new tab</a>.
-      </p>
-      <p class="small"><strong>Parking (optional):</strong> If you’re driving to our Entry Hill clinic and would like us to activate a visitor permit, please include your vehicle registration in the form.</p>
-    </section>
+
+    <div class="grid two">
+      <section class="card">
+        <h2>Before you come</h2>
+        <p class="small">Please complete the short Pre-Appointment form so we can review your medical history and goals. Avoid alcohol and strenuous exercise on the day where possible, and arrive with clean skin (no heavy makeup on treatment areas).</p>
+        <hr class="soft"/>
+        <h2>What to expect</h2>
+        <p class="small">We’ll start with a consultation and assessment. If treatment is suitable and you wish to proceed, we’ll explain everything and take consent. Most treatments are quick with minimal discomfort.</p>
+      </section>
+
+      <section class="card">
+        <h2>Parking & access</h2>
+        <p class="small">Street parking is available locally. If you need a visitor permit, we can activate one for your appointment — just add your registration when you book. Please note there are steps at the entrance and the room is not wheelchair accessible.</p>
+        <hr class="soft"/>
+        <h2>Aftercare</h2>
+        <p class="small">You’ll receive simple aftercare tailored to your treatment. Most people return to normal life immediately; minor redness or pinpoint bruising can occur and settles quickly.</p>
+      </section>
+    </div>
+
+    <div class="card" style="margin-top:24px;text-align:center">
+      <a class="btn" href="pre-appointment.html">Complete Pre-Appointment Form</a>
+    </div>
+
   </div>
 </main>
 
