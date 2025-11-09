@@ -44,24 +44,9 @@ h2{margin:0 0 .6em;font-size:clamp(20px,3vw,26px)}
 .grid{display:grid;gap:22px;margin-top:26px}
 @media(min-width:900px){.grid.two{grid-template-columns:1fr 1fr}}
 .small{color:var(--muted);font-size:14px}
-
-/* FAQ styles (scoped) */
-.faq-grid{display:grid;gap:16px;margin-top:20px}
+.kicker{font-size:12px;letter-spacing:.08em;color:#7a685c;text-transform:uppercase;font-weight:700}
+.faq-grid{display:grid;gap:16px;margin-top:14px}
 @media(min-width:900px){.faq-grid{grid-template-columns:1fr 1fr}}
-.faq details{
-  background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px 16px;
-  box-shadow:0 10px 24px rgba(0,0,0,.05),0 0 0 2px rgba(255,255,255,.9) inset
-}
-.faq summary{
-  cursor:pointer;list-style:none;font-weight:600;
-  display:flex;align-items:center;justify-content:space-between;gap:12px
-}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary span{color:var(--muted);font-weight:500}
-.faq details[open]{border-color:var(--accent)}
-.faq .answer{margin:10px 0 0;color:var(--ink)}
-.faq .answer p{margin:.5em 0}
-.faq a.btn-link{font-weight:700}
 </style>
 </head>
 <body>
@@ -123,117 +108,100 @@ h2{margin:0 0 .6em;font-size:clamp(20px,3vw,26px)}
       </section>
     </div>
 
-    <!-- FAQs -->
+    <!-- FAQs (always open) -->
     <section id="faqs" aria-labelledby="faqs-title" style="margin:40px 0 0">
       <h2 id="faqs-title" style="margin:0 0 16px">FAQs</h2>
-      <div class="faq faq-grid">
+      <div class="faq-grid">
 
-        <details>
-          <summary>Where are you based? <span>Location & access</span></summary>
-          <div class="answer">
-            <p>Appointments are by consultation in a private clinic room near Entry Hill, Bath. Where appropriate, home visits are available across BaNES.</p>
-            <p>Full address and arrival instructions are provided in your booking confirmation.</p>
-          </div>
-        </details>
+        <section class="card">
+          <div class="kicker">Location & access</div>
+          <h2>Where are you based?</h2>
+          <p class="small">Appointments are by consultation in a private clinic room near Entry Hill, Bath. Where appropriate, home visits are available across BaNES. Full address and arrival instructions are provided in your booking confirmation.</p>
+        </section>
 
-        <details>
-          <summary>Is there parking nearby? <span>Getting here</span></summary>
-          <div class="answer">
-            <p>There is on-street parking on nearby roads. We can activate a visitor permit for your appointment if needed — just add your vehicle registration on the pre-appointment form.</p>
-          </div>
-        </details>
+        <section class="card">
+          <div class="kicker">Getting here</div>
+          <h2>Is there parking nearby?</h2>
+          <p class="small">There is on-street parking on nearby roads. We can activate a visitor permit for your appointment if needed — just add your vehicle registration on the pre-appointment form.</p>
+        </section>
 
-        <details>
-          <summary>What happens at my first appointment? <span>Consultation first</span></summary>
-          <div class="answer">
-            <p>We start with a medical consultation and assessment to understand your goals and ensure treatment is appropriate and safe. We’ll discuss options, expected outcomes, pricing and aftercare before anything goes ahead.</p>
-          </div>
-        </details>
+        <section class="card">
+          <div class="kicker">Consultation first</div>
+          <h2>What happens at my first appointment?</h2>
+          <p class="small">We start with a medical consultation and assessment to understand your goals and ensure treatment is appropriate and safe. We’ll discuss options, expected outcomes, pricing and aftercare before anything goes ahead.</p>
+        </section>
 
-        <details>
-          <summary>Who performs the treatments? <span>Clinician-led</span></summary>
-          <div class="answer">
-            <p>All consultations and treatments are carried out by Adam Rochford — Advanced Musculoskeletal Clinician & Independent Prescriber (HCPC registered).</p>
-            <p>See our <a class="btn-link" href="safety.html">Safety</a> page for training and governance info.</p>
-          </div>
-        </details>
+        <section class="card">
+          <div class="kicker">Clinician-led</div>
+          <h2>Who performs the treatments?</h2>
+          <p class="small">All consultations and treatments are carried out by Adam Rochford — Advanced Musculoskeletal Clinician & Independent Prescriber (HCPC registered). See our <a href="safety.html">Safety</a> page for training and governance info.</p>
+        </section>
 
-        <details>
-          <summary>Does Botox&reg; freeze your face? <span>Natural results</span></summary>
-          <div class="answer">
-            <p>No. In conservative dosing the aim is to soften lines while keeping natural expression. We specialise in subtle, “you but fresher” results — not a frozen look.</p>
-          </div>
-        </details>
+        <section class="card">
+          <div class="kicker">Natural results</div>
+          <h2>Does Botox® freeze your face?</h2>
+          <p class="small">No. In conservative dosing the aim is to soften lines while keeping natural expression. We specialise in subtle, “you but fresher” results — not a frozen look.</p>
+        </section>
 
-        <details>
-          <summary>How long do anti-wrinkle results last? <span>Duration</span></summary>
-          <div class="answer">
-            <p>Typically around 3–4 months on average, varying by dose, area treated and individual factors. Results fade gradually — it isn’t permanent.</p>
-          </div>
-        </details>
+        <section class="card">
+          <div class="kicker">Duration</div>
+          <h2>How long do anti-wrinkle results last?</h2>
+          <p class="small">Typically around 3–4 months on average, varying by dose, area treated and individual factors. Results fade gradually — it isn’t permanent.</p>
+        </section>
 
-        <details>
-          <summary>How long do dermal fillers last? <span>Duration</span></summary>
-          <div class="answer">
-            <p>Most hyaluronic acid fillers last roughly 6–18 months depending on the product, area and your own metabolism.</p>
-          </div>
-        </details>
+        <section class="card">
+          <div class="kicker">Duration</div>
+          <h2>How long do dermal fillers last?</h2>
+          <p class="small">Most hyaluronic acid fillers last roughly 6–18 months depending on the product, area and your own metabolism.</p>
+        </section>
 
-        <details>
-          <summary>Will I need a second vial? <span>Dose & pricing</span></summary>
-          <div class="answer">
-            <p>Occasionally a second vial (or higher dose) may be appropriate based on muscle strength and goals. If that’s the case, we’ll agree it with you first. Any additional vials are priced separately — see <a class="btn-link" href="pricing.html">Pricing</a>.</p>
-          </div>
-        </details>
+        <section class="card">
+          <div class="kicker">Dose & pricing</div>
+          <h2>Will I need a second vial?</h2>
+          <p class="small">Sometimes, based on muscle strength and goals. If appropriate, we’ll agree it with you first. Any additional vials are priced separately — see <a href="pricing.html">Pricing</a>.</p>
+        </section>
 
-        <details>
-          <summary>Do you offer a review? <span>Follow-up</span></summary>
-          <div class="answer">
-            <p>For anti-wrinkle treatments we offer an optional review around 2–3 weeks to check progress and make small adjustments if needed.</p>
-          </div>
-        </details>
+        <section class="card">
+          <div class="kicker">Follow-up</div>
+          <h2>Do you offer a review?</h2>
+          <p class="small">For anti-wrinkle treatments we offer an optional review around 2–3 weeks to check progress and make small adjustments if needed.</p>
+        </section>
 
-        <details>
-          <summary>Is there downtime? <span>Aftercare</span></summary>
-          <div class="answer">
-            <p>Most people go straight back to normal activities. You may have small bumps or redness that settle quickly, and occasional pinpoint bruising. We’ll give clear aftercare guidance.</p>
-          </div>
-        </details>
+        <section class="card">
+          <div class="kicker">Aftercare</div>
+          <h2>Is there downtime?</h2>
+          <p class="small">Most people go straight back to normal activities. You may have small bumps or redness that settle quickly, and occasional pinpoint bruising. We’ll give clear aftercare guidance.</p>
+        </section>
 
-        <details>
-          <summary>Does it hurt? <span>Comfort</span></summary>
-          <div class="answer">
-            <p>Treatments are typically very quick with minimal discomfort — often described as tiny pinpricks. We use gentle technique and appropriate comfort measures.</p>
-          </div>
-        </details>
+        <section class="card">
+          <div class="kicker">Comfort</div>
+          <h2>Does it hurt?</h2>
+          <p class="small">Treatments are typically very quick with minimal discomfort — often described as tiny pinpricks. We use gentle technique and appropriate comfort measures.</p>
+        </section>
 
-        <details>
-          <summary>Who is not suitable? <span>Medical considerations</span></summary>
-          <div class="answer">
-            <p>Treatments aren’t suitable in pregnancy or while breastfeeding, and may not be appropriate with certain medical conditions or medications. We’ll screen this during consultation to prioritise your safety.</p>
-          </div>
-        </details>
+        <section class="card">
+          <div class="kicker">Medical considerations</div>
+          <h2>Who is not suitable?</h2>
+          <p class="small">We don’t treat during pregnancy or breastfeeding, and some medical conditions/medications mean treatment may not be appropriate. We’ll screen this during consultation to prioritise your safety.</p>
+        </section>
 
-        <details>
-          <summary>How much does it cost? <span>Transparent fees</span></summary>
-          <div class="answer">
-            <p>All fees are listed on our <a class="btn-link" href="pricing.html">Pricing</a> page, including options for masseter/jaw clenching and underarm sweating. We’ll confirm the exact plan and price before you proceed.</p>
-          </div>
-        </details>
+        <section class="card">
+          <div class="kicker">Transparent fees</div>
+          <h2>How much does it cost?</h2>
+          <p class="small">All fees are listed on our <a href="pricing.html">Pricing</a> page, including masseter/jaw clenching and underarm sweating. We’ll confirm the exact plan and price before you proceed.</p>
+        </section>
 
-        <details>
-          <summary>Do you do home visits? <span>Accessibility</span></summary>
-          <div class="answer">
-            <p>Yes — where clinically appropriate across BaNES. We’ll confirm suitability, environment and travel arrangements during consultation.</p>
-          </div>
-        </details>
+        <section class="card">
+          <div class="kicker">Accessibility</div>
+          <h2>Do you do home visits?</h2>
+          <p class="small">Yes — where clinically appropriate across BaNES. We’ll confirm suitability, environment and travel arrangements during consultation.</p>
+        </section>
 
-        <details>
-          <summary>Where can I read more about risks? <span>Informed choice</span></summary>
-          <div class="answer">
-            <p>Please see our <a class="btn-link" href="safety.html">Safety</a> page for a fuller overview of benefits, risks and consent.</p>
-          </div>
-        </details>
+        <section class="card">
+          <div class="kicker">Informed choice</div>
+          <h2>Where can I read more about risks?</h2>
+          <p class="small">See our <a href="safety.html">Safety</a> page for a fuller overview of benefits, risks and consent. We’ll cover this in person so you can make an informed decision.</p>
+        </section>
 
       </div>
     </section>
