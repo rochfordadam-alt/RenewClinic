@@ -22,12 +22,21 @@ nav.site-nav a{flex:1 1 auto;text-align:center;padding:12px 10px;font-weight:600
 nav.site-nav a:first-child{border-left:0}
 nav.site-nav a:hover{color:var(--accent-2);text-decoration:none}
 
-/* Subhero base styles (image supplied inline on the section) */
-.subhero{position:relative;min-height:28vh;display:flex;align-items:flex-end;color:#fff;border-bottom:1px solid var(--border)}
-.subhero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.15))}
-.subhero .inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:28px 16px;width:100%}
-.subhero h1{margin:0;font-size:clamp(24px,3.8vw,34px);font-weight:700;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+/* SUBPAGE HERO (fish image) */
+.subhero{
+  position:relative;
+  background:center 40%/cover no-repeat url('/assets/renew-fish-hero.jpg'); /* fish hero */
+  min-height:46vh;
+  display:flex;align-items:flex-end;
+  color:#fff;border-bottom:1px solid var(--border)
+}
+.subhero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.28),rgba(0,0,0,.10))}
+.subhero .inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:40px 16px;width:100%}
+.subhero h1{margin:0;font-size:clamp(26px,5.5vw,40px);font-weight:700;text-shadow:0 2px 12px rgba(0,0,0,.35)}
 .subhero p.lead{margin:.4rem 0 0;color:#F1F4F3;max-width:780px}
+@media (max-width: 820px){
+  .subhero{min-height:50vh;background-position:center 42%} /* keep main part of image in view */
+}
 
 main{padding:48px 0}
 h1,h2{margin:0 0 .6em}h1{font-size:clamp(26px,4vw,36px)}h2{font-size:clamp(20px,3vw,26px)}
@@ -61,7 +70,8 @@ hr.soft{border:0;border-top:1px solid var(--border);margin:16px 0}
   </nav>
 </header>
 
-<section class="subhero" role="img" aria-label="Calm clinic space" style="background:center/cover no-repeat url('/clinic-bed.jpg')">
+<!-- FISH HERO FOR SUBPAGE -->
+<section class="subhero" role="img" aria-label="Renew brand hero – pricing">
   <div class="inner">
     <h1>Pricing</h1>
     <p class="lead">Transparent, fair pricing. Consultation and review included.</p>
@@ -150,3 +160,4 @@ hr.soft{border:0;border-top:1px solid var(--border);margin:16px 0}
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
+
