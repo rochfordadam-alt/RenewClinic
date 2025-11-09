@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Renew Aesthetics & Wellbeing – Natural, clinician-led care in Bath</title>
+<link rel="icon" type="image/png" href="logo.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 :root{
   --bg:#F8F3EF;--surface:#FFFFFF;--ink:#232323;--muted:#5F5F5F;
@@ -52,8 +60,10 @@ h2{margin:0 0 .6em;font-size:clamp(20px,3vw,26px)}
   box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,.9) inset;
 }
 .meet img{
-  width:100%;height:320px;object-fit:cover;
-  object-position:center 15%; /* THIS FIXES YOUR HEAD CROPPING */
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  object-position:center 15%; /* keep the top of the photo in view */
   border-radius:16px;border:3px solid #fff;
   box-shadow:0 6px 18px rgba(0,0,0,.12)
 }
@@ -67,11 +77,94 @@ h2{margin:0 0 .6em;font-size:clamp(20px,3vw,26px)}
   .meet{grid-template-columns:1fr}
   .meet img{
     height:min(78vw, 360px);
-    max-width:460px;margin:0 auto;
-    object-position:center 10%; /* mobile version top alignment */
+    max-width:460px;
+    margin:0 auto;
+    object-position:center 10%; /* nudge even higher on mobile */
   }
 }
 
 /* Footer */
 footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);color:var(--muted);text-align:center}
 </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container bar"></div>
+  <nav id="siteNav" class="site-nav">
+    <div class="container">
+      <a href="/">Home</a>
+      <a href="treatments.html">Treatments</a>
+      <a href="pre-appointment.html">Pre-Appointment</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="safety.html">Safety</a>
+      <a href="myth-busters.html">Myth Busters</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" role="img" aria-label="Treatment couch in calm clinic space">
+  <div class="inner">
+    <h1>Natural, clinician-led aesthetics in Bath</h1>
+    <p class="lead">Subtle, safe treatments tailored to you. Appointments by consultation in a private clinic room near Entry Hill or via home visits across BaNES where appropriate.</p>
+    <p style="margin-top:14px"><a class="btn" href="pre-appointment.html">Start with the Pre-Appointment form</a></p>
+  </div>
+</section>
+
+<main>
+  <div class="container">
+
+    <!-- Meet Adam (now directly under hero) -->
+    <div class="meet-wrap">
+      <section class="meet" id="meet-adam">
+        <img src="/adam.jpg" alt="Adam Rochford"/>
+        <div>
+          <h2>Meet Adam</h2>
+          <div class="sub">Advanced Musculoskeletal Clinician • Independent Prescriber (HCPC registered)</div>
+          <p class="lead" style="margin:12px 0 14px">
+            I’m Adam Rochford — an Advanced Musculoskeletal Clinician with many years’ experience treating complex muscle and movement conditions. I hold a Physiotherapy degree, a Master’s degree, a Diploma in Injection Therapy and I am an Independent Prescriber.
+          </p>
+          <p class="lead" style="margin:0 0 14px">
+            Over my NHS career I have delivered hundreds of safe injectable treatments and spent eight years as Clinical Lead within the Orthopaedic Interface Service, leading a team of over 40 clinicians.
+          </p>
+          <p class="lead" style="margin:0 0 14px">
+            I now bring that same evidence-based, precise and conservative approach into aesthetics — focusing on subtle, natural results that still look like you.
+          </p>
+          <a class="btn" href="pre-appointment.html">Book a consultation</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Service cards -->
+    <div class="grid three" style="margin-top:28px">
+      <section class="card">
+        <h2>Anti-wrinkle treatments</h2>
+        <p class="lead">Smoother, fresher — while keeping your natural expression.</p>
+        <p><a class="btn" href="pricing.html#antiwrinkle">See pricing</a></p>
+      </section>
+      <section class="card">
+        <h2>Masseter & jaw clenching</h2>
+        <p class="lead">Targeted treatment that can reduce clenching and soften jaw bulk.</p>
+        <p><a class="btn" href="pricing.html#masseter">Learn more</a></p>
+      </section>
+      <section class="card">
+        <h2>Underarm sweating</h2>
+        <p class="lead">Helps reduce sweat activity for long-lasting confidence.</p>
+        <p><a class="btn" href="pricing.html#sweat">View options</a></p>
+      </section>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    © <span id="y"></span> Renew Clinic • <a href="privacy.html">Privacy</a> • <a href="safety.html">Safety</a><br/>
+    <strong>Contact:</strong> <a href="mailto:info@renewclinic.uk">info@renewclinic.uk</a>
+  </div>
+</footer>
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
