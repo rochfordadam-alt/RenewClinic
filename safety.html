@@ -9,30 +9,6 @@
 :root{--bg:#F8F3EF;--surface:#FFFFFF;--ink:#232323;--muted:#5F5F5F;--border:#E8DCD4;--accent:#C6A48A;--accent-2:#B18F78;--ink-on-accent:#fff}
 *{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{margin:0;font:17px/1.65 Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
-a{color:var(--accent-2)}a:hover{text-decoration:underline}
-.container{max-width:900px;margin:0 auto;padding:0 16px}
-
-/* Header without logo; evenly spaced tabs */
-.site-header{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--border)}
-.bar{display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 0}
-.brand{display:none}.brand img{display:none}
-nav.site-nav{display:block;background:var(--surface)}
-nav.site-nav .container{display:flex;gap:0;padding:0;justify-content:space-evenly;align-items:stretch;flex-wrap:wrap}
-nav.site-nav a{flex:1 1 auto;text-align:center;padding:12px 10px;font-weight:600;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);border-left:1px solid var(--border)}
-nav.site-nav a:first-child{border-left:0}
-nav.site-nav a:hover{color:var(--accent-2);text-decoration:none}
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Safety | Renew Aesthetics & Wellbeing</title>
-<link rel="icon" type="image/png" href="logo.png"/>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-<style>
-:root{--bg:#F8F3EF;--surface:#FFFFFF;--ink:#232323;--muted:#5F5F5F;--border:#E8DCD4;--accent:#C6A48A;--accent-2:#B18F78;--ink-on-accent:#fff}
-*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{margin:0;font:17px/1.65 Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
 a{color:var(--accent-2);text-decoration:none}a:hover{text-decoration:underline}
 .container{max-width:1100px;margin:0 auto;padding:0 16px}
 
@@ -45,7 +21,7 @@ nav.site-nav a{flex:1 1 auto;text-align:center;padding:12px 10px;font-weight:600
 nav.site-nav a:first-child{border-left:0}
 nav.site-nav a:hover{color:var(--accent-2);text-decoration:none}
 
-/* SUBPAGE HERO (fish image) — Option 1 with 50% / 60% */
+/* SUBPAGE HERO (fish image) — desktop 50%, mobile 60% */
 .subhero{
   position:relative;
   background:center 50%/cover no-repeat url('/assets/renew-fish-hero.jpg');
@@ -62,7 +38,7 @@ nav.site-nav a:hover{color:var(--accent-2);text-decoration:none}
 }
 
 main{padding:48px 0}
-h1,h2{margin:0 0 .6em}h2{font-size:clamp(20px,3vw,26px)}
+h2{margin:0 0 .6em;font-size:clamp(20px,3vw,26px)}
 .lead{color:var(--muted)}
 .grid{display:grid;gap:22px;margin-top:26px}
 @media(min-width:900px){.grid.two{grid-template-columns:1fr 1fr}}
@@ -127,58 +103,6 @@ hr.soft{border:0;border-top:1px solid var(--border);margin:16px 0}
       <p><a class="btn" href="pre-appointment.html">Start with the Pre-Appointment form</a></p>
     </div>
 
-  </div>
-</main>
-
-<footer>
-  <div class="container">© <span id="y"></span> Renew Clinic • <a href="privacy.html">Privacy</a> • <a href="safety.html">Safety</a><br/>
-  <strong>Contact:</strong> <a href="mailto:info@renewclinic.uk">info@renewclinic.uk</a></div>
-</footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
-</body>
-</html>
-
-
-main{padding:36px 0}
-.card{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,.9) inset;padding:22px}
-h2{margin:0 0 .6em}
-.lead{color:var(--muted)}
-footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);color:var(--muted);text-align:center}
-</style>
-</head>
-<body>
-<header class="site-header">
-  <div class="container bar"></div>
-  <nav id="siteNav" class="site-nav">
-    <div class="container">
-      <a href="/">Home</a>
-      <a href="treatments.html">Treatments</a>
-      <a href="pre-appointment.html">Pre-Appointment</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="safety.html">Safety</a>
-      <a href="myth-busters.html">Myth Busters</a>
-      <a href="privacy.html">Privacy</a>
-    </div>
-  </nav>
-</header>
-
-<section class="subhero" role="img" aria-label="Calm clinic space" style="background:center/cover no-repeat url('/clinic-bed.jpg')">
-  <div class="inner"><h1>Safety</h1></div>
-</section>
-
-<main>
-  <div class="container">
-    <section class="card">
-      <h2>Our approach</h2>
-      <p class="lead">Clinician-led consultation, evidence-based practice, and a light-touch aesthetic.</p>
-      <ul>
-        <li>Medical history, consent and suitability check before treatment</li>
-        <li>Prescription-only medicines supplied and handled safely</li>
-        <li>Cold-chain storage and temperature logging</li>
-        <li>Two-week review for anti-wrinkle treatments</li>
-        <li>Clear aftercare and open follow-up</li>
-      </ul>
-    </section>
   </div>
 </main>
 
