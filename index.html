@@ -17,7 +17,6 @@ body{margin:0;font:17px/1.65 Poppins,system-ui,-apple-system,Segoe UI,Roboto,Hel
 a{color:var(--accent-2);text-decoration:none}a:hover{text-decoration:underline}
 .container{max-width:1100px;margin:0 auto;padding:0 16px}
 
-/* Header (no logo) + evenly spaced tabs */
 .site-header{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--border)}
 .bar{display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 0}
 nav.site-nav{display:block;background:var(--surface)}
@@ -29,7 +28,6 @@ nav.site-nav a{
 nav.site-nav a:first-child{border-left:0}
 nav.site-nav a:hover{color:var(--accent-2);text-decoration:none}
 
-/* HERO with treatment couch image */
 .hero{
   position:relative;background:center/cover no-repeat url('/clinic-bed.jpg');
   min-height:56vh;color:#fff;display:flex;align-items:flex-end;border-bottom:1px solid var(--border)
@@ -39,7 +37,6 @@ nav.site-nav a:hover{color:var(--accent-2);text-decoration:none}
 .hero h1{margin:0 0 .3rem;font-size:clamp(28px,6vw,44px);font-weight:700;text-shadow:0 2px 12px rgba(0,0,0,.35)}
 .hero p{margin:.3rem 0 0;max-width:720px;color:#F1F4F3}
 
-/* Cards row */
 main{padding:44px 0}
 .grid{display:grid;gap:22px}
 @media(min-width:900px){.grid.three{grid-template-columns:1fr 1fr 1fr}}
@@ -52,7 +49,6 @@ h2{margin:0 0 .6em;font-size:clamp(20px,3vw,26px)}
 .btn{display:inline-block;background:var(--accent);color:var(--ink-on-accent);padding:12px 18px;border-radius:10px;font-weight:700;border:1px solid transparent}
 .btn:hover{background:var(--accent-2)}
 
-/* Meet Adam – standalone feature (photo LEFT) */
 .meet-wrap{margin:34px 0 4px}
 .meet{
   display:grid;grid-template-columns:320px 1fr;gap:26px;align-items:start;
@@ -63,7 +59,7 @@ h2{margin:0 0 .6em;font-size:clamp(20px,3vw,26px)}
   width:100%;
   height:320px;
   object-fit:cover;
-  object-position:center 15%; /* keep the top of the photo in view */
+  object-position:center 15%;
   border-radius:16px;border:3px solid #fff;
   box-shadow:0 6px 18px rgba(0,0,0,.12)
 }
@@ -72,18 +68,11 @@ h2{margin:0 0 .6em;font-size:clamp(20px,3vw,26px)}
 .meet ul{margin:.6rem 0 0 1.2rem}
 .meet ul li{margin:.25rem 0}
 
-/* Stack on phones */
 @media (max-width: 820px){
   .meet{grid-template-columns:1fr}
-  .meet img{
-    height:min(78vw, 360px);
-    max-width:460px;
-    margin:0 auto;
-    object-position:center 10%; /* nudge even higher on mobile */
-  }
+  .meet img{height:min(78vw, 360px);max-width:460px;margin:0 auto;object-position:center 10%}
 }
 
-/* Footer */
 footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);color:var(--muted);text-align:center}
 </style>
 </head>
@@ -114,7 +103,6 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surfac
 <main>
   <div class="container">
 
-    <!-- Meet Adam (now directly under hero) -->
     <div class="meet-wrap">
       <section class="meet" id="meet-adam">
         <img src="/adam.jpg" alt="Adam Rochford"/>
@@ -135,7 +123,47 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surfac
       </section>
     </div>
 
-    <!-- Service cards -->
+    <!-- Testimonials -->
+    <section id="testimonials" aria-labelledby="testimonials-title" style="margin:28px 0 6px">
+      <div class="container">
+        <h2 id="testimonials-title" style="margin:0 0 16px">What patients say</h2>
+
+        <div class="grid three">
+          <article class="card" aria-label="Testimonial from Sally, 45">
+            <h3 style="margin-top:0">Sally, 45</h3>
+            <blockquote style="margin:8px 0 0"><p style="margin:0">
+              “I always felt like I looked exhausted even when I wasn’t — especially under my eyes.
+              Since having Botox with Adam, my whole face feels softer, fresher and more awake.
+              People keep asking if I’ve been sleeping better or if I’ve been on holiday.
+              It’s not ‘frozen’… it’s just fresher ✨”
+            </p></blockquote>
+          </article>
+
+          <article class="card" aria-label="Testimonial from Kat, 50">
+            <h3 style="margin-top:0">Kat, 50</h3>
+            <blockquote style="margin:8px 0 0"><p style="margin:0">
+              “I was becoming really self-conscious about my frown lines, especially on Teams meetings.
+              As a solicitor, I didn’t want to look harsh or intimidating — I just wanted to look like myself, but softer.
+              This was my first time having Botox and I was a bit nervous, but Adam explained everything clearly and the result has been so natural.
+              My lines have smoothed without that ‘frozen’ look and I feel fresher, more open and more confident.
+              It’s subtle… but it’s made such a difference.”
+            </p></blockquote>
+          </article>
+
+          <article class="card" aria-label="Testimonial from Anna, 52">
+            <h3 style="margin-top:0">Anna, 52</h3>
+            <blockquote style="margin:8px 0 0"><p style="margin:0">
+              “I’ve worked in emergency care in the NHS for over 30 years, and recently I’d started to feel like I looked constantly tired, even when I wasn’t.
+              I’d never had Botox before and I wanted to look fresher, but still like myself.
+              Adam took the time to properly assess, explain and check my medical history — the consultation felt extremely safe and professional.
+              My result is subtle and natural, and I feel refreshed without looking different.
+              I’m so glad I finally did this.”
+            </p></blockquote>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <div class="grid three" style="margin-top:28px">
       <section class="card">
         <h2>Anti-wrinkle treatments</h2>
