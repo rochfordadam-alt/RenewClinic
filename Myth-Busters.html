@@ -1,52 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Myth Busters | Renew Aesthetics & Wellbeing</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<!-- Consistent brand positioning in the title -->
+<title>Myth Busters | Renew Aesthetics & Wellbeing – Expert-led, safe injectable treatments in Bath</title>
+
+<!-- New meta description for search results -->
+<meta name="description" content="Common myths about Botox and fillers—busted. Honest, evidence-based answers from an Advanced Clinical Practitioner and Independent Prescriber in Bath." />
+
 <link rel="icon" type="image/png" href="logo.png"/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
-:root{--bg:#F8F3EF;--surface:#FFFFFF;--ink:#232323;--muted:#5F5F5F;--border:#E8DCD4;--accent:#C6A48A;--accent-2:#B18F78;--ink-on-accent:#fff}
-*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+:root{
+  --bg:#F8F3EF;--surface:#FFFFFF;--ink:#232323;--muted:#5F5F5F;
+  --border:#E8DCD4;--accent:#C6A48A;--accent-2:#B18F78;--ink-on-accent:#fff
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{margin:0;font:17px/1.65 Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
 a{color:var(--accent-2);text-decoration:none}a:hover{text-decoration:underline}
 .container{max-width:1100px;margin:0 auto;padding:0 16px}
 
-/* Header */
 .site-header{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--border)}
 .bar{display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 0}
 nav.site-nav{display:block;background:var(--surface)}
-nav.site-nav .container{display:flex;gap:0;padding:0;justify-content:space-evenly;align-items:stretch;flex-wrap:wrap;border-top:0}
-nav.site-nav a{flex:1 1 auto;text-align:center;padding:12px 10px;font-weight:600;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);border-left:1px solid var(--border)}
+nav.site-nav .container{display:flex;gap:0;padding:0;justify-content:space-evenly;align-items:stretch;flex-wrap:wrap}
+nav.site-nav a{
+  flex:1 1 auto;text-align:center;padding:12px 10px;font-weight:600;font-size:13px;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--ink);border-left:1px solid var(--border)
+}
 nav.site-nav a:first-child{border-left:0}
 nav.site-nav a:hover{color:var(--accent-2);text-decoration:none}
 
-/* SUBPAGE HERO (fish image) — desktop 50%, mobile 60% */
-.subhero{
-  position:relative;
-  background:center 50%/cover no-repeat url('/assets/renew-fish-hero.jpg');
-  min-height:58vh;
-  display:flex;align-items:flex-end;
-  color:#fff;border-bottom:1px solid var(--border)
+/* Base hero */
+.hero{
+  position:relative;background:center/cover no-repeat var(--hero-img, url('/clinic-bed.jpg'));
+  min-height:48vh;color:#fff;display:flex;align-items:flex-end;border-bottom:1px solid var(--border)
 }
-.subhero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.22),rgba(0,0,0,.10))}
-.subhero .inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:44px 16px;width:100%}
-.subhero h1{margin:0;font-size:clamp(26px,5.5vw,40px);font-weight:700;text-shadow:0 2px 12px rgba(0,0,0,.35)}
-.subhero p.lead{margin:.4rem 0 0;color:#F1F4F3;max-width:780px}
-@media (max-width: 820px){
-  .subhero{min-height:56vh;background-position:center 60%}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.30),rgba(0,0,0,.12))
 }
+.hero .inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:40px 16px;width:100%}
+.hero h1{margin:0 0 .3rem;font-size:clamp(28px,6vw,44px);font-weight:700;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+.hero p{margin:.3rem 0 0;max-width:800px;color:#F1F4F3}
 
-main{padding:48px 0}
-h2{margin:0 0 .6em;font-size:clamp(20px,3vw,26px)}
+/* HIGH CONTRAST overlay for the fish image (use this class anywhere text over the fish is hard to read) */
+.hero--contrast{
+  --hero-img: url('/goldfish.jpg'); /* <- your fish image path */
+}
+.hero--contrast::before{
+  /* stronger scrim + edge vignette for readability on bright/orange areas */
+  background:
+    radial-gradient(120% 120% at 50% 30%, rgba(0,0,0,.72) 0%, rgba(0,0,0,.58) 35%, rgba(0,0,0,.42) 60%, rgba(0,0,0,.32) 75%, rgba(0,0,0,.28) 100%),
+    linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.35));
+}
+.hero--contrast .inner{ text-shadow: 0 3px 22px rgba(0,0,0,.65), 0 1px 6px rgba(0,0,0,.55); }
+.hero--contrast h1{ color:#fff }
+.hero--contrast p{ color:#EAF1F1 }
+
+main{padding:44px 0}
+.grid{display:grid;gap:22px}
+@media(min-width:900px){.grid.three{grid-template-columns:1fr 1fr 1fr}}
+.card{
+  background:#fff;border:1px solid var(--border);border-radius:18px;
+  box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,.9) inset;padding:22px
+}
+h1,h2{margin:0 0 .6em}
+h2{font-size:clamp(20px,3vw,26px)}
 .lead{color:var(--muted)}
-.card{background:#FFFFFF;border:1px solid var(--border);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,.9) inset;padding:22px}
-.grid{display:grid;gap:22px;margin-top:26px}
-@media(min-width:900px){.grid.two{grid-template-columns:1fr 1fr}}
-.small{color:var(--muted);font-size:14px}
-.kicker{font-size:12px;letter-spacing:.08em;color:#7a685c;text-transform:uppercase;font-weight:700}
-.faq-grid{display:grid;gap:16px;margin-top:14px}
-@media(min-width:900px){.faq-grid{grid-template-columns:1fr 1fr}}
+.btn{display:inline-block;background:var(--accent);color:var(--ink-on-accent);padding:12px 18px;border-radius:10px;font-weight:700;border:1px solid transparent}
+.btn:hover{background:var(--accent-2)}
+
+footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);color:var(--muted);text-align:center}
 </style>
 </head>
 <body>
@@ -59,164 +87,73 @@ h2{margin:0 0 .6em;font-size:clamp(20px,3vw,26px)}
       <a href="pre-appointment.html">Pre-Appointment</a>
       <a href="pricing.html">Pricing</a>
       <a href="safety.html">Safety</a>
-      <a href="myth-busters.html">Myth Busters</a>
+      <a aria-current="page" href="myth-busters.html">Myth Busters</a>
       <a href="privacy.html">Privacy</a>
     </div>
   </nav>
 </header>
 
-<section class="subhero" role="img" aria-label="Renew brand hero – myth busters">
+<!-- Use the high-contrast hero for the fish image -->
+<section class="hero hero--contrast" role="img" aria-label="Goldfish background with high contrast overlay">
   <div class="inner">
     <h1>Myth Busters</h1>
-    <p class="lead">Straight answers to common questions — no hype, no filters, just facts.</p>
+    <p>Honest, evidence-based answers about Botox and fillers — from an Advanced Clinical Practitioner and Independent Prescriber.</p>
   </div>
 </section>
 
 <main>
   <div class="container">
-
-    <!-- Myth cards -->
-    <div class="grid two">
-      <section class="card">
-        <h2>“Anti Wrinkle treatment freezes your face.”</h2>
-        <p class="small">In skilled, conservative dosing the goal is to soften lines while keeping natural expression. “Frozen” looks come from over-treating or poor technique — not an inevitable outcome. We specialise in subtle, natural results.</p>
-      </section>
-
-      <section class="card">
-        <h2>“Fillers last forever.”</h2>
-        <p class="small">Hyaluronic acid fillers are temporary and gradually metabolised. Typical duration ranges from ~6–18 months depending on product, area and individual factors.</p>
-      </section>
-
-      <section class="card">
-        <h2>“You can’t work or exercise after.”</h2>
-        <p class="small">Most people return to normal life immediately. We’ll give simple aftercare (avoid heavy exercise or facials for a short period) to support the best result.</p>
-      </section>
-
-      <section class="card">
-        <h2>“One size fits all.”</h2>
-        <p class="small">Everyone’s muscles, skin and goals are different. We dose and plan conservatively based on your assessment, then review and refine where appropriate.</p>
-      </section>
-
-      <section class="card">
-        <h2>“If you start, you can’t stop.”</h2>
-        <p class="small">You can stop any time. Muscles gradually return to normal activity, and lines return as they were over time — not worse because you had treatment.</p>
-      </section>
-
-      <section class="card">
-        <h2>“Top-ups are automatically free.”</h2>
-        <p class="small">Reviews are included to assess results. If additional units are clinically indicated, they may require opening a new single-patient-use vial — agreed transparently first.</p>
-      </section>
-    </div>
-
-    <!-- FAQs (always open) -->
-    <section id="faqs" aria-labelledby="faqs-title" style="margin:40px 0 0">
-      <h2 id="faqs-title" style="margin:0 0 16px">FAQs</h2>
-      <div class="faq-grid">
-
-        <section class="card">
-          <div class="kicker">Location & access</div>
-          <h2>Where are you based?</h2>
-          <p class="small">Appointments are by consultation in a private clinic room near Entry Hill, Bath. Where appropriate, home visits are available across BaNES. Full address and arrival instructions are provided in your booking confirmation.</p>
-        </section>
-
-        <section class="card">
-          <div class="kicker">Getting here</div>
-          <h2>Is there parking nearby?</h2>
-          <p class="small">There is on-street parking on nearby roads. We can activate a visitor permit for your appointment if needed — just add your vehicle registration on the pre-appointment form.</p>
-        </section>
-
-        <section class="card">
-          <div class="kicker">Consultation first</div>
-          <h2>What happens at my first appointment?</h2>
-          <p class="small">We start with a medical consultation and assessment to understand your goals and ensure treatment is appropriate and safe. We’ll discuss options, expected outcomes, pricing and aftercare before anything goes ahead.</p>
-        </section>
-
-        <section class="card">
-          <div class="kicker">Clinician-led</div>
-          <h2>Who performs the treatments?</h2>
-          <p class="small">All consultations and treatments are carried out by Adam Rochford — Advanced Musculoskeletal Clinician & Independent Prescriber (HCPC registered). See our <a href="safety.html">Safety</a> page for training and governance info.</p>
-        </section>
-
-        <section class="card">
-          <div class="kicker">Natural results</div>
-          <h2>Does Botox® freeze your face?</h2>
-          <p class="small">No. In conservative dosing the aim is to soften lines while keeping natural expression. We specialise in subtle, “you but fresher” results — not a frozen look.</p>
-        </section>
-
-        <section class="card">
-          <div class="kicker">Duration</div>
-          <h2>How long do anti-wrinkle results last?</h2>
-          <p class="small">Typically around 3–4 months on average, varying by dose, area treated and individual factors. Results fade gradually — it isn’t permanent.</p>
-        </section>
-
-        <section class="card">
-          <div class="kicker">Duration</div>
-          <h2>How long do dermal fillers last?</h2>
-          <p class="small">Most hyaluronic acid fillers last roughly 6–18 months depending on the product, area and your own metabolism.</p>
-        </section>
-
-        <section class="card">
-          <div class="kicker">Dose & pricing</div>
-          <h2>Will I need a second vial?</h2>
-          <p class="small">Sometimes, based on muscle strength and goals. If appropriate, we’ll agree it with you first. Any additional vials are priced separately — see <a href="pricing.html">Pricing</a>.</p>
-        </section>
-
-        <section class="card">
-          <div class="kicker">Follow-up</div>
-          <h2>Do you offer a review?</h2>
-          <p class="small">For anti-wrinkle treatments we offer an optional review around 2–3 weeks to check progress and make small adjustments if needed.</p>
-        </section>
-
-        <section class="card">
-          <div class="kicker">Aftercare</div>
-          <h2>Is there downtime?</h2>
-          <p class="small">Most people go straight back to normal activities. You may have small bumps or redness that settle quickly, and occasional pinpoint bruising. We’ll give clear aftercare guidance.</p>
-        </section>
-
-        <section class="card">
-          <div class="kicker">Comfort</div>
-          <h2>Does it hurt?</h2>
-          <p class="small">Treatments are typically very quick with minimal discomfort — often described as tiny pinpricks. We use gentle technique and appropriate comfort measures.</p>
-        </section>
-
-        <section class="card">
-          <div class="kicker">Medical considerations</div>
-          <h2>Who is not suitable?</h2>
-          <p class="small">We don’t treat during pregnancy or breastfeeding, and some medical conditions/medications mean treatment may not be appropriate. We’ll screen this during consultation to prioritise your safety.</p>
-        </section>
-
-        <section class="card">
-          <div class="kicker">Transparent fees</div>
-          <h2>How much does it cost?</h2>
-          <p class="small">All fees are listed on our <a href="pricing.html">Pricing</a> page, including masseter/jaw clenching and underarm sweating. We’ll confirm the exact plan and price before you proceed.</p>
-        </section>
-
-        <section class="card">
-          <div class="kicker">Accessibility</div>
-          <h2>Do you do home visits?</h2>
-          <p class="small">Yes — where clinically appropriate across BaNES. We’ll confirm suitability, environment and travel arrangements during consultation.</p>
-        </section>
-
-        <section class="card">
-          <div class="kicker">Informed choice</div>
-          <h2>Where can I read more about risks?</h2>
-          <p class="small">See our <a href="safety.html">Safety</a> page for a fuller overview of benefits, risks and consent. We’ll cover this in person so you can make an informed decision.</p>
-        </section>
-
-      </div>
+    <section aria-labelledby="mb-intro" style="margin-bottom:10px">
+      <h2 id="mb-intro">The most common myths — explained clearly</h2>
+      <p class="lead">If you’re unsure what’s true, you’re not alone. Here are straight answers to the questions I’m asked most.</p>
     </section>
 
-    <div class="card" style="margin-top:24px">
-      <p class="small">Still unsure about something you’ve heard? Add your question to the <a href="pre-appointment.html">Pre-Appointment form</a> and we’ll cover it in your consultation.</p>
-    </div>
+    <section class="grid three" aria-label="Myths and facts">
+      <article class="card">
+        <h3 style="margin-top:0">Myth: Botox freezes your face</h3>
+        <p><strong>Fact:</strong> When dosed and placed correctly, anti-wrinkle treatment softens lines while keeping your natural expression. “Frozen” results usually come from over-treatment.</p>
+      </article>
 
+      <article class="card">
+        <h3 style="margin-top:0">Myth: Fillers always look obvious</h3>
+        <p><strong>Fact:</strong> Subtle volumising can refresh without changing your features. The goal is balance and proportion — not a different face.</p>
+      </article>
+
+      <article class="card">
+        <h3 style="margin-top:0">Myth: It’s unsafe unless a doctor does it</h3>
+        <p><strong>Fact:</strong> Safety comes from training, assessment and scope of practice. I’m an <em>Advanced Clinical Practitioner and Independent Prescriber</em> with long-standing NHS experience and specific training in injectables.</p>
+      </article>
+
+      <article class="card">
+        <h3 style="margin-top:0">Myth: Downtime is guaranteed</h3>
+        <p><strong>Fact:</strong> Most people return to normal activity the same day. You’ll get personalised aftercare to minimise swelling and bruising.</p>
+      </article>
+
+      <article class="card">
+        <h3 style="margin-top:0">Myth: It’s addictive</h3>
+        <p><strong>Fact:</strong> Results wear off slowly. You choose whether and when to repeat treatment. My approach is conservative and evidence-based.</p>
+      </article>
+
+      <article class="card">
+        <h3 style="margin-top:0">Myth: One size fits all</h3>
+        <p><strong>Fact:</strong> Every face is different. Your plan is tailored in consultation — sometimes the best plan is to do nothing.</p>
+      </article>
+    </section>
+
+    <section style="margin-top:28px">
+      <a class="btn" href="pre-appointment.html">Book a consultation</a>
+    </section>
   </div>
 </main>
 
 <footer>
-  <div class="container">© <span id="y"></span> Renew Clinic • <a href="privacy.html">Privacy</a> • <a href="safety.html">Safety</a><br/>
-  <strong>Contact:</strong> <a href="mailto:info@renewclinic.uk">info@renewclinic.uk</a></div>
+  <div class="container">
+    © <span id="y"></span> Renew Clinic • <a href="privacy.html">Privacy</a> • <a href="safety.html">Safety</a><br/>
+    <strong>Contact:</strong> <a href="mailto:info@renewclinic.uk">info@renewclinic.uk</a>
+  </div>
 </footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
