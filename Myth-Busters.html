@@ -3,12 +3,11 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
 <title>Myth Busters | Renew Aesthetics & Wellbeing – Expert-led, safe injectable treatments in Bath</title>
-<meta name="description" content="Common myths about Botox and fillers—busted. Honest, evidence-based answers from an Advanced Clinical Practitioner and Independent Prescriber serving Bath and BaNES." />
-
+<meta name="description" content="Common myths about Botox and fillers—busted. Evidence-based answers from an Advanced Clinical Practitioner and Independent Prescriber serving Bath and BaNES." />
 <link rel="icon" type="image/png" href="logo.png"/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
 <style>
 :root{
   --bg:#F8F3EF;--surface:#FFFFFF;--ink:#232323;--muted:#5F5F5F;
@@ -33,39 +32,31 @@ nav.site-nav a:first-child{border-left:0}
 nav.site-nav a[aria-current="page"]{color:var(--accent-2)}
 nav.site-nav a:hover{color:var(--accent-2);text-decoration:none}
 
-/* Hero (with goldfish) */
+/* Universal hero with readability overlay */
 .hero{
-  position:relative;
-  min-height:48vh;
-  color:#fff;
-  display:flex;
-  align-items:flex-end;
-  border-bottom:1px solid var(--border)
+  position:relative;min-height:48vh;color:#fff;display:flex;align-items:flex-end;border-bottom:1px solid var(--border);
+  background:center/cover no-repeat var(--hero-img, url('/clinic-bed.jpg'));
 }
-/* Set your goldfish image here */
-.hero--goldfish{
-  background:center/cover no-repeat url('/goldfish.jpg');
-}
-/* Readability overlay + edge vignette */
-.hero--goldfish::before{
-  content:"";
-  position:absolute;inset:0;
+.hero::before{
+  /* universal scrim for readability (works on bright images like the fish) */
+  content:"";position:absolute;inset:0;
   background:
     radial-gradient(120% 120% at 50% 30%, rgba(0,0,0,.72) 0%, rgba(0,0,0,.58) 35%, rgba(0,0,0,.42) 60%, rgba(0,0,0,.32) 75%, rgba(0,0,0,.28) 100%),
     linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.35));
-  mix-blend-mode:normal;
 }
 .hero .inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:40px 16px;width:100%}
-.hero h1{
-  margin:0 0 .3rem;
-  font-size:clamp(28px,6vw,44px);font-weight:700;
-  text-shadow:0 3px 22px rgba(0,0,0,.65), 0 1px 6px rgba(0,0,0,.55)
-}
+.hero h1{margin:0 0 .3rem;font-size:clamp(28px,6vw,44px);font-weight:700;text-shadow:0 3px 22px rgba(0,0,0,.65), 0 1px 6px rgba(0,0,0,.55)}
 .hero p{margin:.3rem 0 0;max-width:820px;color:#EAF1F1;text-shadow:0 2px 12px rgba(0,0,0,.45)}
+
+/* Apply fish hero image here */
+.hero--fish{ --hero-img: url('assets/renew-fish-hero.jpg'); }
 
 main{padding:44px 0}
 .grid{display:grid;gap:22px}
-@media(min-width:900px){.grid.two{grid-template-columns:1fr 1fr} .grid.three{grid-template-columns:1fr 1fr 1fr}}
+@media(min-width:900px){
+  .grid.two{grid-template-columns:1fr 1fr}
+  .grid.three{grid-template-columns:1fr 1fr 1fr}
+}
 .card{
   background:#fff;border:1px solid var(--border);border-radius:18px;
   box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,.9) inset;padding:22px
@@ -100,8 +91,8 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surfac
   </nav>
 </header>
 
-<!-- Goldfish hero with strong readability overlay -->
-<section class="hero hero--goldfish" role="img" aria-label="Goldfish background with high-contrast overlay">
+<!-- Fish hero with strong but tasteful overlay so text stays readable -->
+<section class="hero hero--fish" role="img" aria-label="Goldfish background with high-contrast overlay">
   <div class="inner">
     <h1>Myth Busters</h1>
     <p>Honest, evidence-based answers about injectables — from an Advanced Clinical Practitioner and Independent Prescriber.</p>
@@ -115,8 +106,8 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surfac
       <p class="lead">If you’re unsure what’s true, you’re not alone. Here are straight answers to the questions I’m asked most.</p>
     </section>
 
-    <!-- Myths (4 for easy scanning) -->
-    <section class="grid two" aria-label="Myths and facts">
+    <!-- SIX myths, easy to scan (3x2 grid on desktop) -->
+    <section class="grid three" aria-label="Myths and facts">
       <article class="card">
         <h3 style="margin-top:0">Myth: Botox freezes your face</h3>
         <p><strong>Fact:</strong> When dosed and placed correctly, anti-wrinkle treatment softens lines while keeping natural expression. “Frozen” results usually come from over-treatment.</p>
@@ -130,6 +121,16 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surfac
       <article class="card">
         <h3 style="margin-top:0">Myth: It’s unsafe unless a doctor does it</h3>
         <p><strong>Fact:</strong> Safety comes from training, assessment and scope of practice. I’m an <em>Advanced Clinical Practitioner and Independent Prescriber</em> with long-standing NHS experience and specific training in injectables.</p>
+      </article>
+
+      <article class="card">
+        <h3 style="margin-top:0">Myth: Downtime is guaranteed</h3>
+        <p><strong>Fact:</strong> Most people return to normal activity the same day. You’ll get personalised aftercare to minimise swelling and bruising.</p>
+      </article>
+
+      <article class="card">
+        <h3 style="margin-top:0">Myth: It’s addictive</h3>
+        <p><strong>Fact:</strong> Results wear off gradually. You choose whether and when to repeat treatment. My approach is conservative and evidence-based.</p>
       </article>
 
       <article class="card">
@@ -156,7 +157,7 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surfac
           <dd>Yes — where appropriate, I provide home visits across BaNES. We’ll confirm suitability during consultation and ensure the setting is safe for treatment.</dd>
 
           <dt>Who performs the treatment?</dt>
-          <dd>I do. I’m an Advanced Clinical Practitioner (MSK) and Independent Prescriber, HCPC-registered, with long-standing NHS experience and specific training in Botox and fillers.</dd>
+          <dd>I do. I’m an Advanced Clinical Practitioner (MSK) and Independent Prescriber, HCPC-registered, with specific training in Botox and fillers.</dd>
 
           <dt>What if I’m not sure I’m ready?</dt>
           <dd>There’s no pressure to proceed. The consultation is about assessing, informing and agreeing a plan that suits you — which may be to wait or to do nothing.</dd>
