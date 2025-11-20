@@ -49,4 +49,232 @@ h2{margin:0 0 .6em;font-size:clamp(20px,3vw,26px)}
 .btn{display:inline-block;background:var(--accent);color:var(--ink-on-accent);padding:12px 18px;border-radius:10px;font-weight:700;border:1px solid transparent}
 .btn:hover{background:var(--accent-2)}
 
-.meet-wrap{margin:34px 0
+.meet-wrap{margin:34px 0 4px}
+.meet{
+  display:grid;grid-template-columns:320px 1fr;gap:26px;align-items:start;
+  background:var(--surface);border-radius:22px;padding:24px;border:1px solid var(--border);
+  box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,.9) inset;
+}
+.meet img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  object-position:center 15%;
+  border-radius:16px;border:3px solid #fff;
+  box-shadow:0 6px 18px rgba(0,0,0,.12)
+}
+.meet h2{margin:.2rem 0 .4rem}
+.meet .sub{color:var(--muted);font-size:14px;margin-top:-4px}
+.meet ul{margin:.6rem 0 0 1.2rem}
+.meet ul li{margin:.25rem 0}
+
+@media (max-width: 820px){
+  .meet{grid-template-columns:1fr}
+  .meet img{height:min(78vw, 360px);max-width:460px;margin:0 auto;object-position:center 10%}
+}
+
+/* Footer */
+footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);color:var(--muted);text-align:center}
+.footer-social{
+  margin-top:8px;
+  font-size:14px;
+}
+.footer-social a{
+  color:var(--accent-2);
+  font-weight:500;
+}
+.footer-social a:hover{
+  text-decoration:underline;
+}
+
+/* Floating Instagram button */
+.insta-fab{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:80;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 16px;
+  border-radius:999px;
+  background:var(--accent);
+  color:var(--ink-on-accent);
+  font-size:14px;
+  font-weight:600;
+  box-shadow:0 10px 24px rgba(0,0,0,.18);
+  border:1px solid rgba(255,255,255,.7);
+}
+.insta-fab:hover{
+  background:var(--accent-2);
+  text-decoration:none;
+  transform:translateY(-1px);
+}
+.insta-fab-icon{
+  width:22px;
+  height:22px;
+  border-radius:7px;
+  border:1px solid rgba(255,255,255,.7);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-size:11px;
+  font-weight:700;
+}
+.insta-fab-label{
+  white-space:nowrap;
+}
+
+/* Make it more compact on small screens */
+@media (max-width:600px){
+  .insta-fab{
+    padding:10px 12px;
+    right:12px;
+    bottom:12px;
+  }
+  .insta-fab-label{
+    display:none;
+  }
+}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container bar"></div>
+  <nav id="siteNav" class="site-nav">
+    <div class="container">
+      <a href="/">Home</a>
+      <a href="treatments.html">Treatments</a>
+      <a href="pre-appointment.html">Pre-Appointment</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="safety.html">Safety</a>
+      <a href="myth-busters.html">Myth Busters</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" role="img" aria-label="Treatment couch in calm clinic space">
+  <div class="inner">
+    <h1>Renew Aesthetics & Wellbeing</h1>
+    <p>Natural, expert-led injectable treatments — delivered safely by an Advanced Clinical Practitioner and Independent Prescriber with over 20 years’ NHS experience.</p>
+    <p class="lead">Subtle, safe treatments tailored to you. Appointments by consultation in a private clinic room near Entry Hill or via home visits across BaNES where appropriate.</p>
+    <p style="margin-top:14px"><a class="btn" href="pre-appointment.html">Start with the Pre-Appointment form</a></p>
+  </div>
+</section>
+
+<main>
+  <div class="container">
+
+    <div class="meet-wrap">
+      <section class="meet" id="meet-adam">
+        <img src="/adam.jpg" alt="Adam Rochford"/>
+        <div>
+          <h2>Meet Adam</h2>
+          <div class="sub">Advanced Clinical Practitioner (MSK) • Independent Prescriber (HCPC registered)</div>
+          <p class="lead" style="margin:12px 0 14px">
+            I’m Adam Rochford — an Advanced Clinical Practitioner in musculoskeletal health. I hold a Physiotherapy degree, a Master’s degree, a Diploma in Injection Therapy, and I’m an Independent Prescriber.
+          </p>
+          <p class="lead" style="margin:0 0 14px">
+            Across my NHS career I’ve delivered hundreds of safe injectable treatments and spent eight years as a Clinical Lead in Orthopaedics, leading a team of more than 40 clinicians.
+          </p>
+          <p class="lead" style="margin:0 0 14px">
+            I now bring the same evidence-based, precise and conservative approach to aesthetics — for subtle, natural results that still look like you.
+          </p>
+          <a class="btn" href="pre-appointment.html">Book a consultation</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Testimonials -->
+    <section id="testimonials" aria-labelledby="testimonials-title" style="margin:28px 0 6px">
+      <div class="container">
+        <h2 id="testimonials-title" style="margin:0 0 16px">What patients say</h2>
+
+        <div class="grid three">
+          <article class="card" aria-label="Testimonial from Sally, 45">
+            <h3 style="margin-top:0">Sally, 45</h3>
+            <blockquote style="margin:8px 0 0"><p style="margin:0">
+              “I always felt like I looked exhausted even when I wasn’t — especially under my eyes.
+              Since having Botox with Adam, my whole face feels softer, fresher and more awake.
+              People keep asking if I’ve been sleeping better or if I’ve been on holiday.
+              It’s not ‘frozen’… it’s just fresher ✨”
+            </p></blockquote>
+          </article>
+
+          <article class="card" aria-label="Testimonial from Kat, 50">
+            <h3 style="margin-top:0">Kat, 50</h3>
+            <blockquote style="margin:8px 0 0"><p style="margin:0">
+              “I was becoming really self-conscious about my frown lines, especially on Teams meetings.
+              As a solicitor, I didn’t want to look harsh or intimidating — I just wanted to look like myself, but softer.
+              This was my first time having Botox and I was a bit nervous, but Adam explained everything clearly and the result has been so natural.
+              My lines have smoothed without that ‘frozen’ look and I feel fresher, more open and more confident.
+              It’s subtle… but it’s made such a difference.”
+            </p></blockquote>
+          </article>
+
+          <article class="card" aria-label="Testimonial from Anna, 52">
+            <h3 style="margin-top:0">Anna, 52</h3>
+            <blockquote style="margin:8px 0 0"><p style="margin:0">
+              “I’ve worked in emergency care in the NHS for over 30 years, and recently I’d started to feel like I looked constantly tired, even when I wasn’t.
+              I’d never had Botox before and I wanted to look fresher, but still like myself.
+              Adam took the time to properly assess, explain and check my medical history — the consultation felt extremely safe and professional.
+              My result is subtle and natural, and I feel refreshed without looking different.
+              I’m so glad I finally did this.”
+            </p></blockquote>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid three" style="margin-top:28px">
+      <section class="card">
+        <h2>Anti-wrinkle treatments</h2>
+        <p class="lead">Smoother, fresher — while keeping your natural expression.</p>
+        <p><a class="btn" href="pricing.html#antiwrinkle">See pricing</a></p>
+      </section>
+      <section class="card">
+        <h2>Masseter & jaw clenching</h2>
+        <p class="lead">Targeted treatment that can reduce clenching and soften jaw bulk.</p>
+        <p><a class="btn" href="pricing.html#masseter">Learn more</a></p>
+      </section>
+      <section class="card">
+        <h2>Underarm sweating</h2>
+        <p class="lead">Helps reduce sweat activity for long-lasting confidence.</p>
+        <p><a class="btn" href="pricing.html#sweat">View options</a></p>
+      </section>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    © <span id="y"></span> Renew Clinic • <a href="privacy.html">Privacy</a> • <a href="safety.html">Safety</a><br/>
+    <strong>Contact:</strong> <a href="mailto:info@renewclinic.uk">info@renewclinic.uk</a>
+    <div class="footer-social">
+      Instagram:
+      <a href="https://www.instagram.com/renewclinic.bath" target="_blank" rel="noopener">
+        @renewclinic.bath
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Instagram button -->
+<a
+  href="https://www.instagram.com/renewclinic.bath"
+  class="insta-fab"
+  target="_blank"
+  rel="noopener"
+  aria-label="Open Renew Clinic Instagram in a new tab"
+>
+  <span class="insta-fab-icon">IG</span>
+  <span class="insta-fab-label">@renewclinic.bath</span>
+</a>
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
