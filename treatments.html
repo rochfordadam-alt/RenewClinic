@@ -42,6 +42,69 @@ h3{margin:1.1em 0 .4em;font-size:clamp(17px,2.4vw,20px)}
 .btn:hover{background:var(--accent-2)}
 footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);color:var(--muted);text-align:center}
 ul.clean{margin:.2rem 0 .8rem 1.2rem}
+
+/* Instagram footer link */
+.footer-social{
+  margin-top:8px;
+  font-size:14px;
+}
+.footer-social a{
+  color:#E1306C;           /* Instagram pink */
+  font-weight:500;
+}
+.footer-social a:hover{
+  text-decoration:underline;
+}
+
+/* Floating Instagram button – Insta gradient branding */
+.insta-fab{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:80;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 16px;
+  border-radius:999px;
+  background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
+  color:#fff;
+  font-size:14px;
+  font-weight:600;
+  box-shadow:0 10px 24px rgba(0,0,0,.18);
+  border:1px solid rgba(255,255,255,.7);
+}
+.insta-fab:hover{
+  text-decoration:none;
+  transform:translateY(-1px);
+}
+.insta-fab-icon{
+  width:22px;
+  height:22px;
+  border-radius:7px;
+  border:1px solid rgba(255,255,255,.9);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-size:13px;
+  font-weight:700;
+  background:rgba(0,0,0,.08);
+}
+.insta-fab-label{
+  white-space:nowrap;
+}
+
+/* Make it more compact on small screens */
+@media (max-width:600px){
+  .insta-fab{
+    padding:10px 12px;
+    right:12px;
+    bottom:12px;
+  }
+  .insta-fab-label{
+    display:none;
+  }
+}
 </style>
 </head>
 <body>
@@ -164,9 +227,30 @@ ul.clean{margin:.2rem 0 .8rem 1.2rem}
 </main>
 
 <footer>
-  <div class="container">© <span id="y"></span> Renew Clinic • <a href="privacy.html">Privacy</a> • <a href="safety.html">Safety</a><br/>
-  <strong>Contact:</strong> <a href="mailto:info@renewclinic.uk">info@renewclinic.uk</a></div>
+  <div class="container">
+    © <span id="y"></span> Renew Clinic • <a href="privacy.html">Privacy</a> • <a href="safety.html">Safety</a><br/>
+    <strong>Contact:</strong> <a href="mailto:info@renewclinic.uk">info@renewclinic.uk</a>
+    <div class="footer-social">
+      Instagram:
+      <a href="https://www.instagram.com/renewclinic.bath" target="_blank" rel="noopener">
+        @renewclinic.bath
+      </a>
+    </div>
+  </div>
 </footer>
+
+<!-- Floating Instagram button -->
+<a
+  href="https://www.instagram.com/renewclinic.bath"
+  class="insta-fab"
+  target="_blank"
+  rel="noopener"
+  aria-label="Open Renew Clinic Instagram in a new tab"
+>
+  <span class="insta-fab-icon">📷</span>
+  <span class="insta-fab-label">@renewclinic.bath</span>
+</a>
+
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
