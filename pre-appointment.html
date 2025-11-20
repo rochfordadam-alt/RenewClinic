@@ -21,7 +21,7 @@ nav.site-nav a{flex:1 1 auto;text-align:center;padding:12px 10px;font-weight:600
 nav.site-nav a:first-child{border-left:0}
 nav.site-nav a:hover{color:var(--accent-2);text-decoration:none}
 
-/* SUBPAGE HERO (fish image) — desktop 50%, mobile 60% */
+/* SUBPAGE HERO (fish image) */
 .subhero{
   position:relative;
   background:center 50%/cover no-repeat url('/assets/renew-fish-hero.jpg');
@@ -54,18 +54,81 @@ hr.soft{border:0;border-top:1px solid var(--border);margin:16px 0}
 }
 .form-frame{
   width:100%;
-  height:2200px;               /* desktop height */
+  height:2200px;
   border:0;
   border-radius:12px;
   background:#fff
 }
 .form-note{color:var(--muted);font-size:13px;margin-top:10px;text-align:center}
 @media (max-width:900px){
-  .form-frame{height:2600px}   /* a bit taller on mobile to avoid inner scroll */
+  .form-frame{height:2600px}
+}
+
+/* --- Instagram footer link --- */
+.footer-social{
+  margin-top:8px;
+  font-size:14px;
+}
+.footer-social a{
+  color:#E1306C;
+  font-weight:500;
+}
+.footer-social a:hover{
+  text-decoration:underline;
+}
+
+/* --- Floating Instagram button (gradient) --- */
+.insta-fab{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:80;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 16px;
+  border-radius:999px;
+  background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
+  color:#fff;
+  font-size:14px;
+  font-weight:600;
+  box-shadow:0 10px 24px rgba(0,0,0,.18);
+  border:1px solid rgba(255,255,255,.7);
+}
+.insta-fab:hover{
+  transform:translateY(-1px);
+  text-decoration:none;
+}
+.insta-fab-icon{
+  width:22px;
+  height:22px;
+  border-radius:7px;
+  border:1px solid rgba(255,255,255,.9);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-size:13px;
+  font-weight:700;
+  background:rgba(0,0,0,.08);
+}
+.insta-fab-label{
+  white-space:nowrap;
+}
+
+@media (max-width:600px){
+  .insta-fab{
+    padding:10px 12px;
+    right:12px;
+    bottom:12px;
+  }
+  .insta-fab-label{
+    display:none;
+  }
 }
 </style>
 </head>
 <body>
+
 <header class="site-header">
   <div class="container bar"></div>
   <nav id="siteNav" class="site-nav">
@@ -94,18 +157,18 @@ hr.soft{border:0;border-top:1px solid var(--border);margin:16px 0}
     <div class="grid two">
       <section class="card">
         <h2>Before you come</h2>
-        <p class="small">Please complete the short Pre-Appointment form so we can review your medical history and goals. Avoid alcohol and strenuous exercise on the day where possible, and arrive with clean skin (no heavy makeup on treatment areas).</p>
+        <p class="small">Please complete the short Pre-Appointment form so we can review your medical history and goals. Avoid alcohol and strenuous exercise on the day where possible, and arrive with clean skin.</p>
         <hr class="soft"/>
         <h2>What to expect</h2>
-        <p class="small">We’ll start with a consultation and assessment. If treatment is suitable and you wish to proceed, we’ll explain everything and take consent. Most treatments are quick with minimal discomfort.</p>
+        <p class="small">We’ll start with a consultation and assessment. If treatment is suitable and you wish to proceed, we’ll explain everything and take consent.</p>
       </section>
 
       <section class="card">
         <h2>Parking & access</h2>
-        <p class="small">Street parking is available locally. If you need a visitor permit, we can activate one for your appointment — just add your registration when you book. Please note there are steps at the entrance and the room is not wheelchair accessible.</p>
+        <p class="small">Street parking is available locally. Visitor permits can be activated when you book.</p>
         <hr class="soft"/>
         <h2>Aftercare</h2>
-        <p class="small">You’ll receive simple aftercare tailored to your treatment. Most people return to normal life immediately; minor redness or pinpoint bruising can occur and settles quickly.</p>
+        <p class="small">You’ll receive simple aftercare tailored to your treatment.</p>
       </section>
     </div>
 
@@ -114,8 +177,7 @@ hr.soft{border:0;border-top:1px solid var(--border);margin:16px 0}
       <iframe class="form-frame"
         src="https://docs.google.com/forms/d/e/1FAIpQLSdWGjdD5I94-p1RvoGlR6QmGeUYqjcl3-G5tPwvF5LY5b7mAg/viewform?embedded=true"
         loading="lazy"
-        marginheight="0"
-        marginwidth="0">Loading…</iframe>
+      ></iframe>
       <p class="form-note">If the form doesn’t load, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdWGjdD5I94-p1RvoGlR6QmGeUYqjcl3-G5tPwvF5LY5b7mAg/viewform" target="_blank" rel="noopener">open it in a new tab</a>.</p>
     </section>
 
@@ -123,9 +185,35 @@ hr.soft{border:0;border-top:1px solid var(--border);margin:16px 0}
 </main>
 
 <footer>
-  <div class="container">© <span id="y"></span> Renew Clinic • <a href="privacy.html">Privacy</a> • <a href="safety.html">Safety</a><br/>
-  <strong>Contact:</strong> <a href="mailto:info@renewclinic.uk">info@renewclinic.uk</a></div>
+  <div class="container">
+    © <span id="y"></span> Renew Clinic • <a href="privacy.html">Privacy</a> • <a href="safety.html">Safety</a><br/>
+    <strong>Contact:</strong>
+    <a href="mailto:info@renewclinic.uk">info@renewclinic.uk</a>
+
+    <div class="footer-social">
+      Instagram:
+      <a href="https://www.instagram.com/renewclinic.bath" target="_blank" rel="noopener">
+        @renewclinic.bath
+      </a>
+    </div>
+  </div>
 </footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+
+<!-- Floating Instagram button -->
+<a
+  href="https://www.instagram.com/renewclinic.bath"
+  class="insta-fab"
+  target="_blank"
+  rel="noopener"
+  aria-label="Open Renew Clinic Instagram"
+>
+  <span class="insta-fab-icon">📷</span>
+  <span class="insta-fab-label">@renewclinic.bath</span>
+</a>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+</script>
+
 </body>
 </html>
