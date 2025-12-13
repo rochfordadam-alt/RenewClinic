@@ -21,25 +21,56 @@ nav.site-nav a{flex:1 1 auto;text-align:center;padding:12px 10px;font-weight:600
 nav.site-nav a:first-child{border-left:0}
 nav.site-nav a:hover{color:var(--accent-2);text-decoration:none}
 
-/* SUBPAGE HERO (fish image) — desktop 50%, mobile 60% */
+/* SUBPAGE HERO (fish image) — improved readability */
 .subhero{
   position:relative;
   background:center 50%/cover no-repeat url('/assets/renew-fish-hero.jpg');
   min-height:58vh;
-  display:flex;align-items:flex-end;
-  color:#fff;border-bottom:1px solid var(--border)
+  display:flex;
+  align-items:flex-end;
+  color:#fff;
+  border-bottom:1px solid var(--border)
 }
-.subhero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.22),rgba(0,0,0,.10))}
-.subhero .inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:44px 16px;width:100%}
-.subhero h1{margin:0;font-size:clamp(26px,5.5vw,40px);font-weight:700;text-shadow:0 2px 12px rgba(0,0,0,.35)}
-.subhero p.lead{margin:.4rem 0 0;color:#F1F4F3;max-width:780px}
+.subhero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.45);
+}
+.subhero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.20),rgba(0,0,0,.10));
+  pointer-events:none;
+}
+.subhero .inner{
+  position:relative;
+  z-index:1;
+  max-width:1100px;
+  margin:0 auto;
+  padding:44px 16px;
+  width:100%;
+}
+.subhero h1{
+  margin:0;
+  font-size:clamp(26px,5.5vw,44px);
+  font-weight:700;
+  text-shadow:0 2px 14px rgba(0,0,0,.40);
+}
+.subhero p.lead{
+  margin:.6rem 0 0;
+  max-width:780px;
+  font-size:clamp(15px,2.2vw,18px);
+  color:rgba(255,255,255,.92);
+  text-shadow:0 2px 12px rgba(0,0,0,.35);
+}
 @media (max-width: 820px){
   .subhero{min-height:56vh;background-position:center 60%}
 }
 
 main{padding:48px 0}
 h2{margin:0 0 .6em;font-size:clamp(20px,3vw,26px)}
-.lead{color:var(--muted)}
 .grid{display:grid;gap:22px;margin-top:26px}
 @media(min-width:900px){.grid.two{grid-template-columns:1fr 1fr}}
 .card{background:#FFFFFF;border:1px solid var(--border);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,.9) inset;padding:22px}
@@ -48,8 +79,11 @@ hr.soft{border:0;border-top:1px solid var(--border);margin:16px 0}
 .kicker{font-size:12px;letter-spacing:.08em;color:#7a685c;text-transform:uppercase;font-weight:700}
 .btn{display:inline-block;background:var(--accent);color:var(--ink-on-accent);padding:12px 18px;border-radius:10px;font-weight:700;border:1px solid transparent}
 .btn:hover{background:var(--accent-2)}
+ul.small{padding-left:18px;margin:8px 0}
+ul.small li{margin-bottom:6px}
 </style>
 </head>
+
 <body>
 <header class="site-header">
   <div class="container bar"></div>
@@ -80,26 +114,50 @@ hr.soft{border:0;border-top:1px solid var(--border);margin:16px 0}
       <section class="card">
         <div class="kicker">Credentials</div>
         <h2>Clinician-led care</h2>
-        <p class="small">All consultations and treatments are carried out by Adam Rochford — Advanced Musculoskeletal Clinician & Independent Prescriber (HCPC registered). Extensive experience with safe injectable techniques, clinical governance and patient-centred care.</p>
+        <p class="small">
+          All consultations and treatments are carried out by Adam Rochford — Advanced Musculoskeletal Clinician & Independent Prescriber (HCPC registered). Care is evidence-based, conservative and focused on your long-term safety.
+        </p>
         <hr class="soft"/>
         <div class="kicker">Governance</div>
         <h2>Medical assessment first</h2>
-        <p class="small">Before any treatment we take a full medical history and discuss your goals, expected outcomes, alternatives and risks. Treatment only proceeds if clinically appropriate and safe for you.</p>
+        <p class="small">
+          Before any treatment, we take a full medical history and talk through your goals, expected outcomes, alternatives and potential risks. Treatment only goes ahead if it’s safe and appropriate for you.
+        </p>
       </section>
 
       <section class="card">
         <div class="kicker">Informed choice</div>
         <h2>Consent & aftercare</h2>
-        <p class="small">You’ll receive clear information on benefits, risks, what to expect and aftercare. We provide written guidance and a follow-up review where appropriate.</p>
+        <p class="small">
+          You’ll receive clear, honest information about what to expect, aftercare and any possible side effects. Written aftercare guidance and follow-up reviews are provided where appropriate.
+        </p>
         <hr class="soft"/>
         <div class="kicker">Suitability</div>
         <h2>When we won’t treat</h2>
-        <p class="small">We do not treat during pregnancy or breastfeeding and may defer or decline treatment where medical factors or goals suggest a poor risk-benefit balance. Your safety comes first.</p>
+        <p class="small">
+          For safety reasons, we do not provide aesthetic treatments during pregnancy or while breastfeeding.
+        </p>
+        <p class="small">
+          We may also advise against treatment, or recommend delaying it, if there are medical factors that increase risk. These can include (but are not limited to):
+        </p>
+        <ul class="small">
+          <li>Active skin infection, inflammation or injury in the treatment area</li>
+          <li>Known allergies or sensitivities to treatment ingredients</li>
+          <li>Certain neurological, neuromuscular or autoimmune conditions</li>
+          <li>Uncontrolled medical conditions or feeling acutely unwell</li>
+          <li>Recent facial surgery or procedures where healing is still ongoing</li>
+          <li>Medicines that may affect safety or treatment outcomes</li>
+        </ul>
+        <p class="small">
+          If treatment isn’t right for you, we’ll always explain why and discuss alternative options where possible. Your safety and wellbeing come first.
+        </p>
       </section>
     </div>
 
     <div class="card" style="margin-top:24px">
-      <p class="small">Prescription-only medicines are not advertised by brand. Individual outcomes vary. We take a conservative, natural-first approach — subtle improvements that still look like you.</p>
+      <p class="small">
+        Prescription-only medicines are not advertised by brand. Individual results vary. We take a conservative, natural-first approach — enhancing your features without changing who you are.
+      </p>
       <p><a class="btn" href="pre-appointment.html">Start with the Pre-Appointment form</a></p>
     </div>
 
@@ -107,9 +165,17 @@ hr.soft{border:0;border-top:1px solid var(--border);margin:16px 0}
 </main>
 
 <footer>
-  <div class="container">© <span id="y"></span> Renew Clinic • <a href="privacy.html">Privacy</a> • <a href="safety.html">Safety</a><br/>
-  <strong>Contact:</strong> <a href="mailto:info@renewclinic.uk">info@renewclinic.uk</a></div>
+  <div class="container">
+    © <span id="y"></span> Renew Clinic •
+    <a href="privacy.html">Privacy</a> •
+    <a href="safety.html">Safety</a><br/>
+    <strong>Contact:</strong> <a href="mailto:info@renewclinic.uk">info@renewclinic.uk</a>
+  </div>
 </footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+</script>
+
 </body>
 </html>
