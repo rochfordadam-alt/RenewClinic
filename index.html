@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +8,6 @@
 <link rel="icon" type="image/png" href="logo.png"/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
-/* --- styles unchanged --- */
 :root{
   --bg:#F8F3EF;--surface:#FFFFFF;--ink:#232323;--muted:#5F5F5F;
   --border:#E8DCD4;--accent:#C6A48A;--accent-2:#B18F78;--ink-on-accent:#fff
@@ -19,7 +17,118 @@ html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{margin:0;font:17px/1.65 Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
 a{color:var(--accent-2);text-decoration:none}a:hover{text-decoration:underline}
 .container{max-width:1100px;margin:0 auto;padding:0 16px}
-/* rest of your CSS unchanged */
+
+.site-header{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--border)}
+.bar{display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 0}
+nav.site-nav{display:block;background:var(--surface)}
+nav.site-nav .container{display:flex;gap:0;padding:0;justify-content:space-evenly;align-items:stretch;flex-wrap:wrap}
+nav.site-nav a{
+  flex:1 1 auto;text-align:center;padding:12px 10px;font-weight:600;font-size:13px;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--ink);border-left:1px solid var(--border)
+}
+nav.site-nav a:first-child{border-left:0}
+nav.site-nav a:hover{color:var(--accent-2);text-decoration:none}
+
+.hero{
+  position:relative;background:center/cover no-repeat url('/clinic-bed.jpg');
+  min-height:56vh;color:#fff;display:flex;align-items:flex-end;border-bottom:1px solid var(--border)
+}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.3),rgba(0,0,0,.12))}
+.hero .inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:40px 16px;width:100%}
+.hero h1{margin:0 0 .3rem;font-size:clamp(28px,6vw,44px);font-weight:700;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+.hero p{margin:.3rem 0 0;max-width:720px;color:#F1F4F3}
+
+main{padding:44px 0}
+.grid{display:grid;gap:22px}
+@media(min-width:900px){.grid.three{grid-template-columns:1fr 1fr 1fr}}
+.card{
+  background:#fff;border:1px solid var(--border);border-radius:18px;
+  box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,.9) inset;padding:22px
+}
+h2{margin:0 0 .6em;font-size:clamp(20px,3vw,26px)}
+.lead{color:var(--muted)}
+.btn{display:inline-block;background:var(--accent);color:var(--ink-on-accent);padding:12px 18px;border-radius:10px;font-weight:700;border:1px solid transparent}
+.btn:hover{background:var(--accent-2)}
+
+.meet-wrap{margin:34px 0 4px}
+.meet{
+  display:grid;grid-template-columns:320px 1fr;gap:26px;align-items:start;
+  background:var(--surface);border-radius:22px;padding:24px;border:1px solid var(--border);
+  box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,.9) inset;
+}
+.meet img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  object-position:center 15%;
+  border-radius:16px;border:3px solid #fff;
+  box-shadow:0 6px 18px rgba(0,0,0,.12)
+}
+.meet h2{margin:.2rem 0 .4rem}
+.meet .sub{color:var(--muted);font-size:14px;margin-top:-4px}
+.meet ul{margin:.6rem 0 0 1.2rem}
+.meet ul li{margin:.25rem 0}
+
+@media (max-width: 820px){
+  .meet{grid-template-columns:1fr}
+  .meet img{height:min(78vw, 360px);max-width:460px;margin:0 auto;object-position:center 10%}
+}
+
+/* Footer */
+footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);color:var(--muted);text-align:center}
+.footer-social{
+  margin-top:8px;
+  font-size:14px;
+}
+.footer-social a{
+  color:var(--accent-2);
+  font-weight:500;
+}
+.footer-social a:hover{
+  text-decoration:underline;
+}
+
+/* Floating Instagram button */
+.insta-fab{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:80;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 16px;
+  border-radius:999px;
+  background:var(--accent);
+  color:var(--ink-on-accent);
+  font-size:14px;
+  font-weight:600;
+  box-shadow:0 10px 24px rgba(0,0,0,.18);
+  border:1px solid rgba(255,255,255,.7);
+}
+.insta-fab:hover{
+  background:var(--accent-2);
+  text-decoration:none;
+  transform:translateY(-1px);
+}
+.insta-fab-icon{
+  width:22px;
+  height:22px;
+  border-radius:7px;
+  border:1px solid rgba(255,255,255,.7);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-size:11px;
+  font-weight:700;
+}
+.insta-fab-label{
+  white-space:nowrap;
+}
+@media (max-width:600px){
+  .insta-fab{padding:10px 12px;right:12px;bottom:12px}
+  .insta-fab-label{display:none}
+}
 </style>
 </head>
 <body>
@@ -47,22 +156,11 @@ a{color:var(--accent-2);text-decoration:none}a:hover{text-decoration:underline}
     <p style="margin-top:14px">
       <a class="btn" href="pre-appointment.html">Start with the Pre-Appointment form</a>
     </p>
-    <p style="margin-top:14px">
-  <a class="btn" href="pre-appointment.html">Start with the Pre-Appointment form</a>
-</p>
 
-<p class="small" style="margin-top:14px;max-width:720px">
-  New to anti-wrinkle treatments?
-  <a href="botox-explained.html">What people usually mean by “Botox” explained</a>
-  — written from a clear, clinician-led perspective.
-</p>
-
-
-    <!-- NEW: Botox explainer internal link -->
+    <!-- ✅ ONLY NEW ADDITION -->
     <p class="small" style="margin-top:14px;max-width:720px">
       New to anti-wrinkle treatments?
-      <a href="botox-explained.html">What people usually mean by “Botox” explained</a>
-      — written from a clear, clinician-led perspective.
+      <a href="botox-explained.html">What people usually mean by “Botox” explained</a>.
     </p>
   </div>
 </section>
@@ -87,7 +185,23 @@ a{color:var(--accent-2);text-decoration:none}a:hover{text-decoration:underline}
       </section>
     </div>
 
-    <!-- rest of your content unchanged -->
+    <div class="grid three" style="margin-top:28px">
+      <section class="card">
+        <h2>Anti-wrinkle treatments</h2>
+        <p class="lead">Smoother, fresher — while keeping your natural expression.</p>
+        <p><a class="btn" href="pricing.html#antiwrinkle">See pricing</a></p>
+      </section>
+      <section class="card">
+        <h2>Masseter & jaw clenching</h2>
+        <p class="lead">Targeted treatment that can reduce clenching and soften jaw bulk.</p>
+        <p><a class="btn" href="pricing.html#masseter">Learn more</a></p>
+      </section>
+      <section class="card">
+        <h2>Underarm sweating</h2>
+        <p class="lead">Helps reduce sweat activity for long-lasting confidence.</p>
+        <p><a class="btn" href="pricing.html#sweat">View options</a></p>
+      </section>
+    </div>
 
   </div>
 </main>
