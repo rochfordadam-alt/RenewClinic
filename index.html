@@ -47,6 +47,8 @@ main{padding:44px 0}
 }
 h2{margin:0 0 .6em;font-size:clamp(20px,3vw,26px)}
 .lead{color:var(--muted)}
+.small{font-size:14px;color:#F1F4F3} /* ✅ Added so the hero “small” text styles correctly */
+
 .btn{display:inline-block;background:var(--accent);color:var(--ink-on-accent);padding:12px 18px;border-radius:10px;font-weight:700;border:1px solid transparent}
 .btn:hover{background:var(--accent-2)}
 
@@ -157,12 +159,10 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surfac
       <a class="btn" href="pre-appointment.html">Start with the Pre-Appointment form</a>
     </p>
 
-    <!-- ✅ ONLY NEW ADDITION -->
     <p class="small" style="margin-top:14px;max-width:720px">
       New to anti-wrinkle treatments?
-     <a href="botox-explained.html" style="color:#F8F3EF;text-decoration:underline;">
-  What people usually mean by “Botox” explained
-</a>.
+      <a href="botox-explained.html" style="color:#F8F3EF;text-decoration:underline;">What people usually mean by “Botox” explained</a>.
+    </p>
   </div>
 </section>
 
@@ -175,114 +175,28 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surfac
         <div>
           <h2>Meet Adam</h2>
           <div class="sub">Advanced Clinical Practitioner (MSK) • Independent Prescriber (HCPC registered)</div>
+
           <p class="lead" style="margin:12px 0 14px">
-  I’m Adam Rochford — an Advanced Clinical Practitioner in musculoskeletal health, with over 20 years’ experience working in the NHS.
-  I hold a Physiotherapy degree, a Master’s degree, a Diploma in Injection Therapy, and I am an Independent Prescriber registered with the HCPC.
-</p>
-<p class="lead" style="margin:0 0 14px">
-  Throughout my career, I’ve performed many hundreds of injectable procedures and spent several years as a Clinical and Operational Lead within specialist services, overseeing governance, safety, and clinical standards.
-</p>
-<p class="lead" style="margin:0 0 14px">
-  I now bring the same evidence-based, precise and conservative approach to aesthetics — focusing on subtle, natural results that enhance your features while still looking like you.
-</p>
+            I’m Adam Rochford — an Advanced Clinical Practitioner in musculoskeletal health, with over 20 years’ experience working in the NHS.
+            I hold a Physiotherapy degree, a Master’s degree, a Diploma in Injection Therapy, and I am an Independent Prescriber registered with the HCPC.
+          </p>
 
           <p class="lead" style="margin:0 0 14px">
-            I bring the same evidence-based, precise and conservative clinical approach to aesthetics — focusing on subtle, natural results.
+            Throughout my career, I’ve performed many hundreds of injectable procedures and spent several years as a Clinical and Operational Lead within specialist services, overseeing governance, safety, and clinical standards.
           </p>
+
+          <p class="lead" style="margin:0 0 14px">
+            I now bring the same evidence-based, precise and conservative approach to aesthetics — focusing on subtle, natural results that enhance your features while still looking like you.
+          </p>
+
           <a class="btn" href="pre-appointment.html">Book a consultation</a>
         </div>
       </section>
     </div>
+
     <!-- Testimonials -->
-<section id="testimonials" aria-labelledby="testimonials-title" style="margin:28px 0 6px">
-  <div class="container">
-    <h2 id="testimonials-title" style="margin:0 0 16px">What patients say</h2>
+    <section id="testimonials" aria-labelledby="testimonials-title" style="margin:28px 0 6px">
+      <div class="container">
+        <h2 id="testimonials-title" style="margin:0 0 16px">What patients say</h2>
 
-    <div class="grid three">
-      <article class="card" aria-label="Testimonial from Sally, 45">
-        <h3 style="margin-top:0">Sally, 45</h3>
-        <blockquote style="margin:8px 0 0">
-          <p style="margin:0">
-            “I always felt like I looked exhausted even when I wasn’t — especially under my eyes.
-            Since having anti-wrinkle treatment with Adam, my whole face feels softer, fresher and more awake.
-            People keep asking if I’ve been sleeping better or if I’ve been on holiday.
-            It’s not ‘frozen’… it’s just fresher”
-          </p>
-        </blockquote>
-      </article>
-
-      <article class="card" aria-label="Testimonial from Kat, 50">
-        <h3 style="margin-top:0">Kat, 50</h3>
-        <blockquote style="margin:8px 0 0">
-          <p style="margin:0">
-            “I was becoming really self-conscious about my frown lines, especially on Teams meetings.
-            As a solicitor, I didn’t want to look harsh or intimidating — I just wanted to look like myself, but softer.
-            This was my first time having anti-wrinkle treatment and I was a bit nervous, but Adam explained everything clearly and the result has been so natural.
-            My lines have smoothed without that ‘frozen’ look and I feel fresher, more open and more confident.
-            It’s subtle… but it’s made such a difference.”
-          </p>
-        </blockquote>
-      </article>
-
-      <article class="card" aria-label="Testimonial from Anna, 52">
-        <h3 style="margin-top:0">Anna, 52</h3>
-        <blockquote style="margin:8px 0 0">
-          <p style="margin:0">
-            “I’ve worked in emergency care in the NHS for over 30 years, and recently I’d started to feel like I looked constantly tired, even when I wasn’t.
-            I’d never had anti-wrinkle treatment before and I wanted to look fresher, but still like myself.
-            Adam took the time to properly assess, explain and check my medical history — the consultation felt extremely safe and professional.
-            My result is subtle and natural, and I feel refreshed without looking different.
-            I’m so glad I finally did this.”
-          </p>
-        </blockquote>
-      </article>
-    </div>
-  </div>
-</section>
-<!-- End testimonials -->
-
-
-    <div class="grid three" style="margin-top:28px">
-      <section class="card">
-        <h2>Anti-wrinkle treatments</h2>
-        <p class="lead">Smoother, fresher — while keeping your natural expression.</p>
-        <p><a class="btn" href="pricing.html#antiwrinkle">See pricing</a></p>
-      </section>
-      <section class="card">
-        <h2>Masseter & jaw clenching</h2>
-        <p class="lead">Targeted treatment that can reduce clenching and soften jaw bulk.</p>
-        <p><a class="btn" href="pricing.html#masseter">Learn more</a></p>
-      </section>
-      <section class="card">
-        <h2>Underarm sweating</h2>
-        <p class="lead">Helps reduce sweat activity for long-lasting confidence.</p>
-        <p><a class="btn" href="pricing.html#sweat">View options</a></p>
-      </section>
-    </div>
-
-  </div>
-</main>
-
-<footer>
-  <div class="container">
-    © <span id="y"></span> Renew Clinic • <a href="privacy.html">Privacy</a> • <a href="safety.html">Safety</a><br/>
-    <strong>Contact:</strong> <a href="mailto:info@renewclinic.uk">info@renewclinic.uk</a>
-    <div class="footer-social">
-      Instagram:
-      <a href="https://www.instagram.com/renewclinic.bath" target="_blank" rel="noopener">
-        @renewclinic.bath
-      </a>
-    </div>
-  </div>
-</footer>
-
-<a href="https://www.instagram.com/renewclinic.bath" class="insta-fab" target="_blank" rel="noopener">
-  <span class="insta-fab-icon">IG</span>
-  <span class="insta-fab-label">@renewclinic.bath</span>
-</a>
-
-<script>
-document.getElementById('y').textContent = new Date().getFullYear();
-</script>
-</body>
-</html>
+        <div class="grid three
