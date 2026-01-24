@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Pricing & Location | Renew Aesthetics & Wellbeing</title>
+<title>Pricing | Renew Aesthetics & Wellbeing</title>
+<meta name="description" content="Clear pricing for clinician-led anti-wrinkle and dermal filler treatments in Bath. Upper-face and lower-face anti-wrinkle options, plus HA fillers. Consultation-led, subtle results." />
 <link rel="icon" type="image/png" href="logo.png"/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
@@ -12,98 +13,66 @@ body{margin:0;font:17px/1.65 Poppins,system-ui,-apple-system,Segoe UI,Roboto,Hel
 a{color:var(--accent-2);text-decoration:none}a:hover{text-decoration:underline}
 .container{max-width:1100px;margin:0 auto;padding:0 16px}
 
-/* Header without logo; evenly spaced tabs */
+/* Header */
 .site-header{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--border)}
 .bar{display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 0}
-.brand{display:none}.brand img{display:none}
 nav.site-nav{display:block;background:var(--surface)}
-nav.site-nav .container{display:flex;gap:0;padding:0;justify-content:space-evenly;align-items:stretch;flex-wrap:wrap;border-top:0}
+nav.site-nav .container{display:flex;gap:0;padding:0;justify-content:space-evenly;align-items:stretch;flex-wrap:wrap}
 nav.site-nav a{flex:1 1 auto;text-align:center;padding:12px 10px;font-weight:600;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);border-left:1px solid var(--border)}
 nav.site-nav a:first-child{border-left:0}
 nav.site-nav a:hover{color:var(--accent-2);text-decoration:none}
 
-/* SUBPAGE HERO (fish image) — improved readability */
-.subhero{
-  position:relative;
-  background:center 50%/cover no-repeat url('/assets/renew-fish-hero.jpg');
-  min-height:58vh;
-  display:flex;align-items:flex-end;
-  color:#fff;border-bottom:1px solid var(--border)
-}
-/* Strong overlay so text is always readable */
-.subhero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,.45);
-}
-/* Subtle gradient polish */
-.subhero::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(180deg,rgba(0,0,0,.20),rgba(0,0,0,.10));
-  pointer-events:none;
-}
-.subhero .inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:44px 16px;width:100%}
-.subhero h1{margin:0;font-size:clamp(26px,5.5vw,44px);font-weight:700;text-shadow:0 2px 14px rgba(0,0,0,.40)}
-.subhero p.lead{margin:.6rem 0 0;color:rgba(255,255,255,.92);max-width:780px;font-size:clamp(15px,2.2vw,18px);text-shadow:0 2px 12px rgba(0,0,0,.35)}
-@media (max-width: 820px){
-  .subhero{min-height:56vh;background-position:center 60%}
-}
+/* Subhero */
+.subhero{position:relative;min-height:34vh;display:flex;align-items:flex-end;color:#fff;border-bottom:1px solid var(--border);background-size:cover;background-position:center}
+.subhero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.15))}
+.subhero .inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:34px 16px;width:100%}
+.subhero h1{margin:0;font-size:clamp(26px,4vw,36px);font-weight:700;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+.subhero p.lead{margin:.4rem 0 0;color:#F1F4F3;max-width:880px}
 
-main{padding:48px 0}
-h1,h2{margin:0 0 .6em}h1{font-size:clamp(26px,4vw,36px)}h2{font-size:clamp(20px,3vw,26px)}
-.lead{color:var(--muted);margin-top:-6px}
-.grid{display:grid;gap:22px;margin-top:26px}
-@media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
-.card{background:#FFFFFF;border:1px solid var(--border);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,.9) inset;padding:22px}
-hr.soft{border:0;border-top:1px solid var(--border);margin:16px 0}
-.price{font-weight:700}
+main{padding:44px 0}
+.grid{display:grid;gap:22px}
+@media(min-width:900px){.grid.two{grid-template-columns:1fr 1fr}}
+.card{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.06),0 0 0 2px rgba(255,255,255,.9) inset;padding:22px}
+h2{margin:0 0 .6em;font-size:clamp(20px,3vw,26px)}
+h3{margin:1.1em 0 .4em;font-size:clamp(17px,2.4vw,20px)}
+.lead{color:var(--muted)}
 .badge{display:inline-block;background:#F0E7DF;color:#664C39;border:1px solid #E5D7CB;padding:4px 8px;border-radius:999px;font-size:12px;font-weight:600}
 .small{color:var(--muted);font-size:14px}
-.disclaimer{color:var(--muted);font-size:13px}
 .btn{display:inline-block;background:var(--accent);color:var(--ink-on-accent);padding:12px 18px;border-radius:10px;font-weight:700;border:1px solid transparent}
 .btn:hover{background:var(--accent-2)}
-.kicker{font-size:12px;letter-spacing:.08em;color:#7a685c;text-transform:uppercase;font-weight:700}
+footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);color:var(--muted);text-align:center}
+ul.clean{margin:.2rem 0 .8rem 1.2rem}
+
+/* Pricing table */
+.price{display:flex;align-items:baseline;gap:10px;margin:.4rem 0 0}
+.price strong{font-size:28px;letter-spacing:-.02em}
+.price span{color:var(--muted)}
+.hr{height:1px;background:var(--border);margin:16px 0}
+
+/* Quick nav pills */
+.pills{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 0}
+.pill{display:inline-block;border:1px solid var(--border);background:#fff;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:600}
+.pill:hover{text-decoration:none;border-color:var(--accent-2)}
 
 /* Instagram footer link */
-.footer-social{
-  margin-top:8px;
-  font-size:14px;
-}
-.footer-social a{
-  color:#E1306C;
-  font-weight:500;
-}
-.footer-social a:hover{
-  text-decoration:underline;
-}
+.footer-social{margin-top:8px;font-size:14px}
+.footer-social a{color:#E1306C;font-weight:500}
+.footer-social a:hover{text-decoration:underline}
 
-/* Floating Instagram button (gradient) */
+/* Floating Instagram button */
 .insta-fab{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  z-index:80;
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:10px 16px;
-  border-radius:999px;
+  position:fixed;right:18px;bottom:18px;z-index:80;
+  display:inline-flex;align-items:center;gap:8px;
+  padding:10px 16px;border-radius:999px;
   background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
-  color:#fff;
-  font-size:14px;
-  font-weight:600;
+  color:#fff;font-size:14px;font-weight:600;
   box-shadow:0 10px 24px rgba(0,0,0,.18);
   border:1px solid rgba(255,255,255,.7);
 }
-.insta-fab:hover{transform:translateY(-1px);text-decoration:none}
+.insta-fab:hover{text-decoration:none;transform:translateY(-1px)}
 .insta-fab-icon{
-  width:22px;height:22px;border-radius:7px;
-  border:1px solid rgba(255,255,255,.9);
-  display:inline-flex;align-items:center;justify-content:center;
-  font-size:13px;font-weight:700;background:rgba(0,0,0,.08)
+  width:22px;height:22px;border-radius:7px;border:1px solid rgba(255,255,255,.9);
+  display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;background:rgba(0,0,0,.08);
 }
 .insta-fab-label{white-space:nowrap}
 @media (max-width:600px){
@@ -112,7 +81,6 @@ hr.soft{border:0;border-top:1px solid var(--border);margin:16px 0}
 }
 </style>
 </head>
-
 <body>
 <header class="site-header">
   <div class="container bar"></div>
@@ -129,90 +97,135 @@ hr.soft{border:0;border-top:1px solid var(--border);margin:16px 0}
   </nav>
 </header>
 
-<section class="subhero" role="img" aria-label="Renew brand hero – pricing">
+<section class="subhero" role="img" aria-label="Calm clinic space" style="background-image:url('/clinic-bed.jpg')">
   <div class="inner">
-    <h1>Pricing &amp; Location</h1>
-    <p class="lead">Transparent, fair pricing. Free consultation and review included.</p>
+    <h1>Pricing</h1>
+    <p class="lead">Clear, straightforward pricing for consultation-led treatments. Every appointment includes assessment, tailored dosing, and aftercare. Review appointments are included where stated.</p>
+    <div class="pills" aria-label="Jump to pricing sections">
+      <a class="pill" href="#antiwrinkle">Upper-face anti-wrinkle</a>
+      <a class="pill" href="#lowerface">Lower-face anti-wrinkle</a>
+      <a class="pill" href="#fillers">Dermal fillers</a>
+    </div>
   </div>
 </section>
 
-<main id="antiwrinkle"><div class="container">
+<main>
+  <div class="container">
+    <div class="grid two">
 
-  <div class="grid">
-    <section class="card">
-      <div class="kicker">Face</div>
-      <h2>Anti-wrinkle (upper face)</h2>
-      <p class="lead">A personalised plan to soften lines while keeping your expression natural. A review at ~2 weeks is included.</p>
-      <p>
-        <span class="price">1 area £170 (~30 Units)</span><br/>
-        <span class="price">2 areas £190 (~40-50 Units)</span><br/>
-        <span class="price">3 areas £210 (50 Units) (£260 if a second vial is used)</span>
-      </p>
-      <p class="small"><strong>Home Visits:</strong> Add £25 for a home visit in BaNES.</p>
-      <p class="small"><strong>Areas included:</strong> frown lines (glabella), forehead lines, crow’s feet.</p>
-      <hr class="soft"/>
-      <p class="small"><strong>How consultations and reviews work:</strong> Free Consultation included. Review at 2 weeks included.</p>
-      <p class="small"><strong>Vials:</strong> Includes 50-unit vial. Second vial if required: +£50 (this will be discussed prior to treatment).</p>
-      <span class="badge">2-week review included</span>
-    </section>
+      <!-- Upper-face anti-wrinkle -->
+      <section class="card" id="antiwrinkle">
+        <span class="badge">Upper face</span>
+        <h2>Upper-face anti-wrinkle</h2>
+        <p class="lead">Forehead, frown and crow’s feet — softened while keeping your expression natural.</p>
 
-    <section class="card" id="masseter">
-      <div class="kicker">Jaw</div>
-      <h2>Teeth grinding (masseter)</h2>
-      <p><span class="price">From £260 </span></p>
-      <p class="small">Reduces jaw clenching and softens bulk over time.</p>
-    </section>
+        <div class="hr"></div>
 
-    <section class="card" id="sweat">
-      <div class="kicker">Sweat control</div>
-      <h2>Underarm sweating</h2>
-      <p><span class="price">From £300 (100 Units) </span></p>
-      <p class="small">Targeted injections to reduce sweat activity. Results last months.</p>
-    </section>
+        <h3>Pricing by area</h3>
+        <ul class="clean">
+          <li><strong>1 area</strong> (forehead <em>or</em> frown <em>or</em> crow’s feet): <strong>£195</strong></li>
+          <li><strong>2 areas</strong>: <strong>£245</strong></li>
+          <li><strong>3 areas</strong>: <strong>£295</strong></li>
+        </ul>
 
-    <section class="card">
-      <div class="kicker">Fillers</div>
-      <h2>Dermal fillers</h2>
-      <p><span class="price">From £220 (0.5ml)</span><br/><span class="price">From £280–£320 (1ml)</span></p>
-      <p class="small">Common areas: lips, nasolabial folds, marionette lines.</p>
-    </section>
-  </div>
+        <p class="small">Both eyes count as one area for crow’s feet. For best brow support, forehead is typically treated alongside the frown (glabella) where appropriate.</p>
 
-  <div class="grid" style="margin-top:24px">
-    <section class="card">
-      <div class="kicker">Where we treat</div>
-      <h2>Clinic location</h2>
-      <p class="small">Private clinic room in Entry Hill, Bath.</p>
-      <hr class="soft"/>
-      <div class="kicker">Parking</div>
-      <p class="small">Street parking available. Visitor permits arranged on request.</p>
-    </section>
+        <h3>What’s included</h3>
+        <ul class="clean">
+          <li>Clinician-led consultation and suitability assessment</li>
+          <li>Personalised dosing plan and careful marking-up</li>
+          <li>Aftercare guidance</li>
+          <li>Review at ~2 weeks (if needed)</li>
+        </ul>
 
-    <section class="card">
-      <div class="kicker">Flexible care</div>
-      <h2>Home visits (BaNES)</h2>
-      <p class="small">Limited availability depending on clinical suitability and safe handling of medicines.</p>
-      <p class="small"><strong>Home Visits:</strong> Please add £20 for a home visit in BaNES.</p>
-    </section>
-  </div>
+        <h3>Vial policy</h3>
+        <p class="small">A single 50-unit, single-patient vial is included per appointment. If more product is needed, opening a second vial is discussed first (<strong>£65 supply fee</strong>).</p>
 
-  <div class="card" style="margin-top:24px">
-    <p class="disclaimer">All treatments follow a clinician-led medical assessment. Results vary.</p>
-    <div style="text-align:center;margin-top:10px">
-      <a class="btn" href="pre-appointment.html">Complete Pre-Appointment Form</a>
+        <p style="margin-top:10px"><a class="btn" href="pre-appointment.html">Start with the Pre-Appointment form</a></p>
+      </section>
+
+      <!-- Lower-face anti-wrinkle -->
+      <section class="card" id="lowerface">
+        <span class="badge">Lower face</span>
+        <h2>Lower-face anti-wrinkle</h2>
+        <p class="lead">Subtle, tailored refinements to soften and balance — always based on your anatomy and goals.</p>
+
+        <div class="hr"></div>
+
+        <h3>Typical options</h3>
+        <ul class="clean">
+          <li>Downturned mouth corners (DAO)</li>
+          <li>Chin dimpling (“pebble chin”)</li>
+          <li>Gently defining the upper lip shape (lip flip)</li>
+          <li>“Bunny lines” when smiling</li>
+        </ul>
+
+        <h3>Pricing</h3>
+        <ul class="clean">
+          <li><strong>Single lower-face option</strong>: <strong>from £175</strong></li>
+          <li><strong>Two lower-face options</strong>: <strong>from £225</strong></li>
+        </ul>
+
+        <p class="small">Final pricing is confirmed after assessment, as dosing and suitability vary by area and facial movement. If it isn’t the right fit for you, I’ll explain why and suggest alternatives.</p>
+
+        <h3>What’s included</h3>
+        <ul class="clean">
+          <li>Consultation-led plan and careful marking-up</li>
+          <li>Aftercare guidance</li>
+          <li>Follow-up advice if you need it</li>
+        </ul>
+
+        <p style="margin-top:10px"><a class="btn" href="pre-appointment.html">Book a consultation</a></p>
+      </section>
+
+      <!-- Dermal fillers -->
+      <section class="card" id="fillers">
+        <span class="badge">HA Fillers</span>
+        <h2>Dermal fillers</h2>
+        <p class="lead">Hyaluronic acid (HA) fillers to restore volume, refine contours and soften creases while keeping balance and proportion.</p>
+
+        <div class="hr"></div>
+
+        <h3>Pricing</h3>
+        <ul class="clean">
+          <li><strong>0.5 ml</strong>: <strong>£175</strong></li>
+          <li><strong>1.0 ml</strong>: <strong>£250</strong></li>
+        </ul>
+
+        <p class="small">Pricing depends on area and product choice. A full consultation, consent process, and aftercare are included.</p>
+
+        <h3>Common areas</h3>
+        <ul class="clean">
+          <li>Lip definition and volume</li>
+          <li>Nasolabial folds</li>
+          <li>Marionette lines</li>
+        </ul>
+
+        <p style="margin-top:10px"><a class="btn" href="pre-appointment.html">Start with the Pre-Appointment form</a></p>
+      </section>
+
+      <!-- Information card -->
+      <section class="card">
+        <span class="badge">Good to know</span>
+        <h2>Before you book</h2>
+        <p class="lead">My approach is conservative and natural. If you’re unsure what you need, we’ll decide together in consultation.</p>
+        <ul class="clean">
+          <li>Appointments are by consultation to confirm suitability</li>
+          <li>Please read the <a href="safety.html">Safety</a> page before treatment</li>
+          <li>Some people are not suitable for certain treatments (this will be discussed openly)</li>
+        </ul>
+        <p class="small">Prescription-only medicines are not advertised by brand name. Results vary with individual anatomy, skin quality and aftercare.</p>
+        <p style="margin-top:10px"><a class="btn" href="pre-appointment.html">Complete Pre-Appointment Form</a></p>
+      </section>
+
     </div>
   </div>
-
-</div></main>
+</main>
 
 <footer>
   <div class="container">
-    © <span id="y"></span> Renew Clinic •
-    <a href="privacy.html">Privacy</a> •
-    <a href="safety.html">Safety</a>
-    <br/>
+    © <span id="y"></span> Renew Clinic • <a href="privacy.html">Privacy</a> • <a href="safety.html">Safety</a><br/>
     <strong>Contact:</strong> <a href="mailto:info@renewclinic.uk">info@renewclinic.uk</a>
-
     <div class="footer-social">
       Instagram:
       <a href="https://www.instagram.com/renewclinic.bath" target="_blank" rel="noopener">
@@ -228,15 +241,12 @@ hr.soft{border:0;border-top:1px solid var(--border);margin:16px 0}
   class="insta-fab"
   target="_blank"
   rel="noopener"
-  aria-label="Open Renew Clinic Instagram"
+  aria-label="Open Renew Clinic Instagram in a new tab"
 >
   <span class="insta-fab-icon">📷</span>
   <span class="insta-fab-label">@renewclinic.bath</span>
 </a>
 
-<script>
-document.getElementById('y').textContent=new Date().getFullYear();
-</script>
-
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
