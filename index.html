@@ -47,8 +47,7 @@ main{padding:44px 0}
 }
 h2{margin:0 0 .6em;font-size:clamp(20px,3vw,26px)}
 .lead{color:var(--muted)}
-.small{font-size:14px;color:#F1F4F3} /* ✅ Added so the hero “small” text styles correctly */
-
+.small{font-size:14px;color:#F1F4F3} /* used in hero */
 .btn{display:inline-block;background:var(--accent);color:var(--ink-on-accent);padding:12px 18px;border-radius:10px;font-weight:700;border:1px solid transparent}
 .btn:hover{background:var(--accent-2)}
 
@@ -78,55 +77,23 @@ h2{margin:0 0 .6em;font-size:clamp(20px,3vw,26px)}
 
 /* Footer */
 footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surface);color:var(--muted);text-align:center}
-.footer-social{
-  margin-top:8px;
-  font-size:14px;
-}
-.footer-social a{
-  color:var(--accent-2);
-  font-weight:500;
-}
-.footer-social a:hover{
-  text-decoration:underline;
-}
+.footer-social{margin-top:8px;font-size:14px}
+.footer-social a{color:var(--accent-2);font-weight:500}
+.footer-social a:hover{text-decoration:underline}
 
 /* Floating Instagram button */
 .insta-fab{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  z-index:80;
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:10px 16px;
-  border-radius:999px;
-  background:var(--accent);
-  color:var(--ink-on-accent);
-  font-size:14px;
-  font-weight:600;
-  box-shadow:0 10px 24px rgba(0,0,0,.18);
+  position:fixed;right:18px;bottom:18px;z-index:80;display:inline-flex;align-items:center;gap:8px;
+  padding:10px 16px;border-radius:999px;background:var(--accent);color:var(--ink-on-accent);
+  font-size:14px;font-weight:600;box-shadow:0 10px 24px rgba(0,0,0,.18);
   border:1px solid rgba(255,255,255,.7);
 }
-.insta-fab:hover{
-  background:var(--accent-2);
-  text-decoration:none;
-  transform:translateY(-1px);
-}
+.insta-fab:hover{background:var(--accent-2);text-decoration:none;transform:translateY(-1px)}
 .insta-fab-icon{
-  width:22px;
-  height:22px;
-  border-radius:7px;
-  border:1px solid rgba(255,255,255,.7);
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  font-size:11px;
-  font-weight:700;
+  width:22px;height:22px;border-radius:7px;border:1px solid rgba(255,255,255,.7);
+  display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;
 }
-.insta-fab-label{
-  white-space:nowrap;
-}
+.insta-fab-label{white-space:nowrap}
 @media (max-width:600px){
   .insta-fab{padding:10px 12px;right:12px;bottom:12px}
   .insta-fab-label{display:none}
@@ -180,11 +147,9 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surfac
             I’m Adam Rochford — an Advanced Clinical Practitioner in musculoskeletal health, with over 20 years’ experience working in the NHS.
             I hold a Physiotherapy degree, a Master’s degree, a Diploma in Injection Therapy, and I am an Independent Prescriber registered with the HCPC.
           </p>
-
           <p class="lead" style="margin:0 0 14px">
             Throughout my career, I’ve performed many hundreds of injectable procedures and spent several years as a Clinical and Operational Lead within specialist services, overseeing governance, safety, and clinical standards.
           </p>
-
           <p class="lead" style="margin:0 0 14px">
             I now bring the same evidence-based, precise and conservative approach to aesthetics — focusing on subtle, natural results that enhance your features while still looking like you.
           </p>
@@ -194,9 +159,35 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surfac
       </section>
     </div>
 
-    <!-- Testimonials -->
+    <!-- Testimonials (kept exactly) -->
     <section id="testimonials" aria-labelledby="testimonials-title" style="margin:28px 0 6px">
       <div class="container">
         <h2 id="testimonials-title" style="margin:0 0 16px">What patients say</h2>
 
-        <div class="grid three
+        <div class="grid three">
+          <article class="card" aria-label="Testimonial from Sally, 45">
+            <h3 style="margin-top:0">Sally, 45</h3>
+            <blockquote style="margin:8px 0 0">
+              <p style="margin:0">
+                “I always felt like I looked exhausted even when I wasn’t — especially under my eyes.
+                Since having anti-wrinkle treatment with Adam, my whole face feels softer, fresher and more awake.
+                People keep asking if I’ve been sleeping better or if I’ve been on holiday.
+                It’s not ‘frozen’… it’s just fresher”
+              </p>
+            </blockquote>
+          </article>
+
+          <article class="card" aria-label="Testimonial from Kat, 50">
+            <h3 style="margin-top:0">Kat, 50</h3>
+            <blockquote style="margin:8px 0 0">
+              <p style="margin:0">
+                “I was becoming really self-conscious about my frown lines, especially on Teams meetings.
+                As a solicitor, I didn’t want to look harsh or intimidating — I just wanted to look like myself, but softer.
+                This was my first time having anti-wrinkle treatment and I was a bit nervous, but Adam explained everything clearly and the result has been so natural.
+                My lines have smoothed without that ‘frozen’ look and I feel fresher, more open and more confident.
+                It’s subtle… but it’s made such a difference.”
+              </p>
+            </blockquote>
+          </article>
+
+          <artic
