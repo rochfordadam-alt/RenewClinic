@@ -47,7 +47,7 @@ main{padding:44px 0}
 }
 h2{margin:0 0 .6em;font-size:clamp(20px,3vw,26px)}
 .lead{color:var(--muted)}
-.small{font-size:14px;color:#F1F4F3} /* used in hero */
+.small{font-size:14px;color:#F1F4F3} /* for hero */
 .btn{display:inline-block;background:var(--accent);color:var(--ink-on-accent);padding:12px 18px;border-radius:10px;font-weight:700;border:1px solid transparent}
 .btn:hover{background:var(--accent-2)}
 
@@ -147,9 +147,11 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surfac
             I’m Adam Rochford — an Advanced Clinical Practitioner in musculoskeletal health, with over 20 years’ experience working in the NHS.
             I hold a Physiotherapy degree, a Master’s degree, a Diploma in Injection Therapy, and I am an Independent Prescriber registered with the HCPC.
           </p>
+
           <p class="lead" style="margin:0 0 14px">
             Throughout my career, I’ve performed many hundreds of injectable procedures and spent several years as a Clinical and Operational Lead within specialist services, overseeing governance, safety, and clinical standards.
           </p>
+
           <p class="lead" style="margin:0 0 14px">
             I now bring the same evidence-based, precise and conservative approach to aesthetics — focusing on subtle, natural results that enhance your features while still looking like you.
           </p>
@@ -159,7 +161,7 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surfac
       </section>
     </div>
 
-    <!-- Testimonials (kept exactly) -->
+    <!-- Testimonials -->
     <section id="testimonials" aria-labelledby="testimonials-title" style="margin:28px 0 6px">
       <div class="container">
         <h2 id="testimonials-title" style="margin:0 0 16px">What patients say</h2>
@@ -190,4 +192,67 @@ footer{border-top:1px solid var(--border);padding:28px 0;background:var(--surfac
             </blockquote>
           </article>
 
-          <artic
+          <article class="card" aria-label="Testimonial from Anna, 52">
+            <h3 style="margin-top:0">Anna, 52</h3>
+            <blockquote style="margin:8px 0 0">
+              <p style="margin:0">
+                “I’ve worked in emergency care in the NHS for over 30 years, and recently I’d started to feel like I looked constantly tired, even when I wasn’t.
+                I’d never had anti-wrinkle treatment before and I wanted to look fresher, but still like myself.
+                Adam took the time to properly assess, explain and check my medical history — the consultation felt extremely safe and professional.
+                My result is subtle and natural, and I feel refreshed without looking different.
+                I’m so glad I finally did this.”
+              </p>
+            </blockquote>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- End testimonials -->
+
+    <!-- Treatments you DO (upper + lower anti-wrinkle + fillers) -->
+    <div class="grid three" style="margin-top:28px">
+      <section class="card">
+        <h2>Upper-face anti-wrinkle</h2>
+        <p class="lead">Forehead, frown and crow’s feet — softened while keeping your expression natural.</p>
+        <p><a class="btn" href="treatments.html#antiwrinkle">Explore</a></p>
+      </section>
+
+      <section class="card">
+        <h2>Dermal fillers</h2>
+        <p class="lead">Restore balance and refine contours with a careful, conservative approach.</p>
+        <p><a class="btn" href="treatments.html#fillers">Learn more</a></p>
+      </section>
+
+      <section class="card">
+        <h2>Lower-face anti-wrinkle</h2>
+        <p class="lead">Small, tailored refinements to soften and balance — always based on your anatomy and goals.</p>
+        <p><a class="btn" href="treatments.html#lowerface">View options</a></p>
+      </section>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    © <span id="y"></span> Renew Clinic • <a href="privacy.html">Privacy</a> • <a href="safety.html">Safety</a><br/>
+    <strong>Contact:</strong> <a href="mailto:info@renewclinic.uk">info@renewclinic.uk</a>
+    <div class="footer-social">
+      Instagram:
+      <a href="https://www.instagram.com/renewclinic.bath" target="_blank" rel="noopener">
+        @renewclinic.bath
+      </a>
+    </div>
+  </div>
+</footer>
+
+<a href="https://www.instagram.com/renewclinic.bath" class="insta-fab" target="_blank" rel="noopener">
+  <span class="insta-fab-icon">IG</span>
+  <span class="insta-fab-label">@renewclinic.bath</span>
+</a>
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
